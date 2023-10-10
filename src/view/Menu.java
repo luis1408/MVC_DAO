@@ -23,6 +23,20 @@ public class Menu extends javax.swing.JFrame {
         this.setPreferredSize(new Dimension(500, 500));
     }
 
+    private String filtroConsulta() {
+        String condicao = "";
+        if (!txtLogin.getText().trim().equals("")) {
+            condicao += "(USU_CODIGO >= " + txtLogin.getText() + ")";
+        }
+        if (!password.getText().trim().equals("")) {
+            if (!condicao.isEmpty()) {
+                condicao += " AND ";
+            }
+            condicao += "(USU_CODIGO <= " + password.getText() + ")";
+        }
+        return condicao;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,13 +53,15 @@ public class Menu extends javax.swing.JFrame {
         lblLogin = new javax.swing.JLabel();
         lblSenha = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        bttUsuario = new javax.swing.JMenu();
-        bttCliente = new javax.swing.JMenu();
-        bttFornecedor = new javax.swing.JMenu();
-        bttProduto = new javax.swing.JMenu();
-        bffFormaPagamento = new javax.swing.JMenu();
-        bttCompra = new javax.swing.JMenu();
-        bttVenda = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
+        menuUsuario = new javax.swing.JMenuItem();
+        menuFornecedor = new javax.swing.JMenuItem();
+        menuCliente = new javax.swing.JMenuItem();
+        menuProduto = new javax.swing.JMenuItem();
+        menuFormaPagamento = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        menuCompra = new javax.swing.JMenuItem();
+        menuVenda = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -103,36 +119,44 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap(58, Short.MAX_VALUE))
         );
 
-        bttUsuario.setText("Usuário");
-        bttUsuario.addActionListener(new java.awt.event.ActionListener() {
+        jMenu1.setText("Cadastro");
+
+        menuUsuario.setText("Usuarios");
+        menuUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bttUsuarioActionPerformed(evt);
+                menuUsuarioActionPerformed(evt);
             }
         });
-        jMenuBar1.add(bttUsuario);
+        jMenu1.add(menuUsuario);
 
-        bttCliente.setText("Cliente");
-        jMenuBar1.add(bttCliente);
+        menuFornecedor.setText("Fornecedor");
+        jMenu1.add(menuFornecedor);
 
-        bttFornecedor.setText("Fornecedor");
-        jMenuBar1.add(bttFornecedor);
+        menuCliente.setText("Cliente");
+        jMenu1.add(menuCliente);
 
-        bttProduto.setText("Produto");
-        jMenuBar1.add(bttProduto);
+        menuProduto.setText("Produto");
+        jMenu1.add(menuProduto);
 
-        bffFormaPagamento.setText("Pagamento");
-        bffFormaPagamento.addActionListener(new java.awt.event.ActionListener() {
+        menuFormaPagamento.setText("Forma de Pagamento");
+        menuFormaPagamento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bffFormaPagamentoActionPerformed(evt);
+                menuFormaPagamentoActionPerformed(evt);
             }
         });
-        jMenuBar1.add(bffFormaPagamento);
+        jMenu1.add(menuFormaPagamento);
 
-        bttCompra.setText("Compra");
-        jMenuBar1.add(bttCompra);
+        jMenuBar1.add(jMenu1);
 
-        bttVenda.setText("Venda");
-        jMenuBar1.add(bttVenda);
+        jMenu2.setText("Movimentacao");
+
+        menuCompra.setText("Compra");
+        jMenu2.add(menuCompra);
+
+        menuVenda.setText("Venda");
+        jMenu2.add(menuVenda);
+
+        jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
@@ -165,13 +189,15 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordActionPerformed
 
-    private void bttUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttUsuarioActionPerformed
+    private void menuUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuUsuarioActionPerformed
+        // TODO add your handling code here:
         new UsuarioView();
-    }//GEN-LAST:event_bttUsuarioActionPerformed
+    }//GEN-LAST:event_menuUsuarioActionPerformed
 
-    private void bffFormaPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bffFormaPagamentoActionPerformed
+    private void menuFormaPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFormaPagamentoActionPerformed
+        // TODO add your handling code here:
         new FormaPagamentoView();
-    }//GEN-LAST:event_bffFormaPagamentoActionPerformed
+    }//GEN-LAST:event_menuFormaPagamentoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -209,17 +235,19 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu bffFormaPagamento;
-    private javax.swing.JMenu bttCliente;
-    private javax.swing.JMenu bttCompra;
     private javax.swing.JButton bttEntrar;
-    private javax.swing.JMenu bttFornecedor;
-    private javax.swing.JMenu bttProduto;
-    private javax.swing.JMenu bttUsuario;
-    private javax.swing.JMenu bttVenda;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblSenha;
+    private javax.swing.JMenuItem menuCliente;
+    private javax.swing.JMenuItem menuCompra;
+    private javax.swing.JMenuItem menuFormaPagamento;
+    private javax.swing.JMenuItem menuFornecedor;
+    private javax.swing.JMenuItem menuProduto;
+    private javax.swing.JMenuItem menuUsuario;
+    private javax.swing.JMenuItem menuVenda;
     private javax.swing.JPanel panelLogin;
     private javax.swing.JPasswordField password;
     private javax.swing.JTextField txtLogin;
