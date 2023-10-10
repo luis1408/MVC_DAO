@@ -5,24 +5,16 @@
  */
 package principal;
 
-import conexao.Conexao;
-import view.UsuarioView;
+import view.Menu;
 
 /**
  *
  * @author celio
  */
 public class MVC_DAO {
-    Conexao objconexao;
-    UsuarioView usuarioview;
-
-    public MVC_DAO() {
-        objconexao = new Conexao();
-        usuarioview = new UsuarioView();
-    }
 
     public static void main(String[] args) {
-        MVC_DAO mvc_dao = new MVC_DAO();
+        new Menu();
     }
 
 }
