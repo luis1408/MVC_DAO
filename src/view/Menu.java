@@ -43,6 +43,11 @@ public class Menu extends javax.swing.JFrame {
     private void singin(String login,String senha) {
         UsuarioModel user = new UsuarioModel();
         user = new UsuarioController().consultar(filtroConsulta()); 
+        if (user.getUsu_login() == login) {
+            // TODO: implementar o método de login
+        } else {
+            // TODO: implementar o método de senha incorreta
+        }
     }
 
     /**
