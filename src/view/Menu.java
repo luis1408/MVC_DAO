@@ -24,6 +24,9 @@ public class Menu extends javax.swing.JFrame {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.pack();
         this.setPreferredSize(new Dimension(500, 500));
+
+        this.jMenuBar.setVisible(false);
+        this.txtMensagemErro.setVisible(false);
     }
 
     private String filtroConsulta() {
@@ -40,13 +43,14 @@ public class Menu extends javax.swing.JFrame {
         return condicao;
     }
 
-    private void singin(String login,String senha) {
+    private void singin(String login, String password) {
         UsuarioModel user = new UsuarioModel();
         user = new UsuarioController().consultar(filtroConsulta()); 
         if (user.getUsu_login() == login) {
-            // TODO: implementar o método de login
+            this.panelLogin.setVisible(false);
+            this.jMenuBar.setVisible(true);
         } else {
-            // TODO: implementar o método de senha incorreta
+            this.txtMensagemErro.setVisible(true);
         }
     }
 
@@ -65,14 +69,15 @@ public class Menu extends javax.swing.JFrame {
         bttEntrar = new javax.swing.JButton();
         lblLogin = new javax.swing.JLabel();
         lblSenha = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
+        txtMensagemErro = new javax.swing.JLabel();
+        jMenuBar = new javax.swing.JMenuBar();
+        menuCadastro = new javax.swing.JMenu();
         menuUsuario = new javax.swing.JMenuItem();
         menuFornecedor = new javax.swing.JMenuItem();
         menuCliente = new javax.swing.JMenuItem();
         menuProduto = new javax.swing.JMenuItem();
         menuFormaPagamento = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
+        menuMovimentacao = new javax.swing.JMenu();
         menuCompra = new javax.swing.JMenuItem();
         menuVenda = new javax.swing.JMenuItem();
 
@@ -101,19 +106,23 @@ public class Menu extends javax.swing.JFrame {
 
         lblSenha.setText("Senha");
 
+        txtMensagemErro.setForeground(new java.awt.Color(204, 0, 0));
+        txtMensagemErro.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtMensagemErro.setText("Usuário ou senha inválido");
+
         javax.swing.GroupLayout panelLoginLayout = new javax.swing.GroupLayout(panelLogin);
         panelLogin.setLayout(panelLoginLayout);
         panelLoginLayout.setHorizontalGroup(
             panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelLoginLayout.createSequentialGroup()
                 .addContainerGap(142, Short.MAX_VALUE)
-                .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblSenha)
                     .addComponent(lblLogin)
-                    .addGroup(panelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
-                        .addComponent(password)
-                        .addComponent(bttEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(txtLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
+                    .addComponent(password)
+                    .addComponent(bttEntrar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(txtMensagemErro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(135, 135, 135))
         );
         panelLoginLayout.setVerticalGroup(
@@ -129,10 +138,12 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(bttEntrar)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(txtMensagemErro)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        jMenu1.setText("Cadastro");
+        menuCadastro.setText("Cadastro");
 
         menuUsuario.setText("Usuarios");
         menuUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -140,16 +151,16 @@ public class Menu extends javax.swing.JFrame {
                 menuUsuarioActionPerformed(evt);
             }
         });
-        jMenu1.add(menuUsuario);
+        menuCadastro.add(menuUsuario);
 
         menuFornecedor.setText("Fornecedor");
-        jMenu1.add(menuFornecedor);
+        menuCadastro.add(menuFornecedor);
 
         menuCliente.setText("Cliente");
-        jMenu1.add(menuCliente);
+        menuCadastro.add(menuCliente);
 
         menuProduto.setText("Produto");
-        jMenu1.add(menuProduto);
+        menuCadastro.add(menuProduto);
 
         menuFormaPagamento.setText("Forma de Pagamento");
         menuFormaPagamento.addActionListener(new java.awt.event.ActionListener() {
@@ -157,21 +168,21 @@ public class Menu extends javax.swing.JFrame {
                 menuFormaPagamentoActionPerformed(evt);
             }
         });
-        jMenu1.add(menuFormaPagamento);
+        menuCadastro.add(menuFormaPagamento);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar.add(menuCadastro);
 
-        jMenu2.setText("Movimentacao");
+        menuMovimentacao.setText("Movimentação");
 
         menuCompra.setText("Compra");
-        jMenu2.add(menuCompra);
+        menuMovimentacao.add(menuCompra);
 
         menuVenda.setText("Venda");
-        jMenu2.add(menuVenda);
+        menuMovimentacao.add(menuVenda);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar.add(menuMovimentacao);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(jMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -195,7 +206,7 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_txtLoginActionPerformed
 
     private void bttEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttEntrarActionPerformed
-        // TODO add your handling code here:
+        singin(this.txtLogin.getText(), this.password.getText());
     }//GEN-LAST:event_bttEntrarActionPerformed
 
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
@@ -249,20 +260,21 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bttEntrar;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblSenha;
+    private javax.swing.JMenu menuCadastro;
     private javax.swing.JMenuItem menuCliente;
     private javax.swing.JMenuItem menuCompra;
     private javax.swing.JMenuItem menuFormaPagamento;
     private javax.swing.JMenuItem menuFornecedor;
+    private javax.swing.JMenu menuMovimentacao;
     private javax.swing.JMenuItem menuProduto;
     private javax.swing.JMenuItem menuUsuario;
     private javax.swing.JMenuItem menuVenda;
     private javax.swing.JPanel panelLogin;
     private javax.swing.JPasswordField password;
     private javax.swing.JTextField txtLogin;
+    private javax.swing.JLabel txtMensagemErro;
     // End of variables declaration//GEN-END:variables
 }
