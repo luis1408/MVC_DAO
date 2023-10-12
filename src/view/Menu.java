@@ -6,6 +6,9 @@ package view;
 
 import java.awt.Dimension;
 
+import controller.UsuarioController;
+import model.UsuarioModel;
+
 /**
  *
  * @author oleoespindola
@@ -26,15 +29,20 @@ public class Menu extends javax.swing.JFrame {
     private String filtroConsulta() {
         String condicao = "";
         if (!txtLogin.getText().trim().equals("")) {
-            condicao += "(USU_CODIGO >= " + txtLogin.getText() + ")";
+            condicao += "(USU_LOGIN = " + txtLogin.getText() + ")";
         }
         if (!password.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_CODIGO <= " + password.getText() + ")";
+            condicao += "(USU_SENHA = " + password.getText() + ")";
         }
         return condicao;
+    }
+
+    private void singin(String login,String senha) {
+        UsuarioModel user = new UsuarioModel();
+        user = new UsuarioController().consultar(filtroConsulta()); 
     }
 
     /**
