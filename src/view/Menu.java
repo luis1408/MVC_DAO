@@ -5,6 +5,7 @@
 package view;
 
 import java.awt.Dimension;
+import java.util.ArrayList;
 
 import controller.UsuarioController;
 import model.UsuarioModel;
@@ -44,13 +45,17 @@ public class Menu extends javax.swing.JFrame {
     }
 
     private void singin(String login, String password) {
-        UsuarioModel user = new UsuarioModel();
-        user = new UsuarioController().consultar(filtroConsulta()); 
-        if (user.getUsu_login() == login) {
-            this.panelLogin.setVisible(false);
-            this.jMenuBar.setVisible(true);
-        } else {
-            this.txtMensagemErro.setVisible(true);
+        try {
+            ArrayList<UsuarioModel> users = new UsuarioController().consultar(filtroConsulta()); 
+            UsuarioModel user = users.get(users.size());
+            if (user.getUsu_login() == login) {
+                this.panelLogin.setVisible(false);
+                this.jMenuBar.setVisible(true);
+            } else {
+                this.txtMensagemErro.setVisible(true);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
