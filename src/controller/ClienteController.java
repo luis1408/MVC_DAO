@@ -2,6 +2,7 @@ package controller;
 
 import conexao.Conexao;
 import dao.ClienteDao;
+import dao.PessoaDao;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -36,6 +37,11 @@ public class ClienteController {
     public void alterar (ClienteModel cliente) throws SQLException{
         ClienteDao dao = new ClienteDao();
         dao.alterar(cliente);
+    }
+    
+    public int getUltimoCodigo (ClienteModel cliente) throws SQLException{
+        PessoaDao dao = new PessoaDao();
+        dao.getUltimoCodigo(pessoa);
     }
     
     public void gravar (String operacao, ClienteModel cliente) throws SQLException {

@@ -10,7 +10,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import model.UsuarioModel;
 
-public class ClienteView extends javax.swing.JFrame {
+public class CompraView extends javax.swing.JFrame {
 
     private String operacao;
     private String colunas[] = {"ID", "Nome", "Login", "Ativo"};
@@ -32,7 +32,7 @@ public class ClienteView extends javax.swing.JFrame {
         btnGRAVAR.setEnabled(ativar);
     }
 
-    public ClienteView() {
+    public CompraView() {
         this.setPreferredSize(new Dimension(750, 650));
         initComponents();
         setOperacao(""); // inicializa o form no modo CONSULTA
@@ -81,10 +81,7 @@ public class ClienteView extends javax.swing.JFrame {
         lblUSU_CODIGO = new javax.swing.JLabel();
         lblUSU_NOME = new javax.swing.JLabel();
         lblUSU_LOGIN = new javax.swing.JLabel();
-        edtUSU_NOME = new javax.swing.JTextField();
         edtUSU_LOGIN = new javax.swing.JTextField();
-        lblUSU_SENHA = new javax.swing.JLabel();
-        chkUSU_ATIVO = new javax.swing.JCheckBox();
         lblUSU_CODIGO1 = new javax.swing.JLabel();
         lblUSU_NOME1 = new javax.swing.JLabel();
         lblUSU_LOGIN1 = new javax.swing.JLabel();
@@ -92,30 +89,19 @@ public class ClienteView extends javax.swing.JFrame {
         edtUSU_LOGIN1 = new javax.swing.JTextField();
         edtUSU_LOGIN2 = new javax.swing.JTextField();
         edtUSU_NOME2 = new javax.swing.JTextField();
-        lblUSU_LOGIN2 = new javax.swing.JLabel();
         edtUSU_NOME3 = new javax.swing.JTextField();
         lblUSU_CODIGO2 = new javax.swing.JLabel();
         edtUSU_LOGIN3 = new javax.swing.JTextField();
-        edtUSU_NOME4 = new javax.swing.JTextField();
         lblUSU_CODIGO3 = new javax.swing.JLabel();
         edtUSU_LOGIN4 = new javax.swing.JTextField();
         lblUSU_CODIGO4 = new javax.swing.JLabel();
         lblUSU_CODIGO5 = new javax.swing.JLabel();
         lblUSU_CODIGO6 = new javax.swing.JLabel();
         lblUSU_CODIGO7 = new javax.swing.JLabel();
-        lblUSU_CODIGO8 = new javax.swing.JLabel();
-        chkUSU_ATIVO1 = new javax.swing.JCheckBox();
-        lblUSU_CODIGO9 = new javax.swing.JLabel();
-        lblUSU_CODIGO10 = new javax.swing.JLabel();
         edtUSU_LOGIN5 = new javax.swing.JTextField();
         edtUSU_LOGIN6 = new javax.swing.JTextField();
         edtUSU_LOGIN7 = new javax.swing.JTextField();
-        edtUSU_LOGIN8 = new javax.swing.JTextField();
         edtUSU_LOGIN9 = new javax.swing.JTextField();
-        edtUSU_LOGIN10 = new javax.swing.JTextField();
-        edtUSU_LOGIN11 = new javax.swing.JTextField();
-        lblUSU_SENHA1 = new javax.swing.JLabel();
-        edtUSU_NOME5 = new javax.swing.JTextField();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         painelCONSULTA = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -273,25 +259,18 @@ public class ClienteView extends javax.swing.JFrame {
         jToolBar1.setBounds(0, 0, 730, 71);
 
         lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lblTitulo.setText("Cadastro de Clientes");
+        lblTitulo.setText("Cadastro de Compras");
         getContentPane().add(lblTitulo);
-        lblTitulo.setBounds(230, 80, 260, 20);
+        lblTitulo.setBounds(230, 80, 260, 40);
 
         lblUSU_CODIGO.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO.setText("Nome");
+        lblUSU_CODIGO.setText("ID do Usuario");
 
         lblUSU_NOME.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_NOME.setText("N Fantasia");
+        lblUSU_NOME.setText("ID do Fornecedor");
 
         lblUSU_LOGIN.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_LOGIN.setText("Telefone ");
-
-        edtUSU_NOME.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOMEActionPerformed(evt);
-            }
-        });
+        lblUSU_LOGIN.setText("Total");
 
         edtUSU_LOGIN.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         edtUSU_LOGIN.addActionListener(new java.awt.event.ActionListener() {
@@ -300,25 +279,14 @@ public class ClienteView extends javax.swing.JFrame {
             }
         });
 
-        lblUSU_SENHA.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_SENHA.setText("Celular");
-
-        chkUSU_ATIVO.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        chkUSU_ATIVO.setText("Ativo");
-        chkUSU_ATIVO.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkUSU_ATIVOActionPerformed(evt);
-            }
-        });
-
         lblUSU_CODIGO1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO1.setText("RG");
+        lblUSU_CODIGO1.setText("Valor");
 
         lblUSU_NOME1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_NOME1.setText("Data Cadastro");
+        lblUSU_NOME1.setText("Desconto");
 
         lblUSU_LOGIN1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_LOGIN1.setText("CPF/CNPJ");
+        lblUSU_LOGIN1.setText("Data de Emissão");
 
         edtUSU_NOME1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         edtUSU_NOME1.addActionListener(new java.awt.event.ActionListener() {
@@ -348,9 +316,6 @@ public class ClienteView extends javax.swing.JFrame {
             }
         });
 
-        lblUSU_LOGIN2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_LOGIN2.setText("Telefone ");
-
         edtUSU_NOME3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         edtUSU_NOME3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -359,7 +324,7 @@ public class ClienteView extends javax.swing.JFrame {
         });
 
         lblUSU_CODIGO2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO2.setText("Endereço");
+        lblUSU_CODIGO2.setText("ID do Produto");
 
         edtUSU_LOGIN3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         edtUSU_LOGIN3.addActionListener(new java.awt.event.ActionListener() {
@@ -368,15 +333,8 @@ public class ClienteView extends javax.swing.JFrame {
             }
         });
 
-        edtUSU_NOME4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOME4ActionPerformed(evt);
-            }
-        });
-
         lblUSU_CODIGO3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO3.setText("Complemento");
+        lblUSU_CODIGO3.setText("Preço");
 
         edtUSU_LOGIN4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         edtUSU_LOGIN4.addActionListener(new java.awt.event.ActionListener() {
@@ -386,28 +344,16 @@ public class ClienteView extends javax.swing.JFrame {
         });
 
         lblUSU_CODIGO4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO4.setText("Número");
+        lblUSU_CODIGO4.setText("Quantidade");
 
         lblUSU_CODIGO5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO5.setText("Cidade");
+        lblUSU_CODIGO5.setText("Total");
 
         lblUSU_CODIGO6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO6.setText("UF");
+        lblUSU_CODIGO6.setText("Observação");
 
         lblUSU_CODIGO7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO7.setText("Bairro");
-
-        lblUSU_CODIGO8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO8.setText("Site");
-
-        chkUSU_ATIVO1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        chkUSU_ATIVO1.setText("Fisica");
-
-        lblUSU_CODIGO9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO9.setText("Email");
-
-        lblUSU_CODIGO10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO10.setText("CEP");
+        lblUSU_CODIGO7.setText("Desconto");
 
         edtUSU_LOGIN5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         edtUSU_LOGIN5.addActionListener(new java.awt.event.ActionListener() {
@@ -430,41 +376,10 @@ public class ClienteView extends javax.swing.JFrame {
             }
         });
 
-        edtUSU_LOGIN8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN8ActionPerformed(evt);
-            }
-        });
-
         edtUSU_LOGIN9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         edtUSU_LOGIN9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 edtUSU_LOGIN9ActionPerformed(evt);
-            }
-        });
-
-        edtUSU_LOGIN10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN10ActionPerformed(evt);
-            }
-        });
-
-        edtUSU_LOGIN11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN11ActionPerformed(evt);
-            }
-        });
-
-        lblUSU_SENHA1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_SENHA1.setText("Limite de Credito");
-
-        edtUSU_NOME5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOME5ActionPerformed(evt);
             }
         });
 
@@ -475,7 +390,6 @@ public class ClienteView extends javax.swing.JFrame {
             .addGroup(painelDADOSLayout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblUSU_NOME)
                     .addGroup(painelDADOSLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -485,69 +399,45 @@ public class ClienteView extends javax.swing.JFrame {
                             .addGroup(painelDADOSLayout.createSequentialGroup()
                                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblUSU_NOME1)
-                                    .addComponent(lblUSU_LOGIN)
-                                    .addComponent(lblUSU_LOGIN2)
-                                    .addComponent(lblUSU_SENHA)
-                                    .addComponent(lblUSU_SENHA1))
-                                .addGap(4, 4, 4)
-                                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(edtUSU_NOME5, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(edtUSU_NOME, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                        .addComponent(edtUSU_NOME4, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                        .addComponent(edtUSU_NOME1)
-                                        .addComponent(edtUSU_LOGIN2)
-                                        .addComponent(edtUSU_LOGIN)
-                                        .addComponent(edtUSU_NOME3)
-                                        .addComponent(edtUSU_NOME2)
-                                        .addComponent(edtUSU_LOGIN3)))))
+                                    .addComponent(lblUSU_LOGIN))
+                                .addGap(47, 47, 47)
+                                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(edtUSU_NOME1, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                                    .addComponent(edtUSU_LOGIN2)
+                                    .addComponent(edtUSU_LOGIN)
+                                    .addComponent(edtUSU_NOME3)
+                                    .addComponent(edtUSU_NOME2)
+                                    .addComponent(edtUSU_LOGIN3))))
                         .addGap(58, 58, 58)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelDADOSLayout.createSequentialGroup()
-                                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblUSU_CODIGO6)
-                                    .addComponent(lblUSU_CODIGO10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(lblUSU_CODIGO6)
+                                .addGap(0, 329, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
                                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelDADOSLayout.createSequentialGroup()
-                                        .addComponent(lblUSU_CODIGO9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(49, 49, 49)
-                                        .addComponent(edtUSU_LOGIN8, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
-                                    .addGroup(painelDADOSLayout.createSequentialGroup()
-                                        .addComponent(lblUSU_CODIGO3)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(edtUSU_LOGIN5))
                                     .addGroup(painelDADOSLayout.createSequentialGroup()
                                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(lblUSU_CODIGO4)
                                             .addComponent(lblUSU_CODIGO2))
-                                        .addGap(46, 46, 46)
+                                        .addGap(34, 34, 34)
                                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(edtUSU_LOGIN4)
+                                            .addComponent(edtUSU_LOGIN4, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
                                             .addComponent(edtUSU_LOGIN1)))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelDADOSLayout.createSequentialGroup()
                                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(lblUSU_CODIGO7)
                                             .addComponent(lblUSU_CODIGO5)
-                                            .addComponent(lblUSU_CODIGO8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(lblUSU_CODIGO3))
                                         .addGap(63, 63, 63)
                                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(edtUSU_LOGIN11)
+                                            .addComponent(edtUSU_LOGIN5)
                                             .addComponent(edtUSU_LOGIN6)
                                             .addComponent(edtUSU_LOGIN7)
-                                            .addGroup(painelDADOSLayout.createSequentialGroup()
-                                                .addComponent(edtUSU_LOGIN9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 0, Short.MAX_VALUE))
-                                            .addComponent(edtUSU_LOGIN10))))
-                                .addGap(33, 33, 33)
-                                .addComponent(chkUSU_ATIVO, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(24, 24, 24))
-            .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
-                    .addContainerGap(616, Short.MAX_VALUE)
-                    .addComponent(chkUSU_ATIVO1)
-                    .addGap(40, 40, 40)))
+                                            .addComponent(edtUSU_LOGIN9))))
+                                .addGap(126, 126, 126))))
+                    .addGroup(painelDADOSLayout.createSequentialGroup()
+                        .addComponent(lblUSU_NOME)
+                        .addGap(24, 24, 24))))
         );
         painelDADOSLayout.setVerticalGroup(
             painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -562,24 +452,19 @@ public class ClienteView extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(lblUSU_CODIGO)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelDADOSLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblUSU_NOME)
-                                .addComponent(edtUSU_NOME1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(edtUSU_LOGIN4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUSU_CODIGO4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblUSU_LOGIN1)
-                            .addComponent(edtUSU_LOGIN2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUSU_CODIGO3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(edtUSU_LOGIN5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(chkUSU_ATIVO, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblUSU_NOME)
+                        .addComponent(edtUSU_NOME1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(edtUSU_LOGIN4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblUSU_CODIGO4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUSU_LOGIN1)
+                    .addComponent(edtUSU_LOGIN2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblUSU_CODIGO3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(edtUSU_LOGIN5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUSU_CODIGO1)
@@ -595,51 +480,18 @@ public class ClienteView extends javax.swing.JFrame {
                         .addComponent(edtUSU_LOGIN7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelDADOSLayout.createSequentialGroup()
-                        .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblUSU_LOGIN)
-                            .addComponent(edtUSU_NOME3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUSU_CODIGO6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(2, 2, 2)
-                        .addComponent(lblUSU_CODIGO10, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelDADOSLayout.createSequentialGroup()
-                        .addComponent(edtUSU_LOGIN9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                        .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(painelDADOSLayout.createSequentialGroup()
-                                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(lblUSU_LOGIN2)
-                                    .addComponent(edtUSU_NOME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(lblUSU_CODIGO8, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblUSU_SENHA))
-                                    .addComponent(edtUSU_NOME4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(painelDADOSLayout.createSequentialGroup()
-                                .addComponent(edtUSU_LOGIN10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(edtUSU_LOGIN11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(edtUSU_LOGIN9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblUSU_CODIGO9, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(edtUSU_LOGIN8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblUSU_SENHA1)
-                        .addComponent(edtUSU_NOME5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(10, Short.MAX_VALUE))
-            .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(painelDADOSLayout.createSequentialGroup()
-                    .addGap(19, 19, 19)
-                    .addComponent(chkUSU_ATIVO1)
-                    .addContainerGap(269, Short.MAX_VALUE)))
+                        .addComponent(lblUSU_LOGIN)
+                        .addComponent(edtUSU_NOME3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblUSU_CODIGO6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Dados do Cliente", painelDADOS);
+        jTabbedPane1.addTab("Dados da Compra", painelDADOS);
 
         getContentPane().add(jTabbedPane1);
-        jTabbedPane1.setBounds(10, 100, 710, 340);
+        jTabbedPane1.setBounds(10, 130, 710, 260);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -668,12 +520,12 @@ public class ClienteView extends javax.swing.JFrame {
         });
 
         lblCONS_NOME.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lblCONS_NOME.setText("Nome");
+        lblCONS_NOME.setText("Quantidade");
 
         edtCONS_NOME.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         lblCONS_LOGIN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lblCONS_LOGIN.setText("CPF/CNPJ");
+        lblCONS_LOGIN.setText("Valor");
 
         edtCONS_LOGIN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
@@ -754,7 +606,7 @@ public class ClienteView extends javax.swing.JFrame {
         jTabbedPane2.addTab("Consulta", painelCONSULTA);
 
         getContentPane().add(jTabbedPane2);
-        jTabbedPane2.setBounds(10, 450, 720, 200);
+        jTabbedPane2.setBounds(10, 420, 720, 230);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -922,10 +774,6 @@ public class ClienteView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnEXCLUIRActionPerformed
 
-    private void edtUSU_NOMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOMEActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOMEActionPerformed
-
     private void edtUSU_NOME1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_edtUSU_NOME1ActionPerformed
@@ -954,17 +802,9 @@ public class ClienteView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_edtUSU_LOGIN3ActionPerformed
 
-    private void edtUSU_NOME4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOME4ActionPerformed
-
     private void edtUSU_LOGIN4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_edtUSU_LOGIN4ActionPerformed
-
-    private void chkUSU_ATIVOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkUSU_ATIVOActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_chkUSU_ATIVOActionPerformed
 
     private void edtUSU_LOGIN5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN5ActionPerformed
         // TODO add your handling code here:
@@ -978,25 +818,9 @@ public class ClienteView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_edtUSU_LOGIN7ActionPerformed
 
-    private void edtUSU_LOGIN8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN8ActionPerformed
-
     private void edtUSU_LOGIN9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_edtUSU_LOGIN9ActionPerformed
-
-    private void edtUSU_LOGIN10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN10ActionPerformed
-
-    private void edtUSU_LOGIN11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN11ActionPerformed
-
-    private void edtUSU_NOME5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOME5ActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -1012,30 +836,22 @@ public class ClienteView extends javax.swing.JFrame {
     private javax.swing.JButton btnPROXIMO;
     private javax.swing.JButton btnSAIR;
     private javax.swing.JButton btnULTIMO;
-    private javax.swing.JCheckBox chkUSU_ATIVO;
-    private javax.swing.JCheckBox chkUSU_ATIVO1;
     private javax.swing.JTextField edtCONS_ID1;
     private javax.swing.JTextField edtCONS_ID2;
     private javax.swing.JTextField edtCONS_LOGIN;
     private javax.swing.JTextField edtCONS_NOME;
     private javax.swing.JTextField edtUSU_LOGIN;
     private javax.swing.JTextField edtUSU_LOGIN1;
-    private javax.swing.JTextField edtUSU_LOGIN10;
-    private javax.swing.JTextField edtUSU_LOGIN11;
     private javax.swing.JTextField edtUSU_LOGIN2;
     private javax.swing.JTextField edtUSU_LOGIN3;
     private javax.swing.JTextField edtUSU_LOGIN4;
     private javax.swing.JTextField edtUSU_LOGIN5;
     private javax.swing.JTextField edtUSU_LOGIN6;
     private javax.swing.JTextField edtUSU_LOGIN7;
-    private javax.swing.JTextField edtUSU_LOGIN8;
     private javax.swing.JTextField edtUSU_LOGIN9;
-    private javax.swing.JTextField edtUSU_NOME;
     private javax.swing.JTextField edtUSU_NOME1;
     private javax.swing.JTextField edtUSU_NOME2;
     private javax.swing.JTextField edtUSU_NOME3;
-    private javax.swing.JTextField edtUSU_NOME4;
-    private javax.swing.JTextField edtUSU_NOME5;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -1053,22 +869,16 @@ public class ClienteView extends javax.swing.JFrame {
     private javax.swing.JLabel lblTitulo;
     private javax.swing.JLabel lblUSU_CODIGO;
     private javax.swing.JLabel lblUSU_CODIGO1;
-    private javax.swing.JLabel lblUSU_CODIGO10;
     private javax.swing.JLabel lblUSU_CODIGO2;
     private javax.swing.JLabel lblUSU_CODIGO3;
     private javax.swing.JLabel lblUSU_CODIGO4;
     private javax.swing.JLabel lblUSU_CODIGO5;
     private javax.swing.JLabel lblUSU_CODIGO6;
     private javax.swing.JLabel lblUSU_CODIGO7;
-    private javax.swing.JLabel lblUSU_CODIGO8;
-    private javax.swing.JLabel lblUSU_CODIGO9;
     private javax.swing.JLabel lblUSU_LOGIN;
     private javax.swing.JLabel lblUSU_LOGIN1;
-    private javax.swing.JLabel lblUSU_LOGIN2;
     private javax.swing.JLabel lblUSU_NOME;
     private javax.swing.JLabel lblUSU_NOME1;
-    private javax.swing.JLabel lblUSU_SENHA;
-    private javax.swing.JLabel lblUSU_SENHA1;
     private javax.swing.JPanel painelCONSULTA;
     private javax.swing.JPanel painelDADOS;
     private javax.swing.JTable tblConsulta;

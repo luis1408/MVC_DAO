@@ -10,7 +10,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import model.UsuarioModel;
 
-public class ClienteView extends javax.swing.JFrame {
+public class FornecedorView extends javax.swing.JFrame {
 
     private String operacao;
     private String colunas[] = {"ID", "Nome", "Login", "Ativo"};
@@ -32,7 +32,7 @@ public class ClienteView extends javax.swing.JFrame {
         btnGRAVAR.setEnabled(ativar);
     }
 
-    public ClienteView() {
+    public FornecedorView() {
         this.setPreferredSize(new Dimension(750, 650));
         initComponents();
         setOperacao(""); // inicializa o form no modo CONSULTA
@@ -273,9 +273,9 @@ public class ClienteView extends javax.swing.JFrame {
         jToolBar1.setBounds(0, 0, 730, 71);
 
         lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lblTitulo.setText("Cadastro de Clientes");
+        lblTitulo.setText("Cadastro de Fornecedores");
         getContentPane().add(lblTitulo);
-        lblTitulo.setBounds(230, 80, 260, 20);
+        lblTitulo.setBounds(200, 80, 330, 20);
 
         lblUSU_CODIGO.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lblUSU_CODIGO.setText("Nome");
@@ -459,7 +459,7 @@ public class ClienteView extends javax.swing.JFrame {
         });
 
         lblUSU_SENHA1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_SENHA1.setText("Limite de Credito");
+        lblUSU_SENHA1.setText("Contato");
 
         edtUSU_NOME5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         edtUSU_NOME5.addActionListener(new java.awt.event.ActionListener() {
@@ -490,18 +490,17 @@ public class ClienteView extends javax.swing.JFrame {
                                     .addComponent(lblUSU_SENHA)
                                     .addComponent(lblUSU_SENHA1))
                                 .addGap(4, 4, 4)
-                                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(edtUSU_NOME5, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(edtUSU_NOME, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                        .addComponent(edtUSU_NOME4, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                        .addComponent(edtUSU_NOME1)
-                                        .addComponent(edtUSU_LOGIN2)
-                                        .addComponent(edtUSU_LOGIN)
-                                        .addComponent(edtUSU_NOME3)
-                                        .addComponent(edtUSU_NOME2)
-                                        .addComponent(edtUSU_LOGIN3)))))
-                        .addGap(58, 58, 58)
+                                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(edtUSU_NOME, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                                    .addComponent(edtUSU_NOME4, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                                    .addComponent(edtUSU_NOME1)
+                                    .addComponent(edtUSU_LOGIN2)
+                                    .addComponent(edtUSU_LOGIN)
+                                    .addComponent(edtUSU_NOME3)
+                                    .addComponent(edtUSU_NOME2)
+                                    .addComponent(edtUSU_LOGIN3)
+                                    .addComponent(edtUSU_NOME5))))
+                        .addGap(65, 65, 65)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelDADOSLayout.createSequentialGroup()
                                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -513,7 +512,7 @@ public class ClienteView extends javax.swing.JFrame {
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelDADOSLayout.createSequentialGroup()
                                         .addComponent(lblUSU_CODIGO9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(49, 49, 49)
-                                        .addComponent(edtUSU_LOGIN8, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
+                                        .addComponent(edtUSU_LOGIN8, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
                                     .addGroup(painelDADOSLayout.createSequentialGroup()
                                         .addComponent(lblUSU_CODIGO3)
                                         .addGap(18, 18, 18)
@@ -557,11 +556,12 @@ public class ClienteView extends javax.swing.JFrame {
                         .addGap(8, 8, 8)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(edtUSU_LOGIN1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUSU_CODIGO2)
                             .addComponent(edtUSU_LOGIN3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(lblUSU_CODIGO)))
+                        .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblUSU_CODIGO, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblUSU_CODIGO2, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelDADOSLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)

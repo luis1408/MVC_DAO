@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import model.*;
 import dao.FornecedorDao;
+import dao.PessoaDao;
 
 public class FornecedorController {
 
@@ -36,6 +37,11 @@ public class FornecedorController {
     public void alterar (FornecedorModel fornecedor) throws SQLException{
         FornecedorDao dao = new FornecedorDao();
         dao.alterar(fornecedor);
+    }
+    
+    public int getUltimoCodigo (FornecedorModel fornecedor) throws SQLException{
+        PessoaDao dao = new PessoaDao();
+        dao.getUltimoCodigo(pessoa);
     }
     
     public void gravar (String operacao, FornecedorModel fornecedor) throws SQLException {

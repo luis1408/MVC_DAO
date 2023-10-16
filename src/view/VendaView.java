@@ -10,7 +10,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import model.UsuarioModel;
 
-public class ClienteView extends javax.swing.JFrame {
+public class VendaView extends javax.swing.JFrame {
 
     private String operacao;
     private String colunas[] = {"ID", "Nome", "Login", "Ativo"};
@@ -32,7 +32,7 @@ public class ClienteView extends javax.swing.JFrame {
         btnGRAVAR.setEnabled(ativar);
     }
 
-    public ClienteView() {
+    public VendaView() {
         this.setPreferredSize(new Dimension(750, 650));
         initComponents();
         setOperacao(""); // inicializa o form no modo CONSULTA
