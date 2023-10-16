@@ -9,10 +9,14 @@ import javax.swing.JOptionPane;
 
 public class Conexao {
 
-    public final static String BANCO = "jdbc:postgresql://localhost/postgres";
-    public final static String USUARIO = "postgres";
-    public final static String SENHA = "M@d@r@";
+    // public final static String BANCO = "jdbc:postgresql://localhost/postgres";
+    // public final static String USUARIO = "postgres";
+    // public final static String SENHA = "M@d@r@";
 
+    public final static String BANCO = "jdbc:postgresql://192.168.70.93/N822350";
+    public final static String USUARIO = "N822350";
+    public final static String SENHA = "N822350";
+    
     private static Connection conexao;
     private Statement stm;
 

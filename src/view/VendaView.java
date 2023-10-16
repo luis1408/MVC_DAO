@@ -78,44 +78,30 @@ public class VendaView extends javax.swing.JFrame {
         lblTitulo = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         painelDADOS = new javax.swing.JPanel();
-        lblUSU_CODIGO = new javax.swing.JLabel();
-        lblUSU_NOME = new javax.swing.JLabel();
-        lblUSU_LOGIN = new javax.swing.JLabel();
-        edtUSU_NOME = new javax.swing.JTextField();
-        edtUSU_LOGIN = new javax.swing.JTextField();
-        lblUSU_SENHA = new javax.swing.JLabel();
-        chkUSU_ATIVO = new javax.swing.JCheckBox();
-        lblUSU_CODIGO1 = new javax.swing.JLabel();
-        lblUSU_NOME1 = new javax.swing.JLabel();
-        lblUSU_LOGIN1 = new javax.swing.JLabel();
-        edtUSU_NOME1 = new javax.swing.JTextField();
-        edtUSU_LOGIN1 = new javax.swing.JTextField();
-        edtUSU_LOGIN2 = new javax.swing.JTextField();
-        edtUSU_NOME2 = new javax.swing.JTextField();
-        lblUSU_LOGIN2 = new javax.swing.JLabel();
-        edtUSU_NOME3 = new javax.swing.JTextField();
-        lblUSU_CODIGO2 = new javax.swing.JLabel();
-        edtUSU_LOGIN3 = new javax.swing.JTextField();
-        edtUSU_NOME4 = new javax.swing.JTextField();
-        lblUSU_CODIGO3 = new javax.swing.JLabel();
-        edtUSU_LOGIN4 = new javax.swing.JTextField();
-        lblUSU_CODIGO4 = new javax.swing.JLabel();
-        lblUSU_CODIGO5 = new javax.swing.JLabel();
-        lblUSU_CODIGO6 = new javax.swing.JLabel();
-        lblUSU_CODIGO7 = new javax.swing.JLabel();
-        lblUSU_CODIGO8 = new javax.swing.JLabel();
-        chkUSU_ATIVO1 = new javax.swing.JCheckBox();
-        lblUSU_CODIGO9 = new javax.swing.JLabel();
-        lblUSU_CODIGO10 = new javax.swing.JLabel();
-        edtUSU_LOGIN5 = new javax.swing.JTextField();
-        edtUSU_LOGIN6 = new javax.swing.JTextField();
-        edtUSU_LOGIN7 = new javax.swing.JTextField();
-        edtUSU_LOGIN8 = new javax.swing.JTextField();
-        edtUSU_LOGIN9 = new javax.swing.JTextField();
-        edtUSU_LOGIN10 = new javax.swing.JTextField();
-        edtUSU_LOGIN11 = new javax.swing.JTextField();
-        lblUSU_SENHA1 = new javax.swing.JLabel();
-        edtUSU_NOME5 = new javax.swing.JTextField();
+        lblID_Usuario = new javax.swing.JLabel();
+        lblID_Cliente = new javax.swing.JLabel();
+        lblTotalVenda = new javax.swing.JLabel();
+        edtValor = new javax.swing.JTextField();
+        lblValor = new javax.swing.JLabel();
+        lblDescontoVenda = new javax.swing.JLabel();
+        lblData = new javax.swing.JLabel();
+        edtID_Cliente = new javax.swing.JTextField();
+        edtProdutoID = new javax.swing.JTextField();
+        edtDataa = new javax.swing.JTextField();
+        edtDescontoVenda = new javax.swing.JTextField();
+        edtTotalVenda = new javax.swing.JTextField();
+        lblID_Produto = new javax.swing.JLabel();
+        edtID_Usuario = new javax.swing.JTextField();
+        lblPreço = new javax.swing.JLabel();
+        edtQtd = new javax.swing.JTextField();
+        lblQuantidade = new javax.swing.JLabel();
+        lblTotalProduto = new javax.swing.JLabel();
+        lblObservção = new javax.swing.JLabel();
+        lblDescontoProduto = new javax.swing.JLabel();
+        edtPreço = new javax.swing.JTextField();
+        edtDescProd = new javax.swing.JTextField();
+        edtTotalProd = new javax.swing.JTextField();
+        edtObs = new javax.swing.JTextField();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         painelCONSULTA = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -125,10 +111,10 @@ public class VendaView extends javax.swing.JFrame {
         edtCONS_ID2 = new javax.swing.JTextField();
         btnConsulta = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
-        lblCONS_NOME = new javax.swing.JLabel();
-        edtCONS_NOME = new javax.swing.JTextField();
-        lblCONS_LOGIN = new javax.swing.JLabel();
-        edtCONS_LOGIN = new javax.swing.JTextField();
+        lblCONS_Valor = new javax.swing.JLabel();
+        edtCONS_Valor = new javax.swing.JTextField();
+        lblCONS_Total = new javax.swing.JLabel();
+        edtCONS_Total = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblConsulta = new javax.swing.JTable();
 
@@ -273,198 +259,127 @@ public class VendaView extends javax.swing.JFrame {
         jToolBar1.setBounds(0, 0, 730, 71);
 
         lblTitulo.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lblTitulo.setText("Cadastro de Clientes");
+        lblTitulo.setText("Cadastro de Vendas");
         getContentPane().add(lblTitulo);
         lblTitulo.setBounds(230, 80, 260, 20);
 
-        lblUSU_CODIGO.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO.setText("Nome");
+        lblID_Usuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblID_Usuario.setText("ID do Usuario");
 
-        lblUSU_NOME.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_NOME.setText("N Fantasia");
+        lblID_Cliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblID_Cliente.setText("ID do Cliente");
 
-        lblUSU_LOGIN.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_LOGIN.setText("Telefone ");
+        lblTotalVenda.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblTotalVenda.setText("Total");
 
-        edtUSU_NOME.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME.addActionListener(new java.awt.event.ActionListener() {
+        edtValor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtValor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOMEActionPerformed(evt);
+                edtValorActionPerformed(evt);
             }
         });
 
-        edtUSU_LOGIN.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN.addActionListener(new java.awt.event.ActionListener() {
+        lblValor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblValor.setText("Valor");
+
+        lblDescontoVenda.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblDescontoVenda.setText("Desconto");
+
+        lblData.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblData.setText("Data");
+
+        edtID_Cliente.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtID_Cliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGINActionPerformed(evt);
+                edtID_ClienteActionPerformed(evt);
             }
         });
 
-        lblUSU_SENHA.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_SENHA.setText("Celular");
-
-        chkUSU_ATIVO.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        chkUSU_ATIVO.setText("Ativo");
-        chkUSU_ATIVO.addActionListener(new java.awt.event.ActionListener() {
+        edtProdutoID.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtProdutoID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkUSU_ATIVOActionPerformed(evt);
+                edtProdutoIDActionPerformed(evt);
             }
         });
 
-        lblUSU_CODIGO1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO1.setText("RG");
-
-        lblUSU_NOME1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_NOME1.setText("Data Cadastro");
-
-        lblUSU_LOGIN1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_LOGIN1.setText("CPF/CNPJ");
-
-        edtUSU_NOME1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME1.addActionListener(new java.awt.event.ActionListener() {
+        edtDataa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtDataa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOME1ActionPerformed(evt);
+                edtDataaActionPerformed(evt);
             }
         });
 
-        edtUSU_LOGIN1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN1.addActionListener(new java.awt.event.ActionListener() {
+        edtDescontoVenda.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtDescontoVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN1ActionPerformed(evt);
+                edtDescontoVendaActionPerformed(evt);
             }
         });
 
-        edtUSU_LOGIN2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN2.addActionListener(new java.awt.event.ActionListener() {
+        edtTotalVenda.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtTotalVenda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN2ActionPerformed(evt);
+                edtTotalVendaActionPerformed(evt);
             }
         });
 
-        edtUSU_NOME2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME2.addActionListener(new java.awt.event.ActionListener() {
+        lblID_Produto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblID_Produto.setText("ID do Produto");
+
+        edtID_Usuario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtID_Usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOME2ActionPerformed(evt);
+                edtID_UsuarioActionPerformed(evt);
             }
         });
 
-        lblUSU_LOGIN2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_LOGIN2.setText("Telefone ");
+        lblPreço.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblPreço.setText("Preço");
 
-        edtUSU_NOME3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME3.addActionListener(new java.awt.event.ActionListener() {
+        edtQtd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtQtd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOME3ActionPerformed(evt);
+                edtQtdActionPerformed(evt);
             }
         });
 
-        lblUSU_CODIGO2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO2.setText("Endereço");
+        lblQuantidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblQuantidade.setText("Quantidade");
 
-        edtUSU_LOGIN3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN3.addActionListener(new java.awt.event.ActionListener() {
+        lblTotalProduto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblTotalProduto.setText("Total");
+
+        lblObservção.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblObservção.setText("Observação");
+
+        lblDescontoProduto.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblDescontoProduto.setText("Desconto");
+
+        edtPreço.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtPreço.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN3ActionPerformed(evt);
+                edtPreçoActionPerformed(evt);
             }
         });
 
-        edtUSU_NOME4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME4.addActionListener(new java.awt.event.ActionListener() {
+        edtDescProd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtDescProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOME4ActionPerformed(evt);
+                edtDescProdActionPerformed(evt);
             }
         });
 
-        lblUSU_CODIGO3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO3.setText("Complemento");
-
-        edtUSU_LOGIN4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN4.addActionListener(new java.awt.event.ActionListener() {
+        edtTotalProd.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtTotalProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN4ActionPerformed(evt);
+                edtTotalProdActionPerformed(evt);
             }
         });
 
-        lblUSU_CODIGO4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO4.setText("Número");
-
-        lblUSU_CODIGO5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO5.setText("Cidade");
-
-        lblUSU_CODIGO6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO6.setText("UF");
-
-        lblUSU_CODIGO7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO7.setText("Bairro");
-
-        lblUSU_CODIGO8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO8.setText("Site");
-
-        chkUSU_ATIVO1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        chkUSU_ATIVO1.setText("Fisica");
-
-        lblUSU_CODIGO9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO9.setText("Email");
-
-        lblUSU_CODIGO10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO10.setText("CEP");
-
-        edtUSU_LOGIN5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN5.addActionListener(new java.awt.event.ActionListener() {
+        edtObs.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtObs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN5ActionPerformed(evt);
-            }
-        });
-
-        edtUSU_LOGIN6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN6ActionPerformed(evt);
-            }
-        });
-
-        edtUSU_LOGIN7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN7ActionPerformed(evt);
-            }
-        });
-
-        edtUSU_LOGIN8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN8ActionPerformed(evt);
-            }
-        });
-
-        edtUSU_LOGIN9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN9.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN9ActionPerformed(evt);
-            }
-        });
-
-        edtUSU_LOGIN10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN10ActionPerformed(evt);
-            }
-        });
-
-        edtUSU_LOGIN11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN11.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN11ActionPerformed(evt);
-            }
-        });
-
-        lblUSU_SENHA1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_SENHA1.setText("Limite de Credito");
-
-        edtUSU_NOME5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOME5ActionPerformed(evt);
+                edtObsActionPerformed(evt);
             }
         });
 
@@ -475,79 +390,54 @@ public class VendaView extends javax.swing.JFrame {
             .addGroup(painelDADOSLayout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblUSU_NOME)
                     .addGroup(painelDADOSLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblUSU_LOGIN1)
-                            .addComponent(lblUSU_CODIGO)
-                            .addComponent(lblUSU_CODIGO1)
+                            .addComponent(lblData)
+                            .addComponent(lblID_Usuario)
+                            .addComponent(lblValor)
                             .addGroup(painelDADOSLayout.createSequentialGroup()
                                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblUSU_NOME1)
-                                    .addComponent(lblUSU_LOGIN)
-                                    .addComponent(lblUSU_LOGIN2)
-                                    .addComponent(lblUSU_SENHA)
-                                    .addComponent(lblUSU_SENHA1))
-                                .addGap(4, 4, 4)
-                                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(edtUSU_NOME5, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(edtUSU_NOME, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                        .addComponent(edtUSU_NOME4, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                        .addComponent(edtUSU_NOME1)
-                                        .addComponent(edtUSU_LOGIN2)
-                                        .addComponent(edtUSU_LOGIN)
-                                        .addComponent(edtUSU_NOME3)
-                                        .addComponent(edtUSU_NOME2)
-                                        .addComponent(edtUSU_LOGIN3)))))
+                                    .addComponent(lblDescontoVenda)
+                                    .addComponent(lblTotalVenda))
+                                .addGap(47, 47, 47)
+                                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(edtID_Cliente, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                                    .addComponent(edtDataa)
+                                    .addComponent(edtValor)
+                                    .addComponent(edtTotalVenda)
+                                    .addComponent(edtDescontoVenda)
+                                    .addComponent(edtID_Usuario))))
                         .addGap(58, 58, 58)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelDADOSLayout.createSequentialGroup()
-                                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblUSU_CODIGO6)
-                                    .addComponent(lblUSU_CODIGO10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(lblObservção)
+                                .addGap(0, 329, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
                                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelDADOSLayout.createSequentialGroup()
-                                        .addComponent(lblUSU_CODIGO9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(49, 49, 49)
-                                        .addComponent(edtUSU_LOGIN8, javax.swing.GroupLayout.DEFAULT_SIZE, 172, Short.MAX_VALUE))
-                                    .addGroup(painelDADOSLayout.createSequentialGroup()
-                                        .addComponent(lblUSU_CODIGO3)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(edtUSU_LOGIN5))
                                     .addGroup(painelDADOSLayout.createSequentialGroup()
                                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblUSU_CODIGO4)
-                                            .addComponent(lblUSU_CODIGO2))
-                                        .addGap(46, 46, 46)
+                                            .addComponent(lblQuantidade)
+                                            .addComponent(lblID_Produto))
+                                        .addGap(34, 34, 34)
                                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(edtUSU_LOGIN4)
-                                            .addComponent(edtUSU_LOGIN1)))
+                                            .addComponent(edtQtd, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                                            .addComponent(edtProdutoID)))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelDADOSLayout.createSequentialGroup()
                                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblUSU_CODIGO7)
-                                            .addComponent(lblUSU_CODIGO5)
-                                            .addComponent(lblUSU_CODIGO8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(lblDescontoProduto)
+                                            .addComponent(lblTotalProduto)
+                                            .addComponent(lblPreço))
                                         .addGap(63, 63, 63)
                                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(edtUSU_LOGIN11)
-                                            .addComponent(edtUSU_LOGIN6)
-                                            .addComponent(edtUSU_LOGIN7)
-                                            .addGroup(painelDADOSLayout.createSequentialGroup()
-                                                .addComponent(edtUSU_LOGIN9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(0, 0, Short.MAX_VALUE))
-                                            .addComponent(edtUSU_LOGIN10))))
-                                .addGap(33, 33, 33)
-                                .addComponent(chkUSU_ATIVO, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(24, 24, 24))
-            .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
-                    .addContainerGap(616, Short.MAX_VALUE)
-                    .addComponent(chkUSU_ATIVO1)
-                    .addGap(40, 40, 40)))
+                                            .addComponent(edtPreço)
+                                            .addComponent(edtDescProd)
+                                            .addComponent(edtTotalProd)
+                                            .addComponent(edtObs))))
+                                .addGap(126, 126, 126))))
+                    .addGroup(painelDADOSLayout.createSequentialGroup()
+                        .addComponent(lblID_Cliente)
+                        .addGap(24, 24, 24))))
         );
         painelDADOSLayout.setVerticalGroup(
             painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -556,90 +446,52 @@ public class VendaView extends javax.swing.JFrame {
                     .addGroup(painelDADOSLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(edtUSU_LOGIN1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUSU_CODIGO2)
-                            .addComponent(edtUSU_LOGIN3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(edtProdutoID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblID_Produto)
+                            .addComponent(edtID_Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(lblUSU_CODIGO)))
+                        .addComponent(lblID_Usuario)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelDADOSLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblUSU_NOME)
-                                .addComponent(edtUSU_NOME1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(edtUSU_LOGIN4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUSU_CODIGO4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblUSU_LOGIN1)
-                            .addComponent(edtUSU_LOGIN2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUSU_CODIGO3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(edtUSU_LOGIN5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(chkUSU_ATIVO, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblID_Cliente)
+                        .addComponent(edtID_Cliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(edtQtd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblQuantidade, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUSU_CODIGO1)
-                    .addComponent(edtUSU_LOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblUSU_CODIGO7, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(edtUSU_LOGIN6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblData)
+                    .addComponent(edtDataa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPreço, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(edtPreço, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblValor)
+                    .addComponent(edtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblDescontoProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(edtDescProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblUSU_NOME1)
+                    .addComponent(lblDescontoVenda)
                     .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(edtUSU_NOME2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblUSU_CODIGO5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(edtUSU_LOGIN7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(edtDescontoVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblTotalProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(edtTotalProd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(painelDADOSLayout.createSequentialGroup()
-                        .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblUSU_LOGIN)
-                            .addComponent(edtUSU_NOME3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUSU_CODIGO6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(2, 2, 2)
-                        .addComponent(lblUSU_CODIGO10, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelDADOSLayout.createSequentialGroup()
-                        .addComponent(edtUSU_LOGIN9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                        .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(painelDADOSLayout.createSequentialGroup()
-                                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(lblUSU_LOGIN2)
-                                    .addComponent(edtUSU_NOME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(lblUSU_CODIGO8, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblUSU_SENHA))
-                                    .addComponent(edtUSU_NOME4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(painelDADOSLayout.createSequentialGroup()
-                                .addComponent(edtUSU_LOGIN10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(edtUSU_LOGIN11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(edtObs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblUSU_CODIGO9, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(edtUSU_LOGIN8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblUSU_SENHA1)
-                        .addComponent(edtUSU_NOME5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(10, Short.MAX_VALUE))
-            .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(painelDADOSLayout.createSequentialGroup()
-                    .addGap(19, 19, 19)
-                    .addComponent(chkUSU_ATIVO1)
-                    .addContainerGap(269, Short.MAX_VALUE)))
+                        .addComponent(lblTotalVenda)
+                        .addComponent(edtTotalVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblObservção, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Dados do Cliente", painelDADOS);
+        jTabbedPane1.addTab("Dados da Venda", painelDADOS);
 
         getContentPane().add(jTabbedPane1);
-        jTabbedPane1.setBounds(10, 100, 710, 340);
+        jTabbedPane1.setBounds(10, 110, 710, 260);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -667,15 +519,15 @@ public class VendaView extends javax.swing.JFrame {
             }
         });
 
-        lblCONS_NOME.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lblCONS_NOME.setText("Nome");
+        lblCONS_Valor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblCONS_Valor.setText("Valor");
 
-        edtCONS_NOME.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        edtCONS_Valor.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        lblCONS_LOGIN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lblCONS_LOGIN.setText("CPF/CNPJ");
+        lblCONS_Total.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblCONS_Total.setText("Total");
 
-        edtCONS_LOGIN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        edtCONS_Total.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -685,9 +537,9 @@ public class VendaView extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
-                        .addComponent(lblCONS_NOME)
+                        .addComponent(lblCONS_Valor)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(edtCONS_NOME)
+                        .addComponent(edtCONS_Valor)
                         .addGap(77, 77, 77))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGap(37, 37, 37)
@@ -699,9 +551,9 @@ public class VendaView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(edtCONS_ID2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(lblCONS_LOGIN)
+                        .addComponent(lblCONS_Total)
                         .addGap(18, 18, 18)
-                        .addComponent(edtCONS_LOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(edtCONS_Total, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(71, 71, 71)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -718,12 +570,12 @@ public class VendaView extends javax.swing.JFrame {
                     .addComponent(lblCodigo2)
                     .addComponent(edtCONS_ID2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnConsulta)
-                    .addComponent(edtCONS_LOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCONS_LOGIN))
+                    .addComponent(edtCONS_Total, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCONS_Total))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(edtCONS_NOME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCONS_NOME)
+                    .addComponent(edtCONS_Valor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCONS_Valor)
                     .addComponent(btnLimpar))
                 .addContainerGap())
         );
@@ -754,7 +606,7 @@ public class VendaView extends javax.swing.JFrame {
         jTabbedPane2.addTab("Consulta", painelCONSULTA);
 
         getContentPane().add(jTabbedPane2);
-        jTabbedPane2.setBounds(10, 450, 720, 200);
+        jTabbedPane2.setBounds(10, 380, 720, 270);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -762,7 +614,7 @@ public class VendaView extends javax.swing.JFrame {
     private void limparAgenda() {
         edtUSU_CODIGO.setText("0");
         edtUSU_NOME.setText("");
-        edtUSU_LOGIN.setText("");
+        edtValor.setText("");
         edtUSU_SENHA.setText("");
         chkUSU_ATIVO.setSelected(false);
     }
@@ -770,7 +622,7 @@ public class VendaView extends javax.swing.JFrame {
     private void mostrar(UsuarioModel usuario) {
         edtUSU_CODIGO.setText(String.valueOf(usuario.getUsu_codigo()));
         edtUSU_NOME.setText(usuario.getUsu_nome());
-        edtUSU_LOGIN.setText(usuario.getUsu_login());
+        edtValor.setText(usuario.getUsu_login());
         edtUSU_SENHA.setText(usuario.getUsu_senha());
         chkUSU_ATIVO.setSelected((usuario.getUsu_ativo() == 1));
     }
@@ -786,17 +638,17 @@ public class VendaView extends javax.swing.JFrame {
             }
             condicao += "(USU_CODIGO <= " + edtCONS_ID2.getText() + ")";
         }
-        if (!edtCONS_NOME.getText().trim().equals("")) {
+        if (!edtCONS_Valor.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_NOME LIKE ('%" + edtCONS_NOME.getText() + "%'))";
+            condicao += "(USU_NOME LIKE ('%" + edtCONS_Valor.getText() + "%'))";
         }
-        if (!edtCONS_LOGIN.getText().trim().equals("")) {
+        if (!edtCONS_Total.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_LOGIN LIKE ('%" + edtCONS_LOGIN.getText() + "%'))";
+            condicao += "(USU_LOGIN LIKE ('%" + edtCONS_Total.getText() + "%'))";
         }
         return condicao;
     }
@@ -841,7 +693,7 @@ public class VendaView extends javax.swing.JFrame {
                 UsuarioModel objusuario = new UsuarioModel();
                 objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
                 objusuario.setUsu_nome(edtUSU_NOME.getText());
-                objusuario.setUsu_login(edtUSU_LOGIN.getText());
+                objusuario.setUsu_login(edtValor.getText());
                 objusuario.setUsu_senha(edtUSU_SENHA.getText());
                 objusuario.setUsu_ativo((chkUSU_ATIVO.isSelected() ? 1 : 0));
                 UsuarioController usuariocontroller = new UsuarioController();
@@ -895,8 +747,8 @@ public class VendaView extends javax.swing.JFrame {
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
         edtCONS_ID1.setText("");
         edtCONS_ID2.setText("");
-        edtCONS_NOME.setText("");
-        edtCONS_LOGIN.setText("");
+        edtCONS_Valor.setText("");
+        edtCONS_Total.setText("");
     }//GEN-LAST:event_btnLimparActionPerformed
 
     private void btnEXCLUIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEXCLUIRActionPerformed
@@ -907,7 +759,7 @@ public class VendaView extends javax.swing.JFrame {
                 UsuarioModel objusuario = new UsuarioModel();
                 objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
                 objusuario.setUsu_nome(edtUSU_NOME.getText());
-                objusuario.setUsu_login(edtUSU_LOGIN.getText());
+                objusuario.setUsu_login(edtValor.getText());
                 objusuario.setUsu_senha(edtUSU_SENHA.getText());
                 objusuario.setUsu_ativo((chkUSU_ATIVO.isSelected() ? 1 : 0));
 
@@ -922,81 +774,53 @@ public class VendaView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnEXCLUIRActionPerformed
 
-    private void edtUSU_NOMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOMEActionPerformed
+    private void edtID_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtID_ClienteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOMEActionPerformed
+    }//GEN-LAST:event_edtID_ClienteActionPerformed
 
-    private void edtUSU_NOME1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME1ActionPerformed
+    private void edtValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtValorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOME1ActionPerformed
+    }//GEN-LAST:event_edtValorActionPerformed
 
-    private void edtUSU_LOGINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGINActionPerformed
+    private void edtProdutoIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtProdutoIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGINActionPerformed
+    }//GEN-LAST:event_edtProdutoIDActionPerformed
 
-    private void edtUSU_LOGIN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN1ActionPerformed
+    private void edtDataaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtDataaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN1ActionPerformed
+    }//GEN-LAST:event_edtDataaActionPerformed
 
-    private void edtUSU_LOGIN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN2ActionPerformed
+    private void edtDescontoVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtDescontoVendaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN2ActionPerformed
+    }//GEN-LAST:event_edtDescontoVendaActionPerformed
 
-    private void edtUSU_NOME2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME2ActionPerformed
+    private void edtTotalVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtTotalVendaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOME2ActionPerformed
+    }//GEN-LAST:event_edtTotalVendaActionPerformed
 
-    private void edtUSU_NOME3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME3ActionPerformed
+    private void edtID_UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtID_UsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOME3ActionPerformed
+    }//GEN-LAST:event_edtID_UsuarioActionPerformed
 
-    private void edtUSU_LOGIN3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN3ActionPerformed
+    private void edtQtdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtQtdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN3ActionPerformed
+    }//GEN-LAST:event_edtQtdActionPerformed
 
-    private void edtUSU_NOME4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME4ActionPerformed
+    private void edtPreçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtPreçoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOME4ActionPerformed
+    }//GEN-LAST:event_edtPreçoActionPerformed
 
-    private void edtUSU_LOGIN4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN4ActionPerformed
+    private void edtDescProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtDescProdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN4ActionPerformed
+    }//GEN-LAST:event_edtDescProdActionPerformed
 
-    private void chkUSU_ATIVOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkUSU_ATIVOActionPerformed
+    private void edtTotalProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtTotalProdActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_chkUSU_ATIVOActionPerformed
+    }//GEN-LAST:event_edtTotalProdActionPerformed
 
-    private void edtUSU_LOGIN5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN5ActionPerformed
+    private void edtObsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtObsActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN5ActionPerformed
-
-    private void edtUSU_LOGIN6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN6ActionPerformed
-
-    private void edtUSU_LOGIN7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN7ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN7ActionPerformed
-
-    private void edtUSU_LOGIN8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN8ActionPerformed
-
-    private void edtUSU_LOGIN9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN9ActionPerformed
-
-    private void edtUSU_LOGIN10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN10ActionPerformed
-
-    private void edtUSU_LOGIN11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN11ActionPerformed
-
-    private void edtUSU_NOME5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOME5ActionPerformed
+    }//GEN-LAST:event_edtObsActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -1012,30 +836,22 @@ public class VendaView extends javax.swing.JFrame {
     private javax.swing.JButton btnPROXIMO;
     private javax.swing.JButton btnSAIR;
     private javax.swing.JButton btnULTIMO;
-    private javax.swing.JCheckBox chkUSU_ATIVO;
-    private javax.swing.JCheckBox chkUSU_ATIVO1;
     private javax.swing.JTextField edtCONS_ID1;
     private javax.swing.JTextField edtCONS_ID2;
-    private javax.swing.JTextField edtCONS_LOGIN;
-    private javax.swing.JTextField edtCONS_NOME;
-    private javax.swing.JTextField edtUSU_LOGIN;
-    private javax.swing.JTextField edtUSU_LOGIN1;
-    private javax.swing.JTextField edtUSU_LOGIN10;
-    private javax.swing.JTextField edtUSU_LOGIN11;
-    private javax.swing.JTextField edtUSU_LOGIN2;
-    private javax.swing.JTextField edtUSU_LOGIN3;
-    private javax.swing.JTextField edtUSU_LOGIN4;
-    private javax.swing.JTextField edtUSU_LOGIN5;
-    private javax.swing.JTextField edtUSU_LOGIN6;
-    private javax.swing.JTextField edtUSU_LOGIN7;
-    private javax.swing.JTextField edtUSU_LOGIN8;
-    private javax.swing.JTextField edtUSU_LOGIN9;
-    private javax.swing.JTextField edtUSU_NOME;
-    private javax.swing.JTextField edtUSU_NOME1;
-    private javax.swing.JTextField edtUSU_NOME2;
-    private javax.swing.JTextField edtUSU_NOME3;
-    private javax.swing.JTextField edtUSU_NOME4;
-    private javax.swing.JTextField edtUSU_NOME5;
+    private javax.swing.JTextField edtCONS_Total;
+    private javax.swing.JTextField edtCONS_Valor;
+    private javax.swing.JTextField edtDataa;
+    private javax.swing.JTextField edtDescProd;
+    private javax.swing.JTextField edtDescontoVenda;
+    private javax.swing.JTextField edtID_Cliente;
+    private javax.swing.JTextField edtID_Usuario;
+    private javax.swing.JTextField edtObs;
+    private javax.swing.JTextField edtPreço;
+    private javax.swing.JTextField edtProdutoID;
+    private javax.swing.JTextField edtQtd;
+    private javax.swing.JTextField edtTotalProd;
+    private javax.swing.JTextField edtTotalVenda;
+    private javax.swing.JTextField edtValor;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -1047,28 +863,22 @@ public class VendaView extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JLabel lblCONS_ID;
-    private javax.swing.JLabel lblCONS_LOGIN;
-    private javax.swing.JLabel lblCONS_NOME;
+    private javax.swing.JLabel lblCONS_Total;
+    private javax.swing.JLabel lblCONS_Valor;
     private javax.swing.JLabel lblCodigo2;
+    private javax.swing.JLabel lblData;
+    private javax.swing.JLabel lblDescontoProduto;
+    private javax.swing.JLabel lblDescontoVenda;
+    private javax.swing.JLabel lblID_Cliente;
+    private javax.swing.JLabel lblID_Produto;
+    private javax.swing.JLabel lblID_Usuario;
+    private javax.swing.JLabel lblObservção;
+    private javax.swing.JLabel lblPreço;
+    private javax.swing.JLabel lblQuantidade;
     private javax.swing.JLabel lblTitulo;
-    private javax.swing.JLabel lblUSU_CODIGO;
-    private javax.swing.JLabel lblUSU_CODIGO1;
-    private javax.swing.JLabel lblUSU_CODIGO10;
-    private javax.swing.JLabel lblUSU_CODIGO2;
-    private javax.swing.JLabel lblUSU_CODIGO3;
-    private javax.swing.JLabel lblUSU_CODIGO4;
-    private javax.swing.JLabel lblUSU_CODIGO5;
-    private javax.swing.JLabel lblUSU_CODIGO6;
-    private javax.swing.JLabel lblUSU_CODIGO7;
-    private javax.swing.JLabel lblUSU_CODIGO8;
-    private javax.swing.JLabel lblUSU_CODIGO9;
-    private javax.swing.JLabel lblUSU_LOGIN;
-    private javax.swing.JLabel lblUSU_LOGIN1;
-    private javax.swing.JLabel lblUSU_LOGIN2;
-    private javax.swing.JLabel lblUSU_NOME;
-    private javax.swing.JLabel lblUSU_NOME1;
-    private javax.swing.JLabel lblUSU_SENHA;
-    private javax.swing.JLabel lblUSU_SENHA1;
+    private javax.swing.JLabel lblTotalProduto;
+    private javax.swing.JLabel lblTotalVenda;
+    private javax.swing.JLabel lblValor;
     private javax.swing.JPanel painelCONSULTA;
     private javax.swing.JPanel painelDADOS;
     private javax.swing.JTable tblConsulta;

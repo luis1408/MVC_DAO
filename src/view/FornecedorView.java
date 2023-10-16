@@ -78,44 +78,44 @@ public class FornecedorView extends javax.swing.JFrame {
         lblTitulo = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         painelDADOS = new javax.swing.JPanel();
-        lblUSU_CODIGO = new javax.swing.JLabel();
-        lblUSU_NOME = new javax.swing.JLabel();
-        lblUSU_LOGIN = new javax.swing.JLabel();
-        edtUSU_NOME = new javax.swing.JTextField();
-        edtUSU_LOGIN = new javax.swing.JTextField();
-        lblUSU_SENHA = new javax.swing.JLabel();
-        chkUSU_ATIVO = new javax.swing.JCheckBox();
-        lblUSU_CODIGO1 = new javax.swing.JLabel();
-        lblUSU_NOME1 = new javax.swing.JLabel();
-        lblUSU_LOGIN1 = new javax.swing.JLabel();
-        edtUSU_NOME1 = new javax.swing.JTextField();
-        edtUSU_LOGIN1 = new javax.swing.JTextField();
-        edtUSU_LOGIN2 = new javax.swing.JTextField();
-        edtUSU_NOME2 = new javax.swing.JTextField();
-        lblUSU_LOGIN2 = new javax.swing.JLabel();
-        edtUSU_NOME3 = new javax.swing.JTextField();
-        lblUSU_CODIGO2 = new javax.swing.JLabel();
-        edtUSU_LOGIN3 = new javax.swing.JTextField();
-        edtUSU_NOME4 = new javax.swing.JTextField();
-        lblUSU_CODIGO3 = new javax.swing.JLabel();
-        edtUSU_LOGIN4 = new javax.swing.JTextField();
-        lblUSU_CODIGO4 = new javax.swing.JLabel();
-        lblUSU_CODIGO5 = new javax.swing.JLabel();
-        lblUSU_CODIGO6 = new javax.swing.JLabel();
-        lblUSU_CODIGO7 = new javax.swing.JLabel();
-        lblUSU_CODIGO8 = new javax.swing.JLabel();
-        chkUSU_ATIVO1 = new javax.swing.JCheckBox();
-        lblUSU_CODIGO9 = new javax.swing.JLabel();
-        lblUSU_CODIGO10 = new javax.swing.JLabel();
-        edtUSU_LOGIN5 = new javax.swing.JTextField();
-        edtUSU_LOGIN6 = new javax.swing.JTextField();
-        edtUSU_LOGIN7 = new javax.swing.JTextField();
-        edtUSU_LOGIN8 = new javax.swing.JTextField();
-        edtUSU_LOGIN9 = new javax.swing.JTextField();
-        edtUSU_LOGIN10 = new javax.swing.JTextField();
-        edtUSU_LOGIN11 = new javax.swing.JTextField();
-        lblUSU_SENHA1 = new javax.swing.JLabel();
-        edtUSU_NOME5 = new javax.swing.JTextField();
+        lblNome = new javax.swing.JLabel();
+        lblFantasia = new javax.swing.JLabel();
+        lblTel1 = new javax.swing.JLabel();
+        edtTel2 = new javax.swing.JTextField();
+        edtRg = new javax.swing.JTextField();
+        lblCel = new javax.swing.JLabel();
+        chkAtivo = new javax.swing.JCheckBox();
+        lblRg = new javax.swing.JLabel();
+        lblData = new javax.swing.JLabel();
+        lblCpfCnpj = new javax.swing.JLabel();
+        edtFantasia = new javax.swing.JTextField();
+        edtEndereço = new javax.swing.JTextField();
+        edtCpfCnpj = new javax.swing.JTextField();
+        edtData = new javax.swing.JTextField();
+        lblTel2 = new javax.swing.JLabel();
+        edtTel1 = new javax.swing.JTextField();
+        lblEndereço = new javax.swing.JLabel();
+        edtNome = new javax.swing.JTextField();
+        edtCel = new javax.swing.JTextField();
+        lblComple = new javax.swing.JLabel();
+        edtNum = new javax.swing.JTextField();
+        lblNum = new javax.swing.JLabel();
+        lblCidade = new javax.swing.JLabel();
+        lbluf = new javax.swing.JLabel();
+        lblbairro = new javax.swing.JLabel();
+        lblSite = new javax.swing.JLabel();
+        chkFisica = new javax.swing.JCheckBox();
+        lblEmail = new javax.swing.JLabel();
+        lblCep = new javax.swing.JLabel();
+        edtCompl = new javax.swing.JTextField();
+        edtBairro = new javax.swing.JTextField();
+        edtCidade = new javax.swing.JTextField();
+        edtEmail = new javax.swing.JTextField();
+        edtUf = new javax.swing.JTextField();
+        edtCep = new javax.swing.JTextField();
+        edtSite = new javax.swing.JTextField();
+        lblContato = new javax.swing.JLabel();
+        edtContato = new javax.swing.JTextField();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         painelCONSULTA = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -127,8 +127,8 @@ public class FornecedorView extends javax.swing.JFrame {
         btnLimpar = new javax.swing.JButton();
         lblCONS_NOME = new javax.swing.JLabel();
         edtCONS_NOME = new javax.swing.JTextField();
-        lblCONS_LOGIN = new javax.swing.JLabel();
-        edtCONS_LOGIN = new javax.swing.JTextField();
+        lblConsCpfCnpj = new javax.swing.JLabel();
+        edtConsCpfCnpj = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         tblConsulta = new javax.swing.JTable();
 
@@ -277,194 +277,194 @@ public class FornecedorView extends javax.swing.JFrame {
         getContentPane().add(lblTitulo);
         lblTitulo.setBounds(200, 80, 330, 20);
 
-        lblUSU_CODIGO.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO.setText("Nome");
+        lblNome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblNome.setText("Nome");
 
-        lblUSU_NOME.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_NOME.setText("N Fantasia");
+        lblFantasia.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblFantasia.setText("N Fantasia");
 
-        lblUSU_LOGIN.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_LOGIN.setText("Telefone ");
+        lblTel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblTel1.setText("Telefone ");
 
-        edtUSU_NOME.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME.addActionListener(new java.awt.event.ActionListener() {
+        edtTel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtTel2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOMEActionPerformed(evt);
+                edtTel2ActionPerformed(evt);
             }
         });
 
-        edtUSU_LOGIN.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN.addActionListener(new java.awt.event.ActionListener() {
+        edtRg.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtRg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGINActionPerformed(evt);
+                edtRgActionPerformed(evt);
             }
         });
 
-        lblUSU_SENHA.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_SENHA.setText("Celular");
+        lblCel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblCel.setText("Celular");
 
-        chkUSU_ATIVO.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        chkUSU_ATIVO.setText("Ativo");
-        chkUSU_ATIVO.addActionListener(new java.awt.event.ActionListener() {
+        chkAtivo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        chkAtivo.setText("Ativo");
+        chkAtivo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                chkUSU_ATIVOActionPerformed(evt);
+                chkAtivoActionPerformed(evt);
             }
         });
 
-        lblUSU_CODIGO1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO1.setText("RG");
+        lblRg.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblRg.setText("RG");
 
-        lblUSU_NOME1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_NOME1.setText("Data Cadastro");
+        lblData.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblData.setText("Data Cadastro");
 
-        lblUSU_LOGIN1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_LOGIN1.setText("CPF/CNPJ");
+        lblCpfCnpj.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblCpfCnpj.setText("CPF/CNPJ");
 
-        edtUSU_NOME1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME1.addActionListener(new java.awt.event.ActionListener() {
+        edtFantasia.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtFantasia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOME1ActionPerformed(evt);
+                edtFantasiaActionPerformed(evt);
             }
         });
 
-        edtUSU_LOGIN1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN1.addActionListener(new java.awt.event.ActionListener() {
+        edtEndereço.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtEndereço.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN1ActionPerformed(evt);
+                edtEndereçoActionPerformed(evt);
             }
         });
 
-        edtUSU_LOGIN2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN2.addActionListener(new java.awt.event.ActionListener() {
+        edtCpfCnpj.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtCpfCnpj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN2ActionPerformed(evt);
+                edtCpfCnpjActionPerformed(evt);
             }
         });
 
-        edtUSU_NOME2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME2.addActionListener(new java.awt.event.ActionListener() {
+        edtData.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtData.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOME2ActionPerformed(evt);
+                edtDataActionPerformed(evt);
             }
         });
 
-        lblUSU_LOGIN2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_LOGIN2.setText("Telefone ");
+        lblTel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblTel2.setText("Telefone ");
 
-        edtUSU_NOME3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME3.addActionListener(new java.awt.event.ActionListener() {
+        edtTel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtTel1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOME3ActionPerformed(evt);
+                edtTel1ActionPerformed(evt);
             }
         });
 
-        lblUSU_CODIGO2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO2.setText("Endereço");
+        lblEndereço.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblEndereço.setText("Endereço");
 
-        edtUSU_LOGIN3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN3.addActionListener(new java.awt.event.ActionListener() {
+        edtNome.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN3ActionPerformed(evt);
+                edtNomeActionPerformed(evt);
             }
         });
 
-        edtUSU_NOME4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME4.addActionListener(new java.awt.event.ActionListener() {
+        edtCel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtCel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOME4ActionPerformed(evt);
+                edtCelActionPerformed(evt);
             }
         });
 
-        lblUSU_CODIGO3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO3.setText("Complemento");
+        lblComple.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblComple.setText("Complemento");
 
-        edtUSU_LOGIN4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN4.addActionListener(new java.awt.event.ActionListener() {
+        edtNum.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtNum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN4ActionPerformed(evt);
+                edtNumActionPerformed(evt);
             }
         });
 
-        lblUSU_CODIGO4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO4.setText("Número");
+        lblNum.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblNum.setText("Número");
 
-        lblUSU_CODIGO5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO5.setText("Cidade");
+        lblCidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblCidade.setText("Cidade");
 
-        lblUSU_CODIGO6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO6.setText("UF");
+        lbluf.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbluf.setText("UF");
 
-        lblUSU_CODIGO7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO7.setText("Bairro");
+        lblbairro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblbairro.setText("Bairro");
 
-        lblUSU_CODIGO8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO8.setText("Site");
+        lblSite.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblSite.setText("Site");
 
-        chkUSU_ATIVO1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        chkUSU_ATIVO1.setText("Fisica");
+        chkFisica.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        chkFisica.setText("Fisica");
 
-        lblUSU_CODIGO9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO9.setText("Email");
+        lblEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblEmail.setText("Email");
 
-        lblUSU_CODIGO10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_CODIGO10.setText("CEP");
+        lblCep.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblCep.setText("CEP");
 
-        edtUSU_LOGIN5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN5.addActionListener(new java.awt.event.ActionListener() {
+        edtCompl.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtCompl.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN5ActionPerformed(evt);
+                edtComplActionPerformed(evt);
             }
         });
 
-        edtUSU_LOGIN6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN6.addActionListener(new java.awt.event.ActionListener() {
+        edtBairro.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtBairro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN6ActionPerformed(evt);
+                edtBairroActionPerformed(evt);
             }
         });
 
-        edtUSU_LOGIN7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN7.addActionListener(new java.awt.event.ActionListener() {
+        edtCidade.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtCidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN7ActionPerformed(evt);
+                edtCidadeActionPerformed(evt);
             }
         });
 
-        edtUSU_LOGIN8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN8.addActionListener(new java.awt.event.ActionListener() {
+        edtEmail.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN8ActionPerformed(evt);
+                edtEmailActionPerformed(evt);
             }
         });
 
-        edtUSU_LOGIN9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN9.addActionListener(new java.awt.event.ActionListener() {
+        edtUf.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtUf.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN9ActionPerformed(evt);
+                edtUfActionPerformed(evt);
             }
         });
 
-        edtUSU_LOGIN10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN10.addActionListener(new java.awt.event.ActionListener() {
+        edtCep.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtCep.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN10ActionPerformed(evt);
+                edtCepActionPerformed(evt);
             }
         });
 
-        edtUSU_LOGIN11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_LOGIN11.addActionListener(new java.awt.event.ActionListener() {
+        edtSite.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtSite.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_LOGIN11ActionPerformed(evt);
+                edtSiteActionPerformed(evt);
             }
         });
 
-        lblUSU_SENHA1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblUSU_SENHA1.setText("Contato");
+        lblContato.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lblContato.setText("Contato");
 
-        edtUSU_NOME5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        edtUSU_NOME5.addActionListener(new java.awt.event.ActionListener() {
+        edtContato.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        edtContato.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                edtUSU_NOME5ActionPerformed(evt);
+                edtContatoActionPerformed(evt);
             }
         });
 
@@ -475,77 +475,77 @@ public class FornecedorView extends javax.swing.JFrame {
             .addGroup(painelDADOSLayout.createSequentialGroup()
                 .addGap(13, 13, 13)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblUSU_NOME)
+                    .addComponent(lblFantasia)
                     .addGroup(painelDADOSLayout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblUSU_LOGIN1)
-                            .addComponent(lblUSU_CODIGO)
-                            .addComponent(lblUSU_CODIGO1)
+                            .addComponent(lblCpfCnpj)
+                            .addComponent(lblNome)
+                            .addComponent(lblRg)
                             .addGroup(painelDADOSLayout.createSequentialGroup()
                                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblUSU_NOME1)
-                                    .addComponent(lblUSU_LOGIN)
-                                    .addComponent(lblUSU_LOGIN2)
-                                    .addComponent(lblUSU_SENHA)
-                                    .addComponent(lblUSU_SENHA1))
+                                    .addComponent(lblData)
+                                    .addComponent(lblTel1)
+                                    .addComponent(lblTel2)
+                                    .addComponent(lblCel)
+                                    .addComponent(lblContato))
                                 .addGap(4, 4, 4)
                                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(edtUSU_NOME, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addComponent(edtUSU_NOME4, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-                                    .addComponent(edtUSU_NOME1)
-                                    .addComponent(edtUSU_LOGIN2)
-                                    .addComponent(edtUSU_LOGIN)
-                                    .addComponent(edtUSU_NOME3)
-                                    .addComponent(edtUSU_NOME2)
-                                    .addComponent(edtUSU_LOGIN3)
-                                    .addComponent(edtUSU_NOME5))))
+                                    .addComponent(edtTel2, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                                    .addComponent(edtCel, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+                                    .addComponent(edtFantasia)
+                                    .addComponent(edtCpfCnpj)
+                                    .addComponent(edtRg)
+                                    .addComponent(edtTel1)
+                                    .addComponent(edtData)
+                                    .addComponent(edtNome)
+                                    .addComponent(edtContato))))
                         .addGap(65, 65, 65)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelDADOSLayout.createSequentialGroup()
                                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblUSU_CODIGO6)
-                                    .addComponent(lblUSU_CODIGO10, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lbluf)
+                                    .addComponent(lblCep, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
                                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelDADOSLayout.createSequentialGroup()
-                                        .addComponent(lblUSU_CODIGO9, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(49, 49, 49)
-                                        .addComponent(edtUSU_LOGIN8, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
+                                        .addComponent(edtEmail, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
                                     .addGroup(painelDADOSLayout.createSequentialGroup()
-                                        .addComponent(lblUSU_CODIGO3)
+                                        .addComponent(lblComple)
                                         .addGap(18, 18, 18)
-                                        .addComponent(edtUSU_LOGIN5))
+                                        .addComponent(edtCompl))
                                     .addGroup(painelDADOSLayout.createSequentialGroup()
                                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblUSU_CODIGO4)
-                                            .addComponent(lblUSU_CODIGO2))
+                                            .addComponent(lblNum)
+                                            .addComponent(lblEndereço))
                                         .addGap(46, 46, 46)
                                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(edtUSU_LOGIN4)
-                                            .addComponent(edtUSU_LOGIN1)))
+                                            .addComponent(edtNum)
+                                            .addComponent(edtEndereço)))
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, painelDADOSLayout.createSequentialGroup()
                                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(lblUSU_CODIGO7)
-                                            .addComponent(lblUSU_CODIGO5)
-                                            .addComponent(lblUSU_CODIGO8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(lblbairro)
+                                            .addComponent(lblCidade)
+                                            .addComponent(lblSite, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(63, 63, 63)
                                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(edtUSU_LOGIN11)
-                                            .addComponent(edtUSU_LOGIN6)
-                                            .addComponent(edtUSU_LOGIN7)
+                                            .addComponent(edtSite)
+                                            .addComponent(edtBairro)
+                                            .addComponent(edtCidade)
                                             .addGroup(painelDADOSLayout.createSequentialGroup()
-                                                .addComponent(edtUSU_LOGIN9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(edtUf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(0, 0, Short.MAX_VALUE))
-                                            .addComponent(edtUSU_LOGIN10))))
+                                            .addComponent(edtCep))))
                                 .addGap(33, 33, 33)
-                                .addComponent(chkUSU_ATIVO, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(chkAtivo, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(24, 24, 24))
             .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
                     .addContainerGap(616, Short.MAX_VALUE)
-                    .addComponent(chkUSU_ATIVO1)
+                    .addComponent(chkFisica)
                     .addGap(40, 40, 40)))
         );
         painelDADOSLayout.setVerticalGroup(
@@ -555,88 +555,88 @@ public class FornecedorView extends javax.swing.JFrame {
                     .addGroup(painelDADOSLayout.createSequentialGroup()
                         .addGap(8, 8, 8)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(edtUSU_LOGIN1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(edtUSU_LOGIN3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(edtEndereço, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(edtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblUSU_CODIGO, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblUSU_CODIGO2, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addComponent(lblNome, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(lblEndereço, javax.swing.GroupLayout.Alignment.TRAILING))))
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelDADOSLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblUSU_NOME)
-                                .addComponent(edtUSU_NOME1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(edtUSU_LOGIN4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUSU_CODIGO4, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lblFantasia)
+                                .addComponent(edtFantasia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(edtNum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblNum, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblUSU_LOGIN1)
-                            .addComponent(edtUSU_LOGIN2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUSU_CODIGO3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(edtUSU_LOGIN5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(lblCpfCnpj)
+                            .addComponent(edtCpfCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblComple, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(edtCompl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelDADOSLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(chkUSU_ATIVO, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(chkAtivo, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUSU_CODIGO1)
-                    .addComponent(edtUSU_LOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblUSU_CODIGO7, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(edtUSU_LOGIN6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblRg)
+                    .addComponent(edtRg, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblbairro, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(edtBairro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblUSU_NOME1)
+                    .addComponent(lblData)
                     .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(edtUSU_NOME2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lblUSU_CODIGO5, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(edtUSU_LOGIN7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(edtData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(edtCidade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelDADOSLayout.createSequentialGroup()
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(lblUSU_LOGIN)
-                            .addComponent(edtUSU_NOME3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblUSU_CODIGO6, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblTel1)
+                            .addComponent(edtTel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbluf, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(2, 2, 2)
-                        .addComponent(lblUSU_CODIGO10, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblCep, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelDADOSLayout.createSequentialGroup()
-                        .addComponent(edtUSU_LOGIN9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(edtUf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(painelDADOSLayout.createSequentialGroup()
                                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(lblUSU_LOGIN2)
-                                    .addComponent(edtUSU_NOME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblTel2)
+                                    .addComponent(edtTel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(lblUSU_CODIGO8, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(lblUSU_SENHA))
-                                    .addComponent(edtUSU_NOME4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(lblSite, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(lblCel))
+                                    .addComponent(edtCel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(painelDADOSLayout.createSequentialGroup()
-                                .addComponent(edtUSU_LOGIN10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(edtCep, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(edtUSU_LOGIN11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(edtSite, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblUSU_CODIGO9, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(edtUSU_LOGIN8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(edtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lblUSU_SENHA1)
-                        .addComponent(edtUSU_NOME5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblContato)
+                        .addComponent(edtContato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(10, Short.MAX_VALUE))
             .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(painelDADOSLayout.createSequentialGroup()
                     .addGap(19, 19, 19)
-                    .addComponent(chkUSU_ATIVO1)
+                    .addComponent(chkFisica)
                     .addContainerGap(269, Short.MAX_VALUE)))
         );
 
-        jTabbedPane1.addTab("Dados do Cliente", painelDADOS);
+        jTabbedPane1.addTab("Dados do Fornecedor", painelDADOS);
 
         getContentPane().add(jTabbedPane1);
         jTabbedPane1.setBounds(10, 100, 710, 340);
@@ -672,10 +672,10 @@ public class FornecedorView extends javax.swing.JFrame {
 
         edtCONS_NOME.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        lblCONS_LOGIN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lblCONS_LOGIN.setText("CPF/CNPJ");
+        lblConsCpfCnpj.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lblConsCpfCnpj.setText("CPF/CNPJ");
 
-        edtCONS_LOGIN.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        edtConsCpfCnpj.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -699,9 +699,9 @@ public class FornecedorView extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(edtCONS_ID2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(lblCONS_LOGIN)
+                        .addComponent(lblConsCpfCnpj)
                         .addGap(18, 18, 18)
-                        .addComponent(edtCONS_LOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(edtConsCpfCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(71, 71, 71)))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -718,8 +718,8 @@ public class FornecedorView extends javax.swing.JFrame {
                     .addComponent(lblCodigo2)
                     .addComponent(edtCONS_ID2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnConsulta)
-                    .addComponent(edtCONS_LOGIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCONS_LOGIN))
+                    .addComponent(edtConsCpfCnpj, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblConsCpfCnpj))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(edtCONS_NOME, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -761,18 +761,18 @@ public class FornecedorView extends javax.swing.JFrame {
 
     private void limparAgenda() {
         edtUSU_CODIGO.setText("0");
-        edtUSU_NOME.setText("");
-        edtUSU_LOGIN.setText("");
+        edtTel2.setText("");
+        edtRg.setText("");
         edtUSU_SENHA.setText("");
-        chkUSU_ATIVO.setSelected(false);
+        chkAtivo.setSelected(false);
     }
 
     private void mostrar(UsuarioModel usuario) {
         edtUSU_CODIGO.setText(String.valueOf(usuario.getUsu_codigo()));
-        edtUSU_NOME.setText(usuario.getUsu_nome());
-        edtUSU_LOGIN.setText(usuario.getUsu_login());
+        edtTel2.setText(usuario.getUsu_nome());
+        edtRg.setText(usuario.getUsu_login());
         edtUSU_SENHA.setText(usuario.getUsu_senha());
-        chkUSU_ATIVO.setSelected((usuario.getUsu_ativo() == 1));
+        chkAtivo.setSelected((usuario.getUsu_ativo() == 1));
     }
 
     private String filtroConsulta() {
@@ -792,11 +792,11 @@ public class FornecedorView extends javax.swing.JFrame {
             }
             condicao += "(USU_NOME LIKE ('%" + edtCONS_NOME.getText() + "%'))";
         }
-        if (!edtCONS_LOGIN.getText().trim().equals("")) {
+        if (!edtConsCpfCnpj.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_LOGIN LIKE ('%" + edtCONS_LOGIN.getText() + "%'))";
+            condicao += "(USU_LOGIN LIKE ('%" + edtConsCpfCnpj.getText() + "%'))";
         }
         return condicao;
     }
@@ -830,8 +830,8 @@ public class FornecedorView extends javax.swing.JFrame {
     private void btnINCLUIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnINCLUIRActionPerformed
         limparAgenda();
         setOperacao("incluir");
-        edtUSU_NOME.setFocusable(true);
-        chkUSU_ATIVO.setSelected(true);
+        edtTel2.setFocusable(true);
+        chkAtivo.setSelected(true);
     }//GEN-LAST:event_btnINCLUIRActionPerformed
 
     private void btnGRAVARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGRAVARActionPerformed
@@ -840,10 +840,10 @@ public class FornecedorView extends javax.swing.JFrame {
             try {
                 UsuarioModel objusuario = new UsuarioModel();
                 objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objusuario.setUsu_nome(edtUSU_NOME.getText());
-                objusuario.setUsu_login(edtUSU_LOGIN.getText());
+                objusuario.setUsu_nome(edtTel2.getText());
+                objusuario.setUsu_login(edtRg.getText());
                 objusuario.setUsu_senha(edtUSU_SENHA.getText());
-                objusuario.setUsu_ativo((chkUSU_ATIVO.isSelected() ? 1 : 0));
+                objusuario.setUsu_ativo((chkAtivo.isSelected() ? 1 : 0));
                 UsuarioController usuariocontroller = new UsuarioController();
                 usuariocontroller.gravar(getOperacao(), objusuario);
 
@@ -896,7 +896,7 @@ public class FornecedorView extends javax.swing.JFrame {
         edtCONS_ID1.setText("");
         edtCONS_ID2.setText("");
         edtCONS_NOME.setText("");
-        edtCONS_LOGIN.setText("");
+        edtConsCpfCnpj.setText("");
     }//GEN-LAST:event_btnLimparActionPerformed
 
     private void btnEXCLUIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEXCLUIRActionPerformed
@@ -906,10 +906,10 @@ public class FornecedorView extends javax.swing.JFrame {
             try {
                 UsuarioModel objusuario = new UsuarioModel();
                 objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objusuario.setUsu_nome(edtUSU_NOME.getText());
-                objusuario.setUsu_login(edtUSU_LOGIN.getText());
+                objusuario.setUsu_nome(edtTel2.getText());
+                objusuario.setUsu_login(edtRg.getText());
                 objusuario.setUsu_senha(edtUSU_SENHA.getText());
-                objusuario.setUsu_ativo((chkUSU_ATIVO.isSelected() ? 1 : 0));
+                objusuario.setUsu_ativo((chkAtivo.isSelected() ? 1 : 0));
 
                 UsuarioController usuariocontroller = new UsuarioController();
                 usuariocontroller.excluir(objusuario);
@@ -922,81 +922,81 @@ public class FornecedorView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnEXCLUIRActionPerformed
 
-    private void edtUSU_NOMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOMEActionPerformed
+    private void edtTel2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtTel2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOMEActionPerformed
+    }//GEN-LAST:event_edtTel2ActionPerformed
 
-    private void edtUSU_NOME1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME1ActionPerformed
+    private void edtFantasiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtFantasiaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOME1ActionPerformed
+    }//GEN-LAST:event_edtFantasiaActionPerformed
 
-    private void edtUSU_LOGINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGINActionPerformed
+    private void edtRgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtRgActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGINActionPerformed
+    }//GEN-LAST:event_edtRgActionPerformed
 
-    private void edtUSU_LOGIN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN1ActionPerformed
+    private void edtEndereçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtEndereçoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN1ActionPerformed
+    }//GEN-LAST:event_edtEndereçoActionPerformed
 
-    private void edtUSU_LOGIN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN2ActionPerformed
+    private void edtCpfCnpjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtCpfCnpjActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN2ActionPerformed
+    }//GEN-LAST:event_edtCpfCnpjActionPerformed
 
-    private void edtUSU_NOME2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME2ActionPerformed
+    private void edtDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtDataActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOME2ActionPerformed
+    }//GEN-LAST:event_edtDataActionPerformed
 
-    private void edtUSU_NOME3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME3ActionPerformed
+    private void edtTel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtTel1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOME3ActionPerformed
+    }//GEN-LAST:event_edtTel1ActionPerformed
 
-    private void edtUSU_LOGIN3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN3ActionPerformed
+    private void edtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtNomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN3ActionPerformed
+    }//GEN-LAST:event_edtNomeActionPerformed
 
-    private void edtUSU_NOME4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME4ActionPerformed
+    private void edtCelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtCelActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOME4ActionPerformed
+    }//GEN-LAST:event_edtCelActionPerformed
 
-    private void edtUSU_LOGIN4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN4ActionPerformed
+    private void edtNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtNumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN4ActionPerformed
+    }//GEN-LAST:event_edtNumActionPerformed
 
-    private void chkUSU_ATIVOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkUSU_ATIVOActionPerformed
+    private void chkAtivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkAtivoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_chkUSU_ATIVOActionPerformed
+    }//GEN-LAST:event_chkAtivoActionPerformed
 
-    private void edtUSU_LOGIN5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN5ActionPerformed
+    private void edtComplActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtComplActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN5ActionPerformed
+    }//GEN-LAST:event_edtComplActionPerformed
 
-    private void edtUSU_LOGIN6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN6ActionPerformed
+    private void edtBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtBairroActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN6ActionPerformed
+    }//GEN-LAST:event_edtBairroActionPerformed
 
-    private void edtUSU_LOGIN7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN7ActionPerformed
+    private void edtCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtCidadeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN7ActionPerformed
+    }//GEN-LAST:event_edtCidadeActionPerformed
 
-    private void edtUSU_LOGIN8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN8ActionPerformed
+    private void edtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN8ActionPerformed
+    }//GEN-LAST:event_edtEmailActionPerformed
 
-    private void edtUSU_LOGIN9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN9ActionPerformed
+    private void edtUfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUfActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN9ActionPerformed
+    }//GEN-LAST:event_edtUfActionPerformed
 
-    private void edtUSU_LOGIN10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN10ActionPerformed
+    private void edtCepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtCepActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN10ActionPerformed
+    }//GEN-LAST:event_edtCepActionPerformed
 
-    private void edtUSU_LOGIN11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN11ActionPerformed
+    private void edtSiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtSiteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_LOGIN11ActionPerformed
+    }//GEN-LAST:event_edtSiteActionPerformed
 
-    private void edtUSU_NOME5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME5ActionPerformed
+    private void edtContatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtContatoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_edtUSU_NOME5ActionPerformed
+    }//GEN-LAST:event_edtContatoActionPerformed
     /**
      * @param args the command line arguments
      */
@@ -1012,30 +1012,30 @@ public class FornecedorView extends javax.swing.JFrame {
     private javax.swing.JButton btnPROXIMO;
     private javax.swing.JButton btnSAIR;
     private javax.swing.JButton btnULTIMO;
-    private javax.swing.JCheckBox chkUSU_ATIVO;
-    private javax.swing.JCheckBox chkUSU_ATIVO1;
+    private javax.swing.JCheckBox chkAtivo;
+    private javax.swing.JCheckBox chkFisica;
+    private javax.swing.JTextField edtBairro;
     private javax.swing.JTextField edtCONS_ID1;
     private javax.swing.JTextField edtCONS_ID2;
-    private javax.swing.JTextField edtCONS_LOGIN;
     private javax.swing.JTextField edtCONS_NOME;
-    private javax.swing.JTextField edtUSU_LOGIN;
-    private javax.swing.JTextField edtUSU_LOGIN1;
-    private javax.swing.JTextField edtUSU_LOGIN10;
-    private javax.swing.JTextField edtUSU_LOGIN11;
-    private javax.swing.JTextField edtUSU_LOGIN2;
-    private javax.swing.JTextField edtUSU_LOGIN3;
-    private javax.swing.JTextField edtUSU_LOGIN4;
-    private javax.swing.JTextField edtUSU_LOGIN5;
-    private javax.swing.JTextField edtUSU_LOGIN6;
-    private javax.swing.JTextField edtUSU_LOGIN7;
-    private javax.swing.JTextField edtUSU_LOGIN8;
-    private javax.swing.JTextField edtUSU_LOGIN9;
-    private javax.swing.JTextField edtUSU_NOME;
-    private javax.swing.JTextField edtUSU_NOME1;
-    private javax.swing.JTextField edtUSU_NOME2;
-    private javax.swing.JTextField edtUSU_NOME3;
-    private javax.swing.JTextField edtUSU_NOME4;
-    private javax.swing.JTextField edtUSU_NOME5;
+    private javax.swing.JTextField edtCel;
+    private javax.swing.JTextField edtCep;
+    private javax.swing.JTextField edtCidade;
+    private javax.swing.JTextField edtCompl;
+    private javax.swing.JTextField edtConsCpfCnpj;
+    private javax.swing.JTextField edtContato;
+    private javax.swing.JTextField edtCpfCnpj;
+    private javax.swing.JTextField edtData;
+    private javax.swing.JTextField edtEmail;
+    private javax.swing.JTextField edtEndereço;
+    private javax.swing.JTextField edtFantasia;
+    private javax.swing.JTextField edtNome;
+    private javax.swing.JTextField edtNum;
+    private javax.swing.JTextField edtRg;
+    private javax.swing.JTextField edtSite;
+    private javax.swing.JTextField edtTel1;
+    private javax.swing.JTextField edtTel2;
+    private javax.swing.JTextField edtUf;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
@@ -1047,28 +1047,28 @@ public class FornecedorView extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JLabel lblCONS_ID;
-    private javax.swing.JLabel lblCONS_LOGIN;
     private javax.swing.JLabel lblCONS_NOME;
+    private javax.swing.JLabel lblCel;
+    private javax.swing.JLabel lblCep;
+    private javax.swing.JLabel lblCidade;
     private javax.swing.JLabel lblCodigo2;
+    private javax.swing.JLabel lblComple;
+    private javax.swing.JLabel lblConsCpfCnpj;
+    private javax.swing.JLabel lblContato;
+    private javax.swing.JLabel lblCpfCnpj;
+    private javax.swing.JLabel lblData;
+    private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblEndereço;
+    private javax.swing.JLabel lblFantasia;
+    private javax.swing.JLabel lblNome;
+    private javax.swing.JLabel lblNum;
+    private javax.swing.JLabel lblRg;
+    private javax.swing.JLabel lblSite;
+    private javax.swing.JLabel lblTel1;
+    private javax.swing.JLabel lblTel2;
     private javax.swing.JLabel lblTitulo;
-    private javax.swing.JLabel lblUSU_CODIGO;
-    private javax.swing.JLabel lblUSU_CODIGO1;
-    private javax.swing.JLabel lblUSU_CODIGO10;
-    private javax.swing.JLabel lblUSU_CODIGO2;
-    private javax.swing.JLabel lblUSU_CODIGO3;
-    private javax.swing.JLabel lblUSU_CODIGO4;
-    private javax.swing.JLabel lblUSU_CODIGO5;
-    private javax.swing.JLabel lblUSU_CODIGO6;
-    private javax.swing.JLabel lblUSU_CODIGO7;
-    private javax.swing.JLabel lblUSU_CODIGO8;
-    private javax.swing.JLabel lblUSU_CODIGO9;
-    private javax.swing.JLabel lblUSU_LOGIN;
-    private javax.swing.JLabel lblUSU_LOGIN1;
-    private javax.swing.JLabel lblUSU_LOGIN2;
-    private javax.swing.JLabel lblUSU_NOME;
-    private javax.swing.JLabel lblUSU_NOME1;
-    private javax.swing.JLabel lblUSU_SENHA;
-    private javax.swing.JLabel lblUSU_SENHA1;
+    private javax.swing.JLabel lblbairro;
+    private javax.swing.JLabel lbluf;
     private javax.swing.JPanel painelCONSULTA;
     private javax.swing.JPanel painelDADOS;
     private javax.swing.JTable tblConsulta;

@@ -2,6 +2,7 @@ package controller;
 
 import conexao.Conexao;
 import dao.UsuarioDao;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public class UsuarioController {
     }
 
     private List<UsuarioModel> listausuarios;
-    
+  
     public ArrayList<UsuarioModel> consultar(String filtro) throws SQLException {
         listausuarios = new UsuarioDao().consultar(filtro);
         return (ArrayList<UsuarioModel>) listausuarios;

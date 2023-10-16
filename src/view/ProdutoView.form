@@ -236,8 +236,8 @@
         <Container class="javax.swing.JPanel" name="painelDADOS">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-              <JTabbedPaneConstraints tabName="Dados do Cliente">
-                <Property name="tabTitle" type="java.lang.String" value="Dados do Cliente"/>
+              <JTabbedPaneConstraints tabName="Dados do Produto">
+                <Property name="tabTitle" type="java.lang.String" value="Dados do Produto"/>
               </JTabbedPaneConstraints>
             </Constraint>
           </Constraints>
@@ -248,27 +248,27 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblUSU_NOME" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblEstoque" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
                               <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblUSU_CODIGO" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblNome" min="-2" max="-2" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblUSU_NOME1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblUSU_LOGIN" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblUSU_LOGIN1" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblUSU_CODIGO1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblCusto" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblAtacado" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblUnidade" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblPreço" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="edtUSU_LOGIN" min="-2" pref="130" max="-2" attributes="0"/>
-                                          <Component id="edtUSU_LOGIN2" min="-2" pref="130" max="-2" attributes="0"/>
+                                          <Component id="edtPreço" min="-2" pref="130" max="-2" attributes="0"/>
+                                          <Component id="edtUnidade" min="-2" pref="130" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="edtUSU_NOME1" alignment="0" pref="130" max="32767" attributes="0"/>
-                                              <Component id="edtUSU_NOME3" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="edtUSU_NOME2" alignment="0" max="32767" attributes="0"/>
-                                              <Component id="edtUSU_LOGIN3" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="edtEstoque" alignment="0" pref="130" max="32767" attributes="0"/>
+                                              <Component id="edtAtacdo" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="edtCusto" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="edtNome" alignment="0" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -277,29 +277,29 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="lblUSU_CODIGO4" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblUSU_CODIGO7" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblUSU_CODIGO2" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblUSU_SENHA" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblUSU_LOGIN2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblPeso" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblObs" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblEmbalagem" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblMax" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblMin" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="edtUSU_LOGIN6" alignment="0" pref="157" max="32767" attributes="0"/>
-                                          <Component id="edtUSU_LOGIN4" max="32767" attributes="0"/>
-                                          <Component id="edtUSU_LOGIN1" max="32767" attributes="0"/>
-                                          <Component id="edtUSU_NOME" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="edtUSU_NOME4" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="edtObs" alignment="0" pref="157" max="32767" attributes="0"/>
+                                          <Component id="edtPeso" max="32767" attributes="0"/>
+                                          <Component id="edtEmabalagem" max="32767" attributes="0"/>
+                                          <Component id="edtMin" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="edtMax" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="lblUSU_CODIGO3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblData" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                                      <Component id="edtUSU_LOGIN5" max="32767" attributes="0"/>
+                                      <Component id="edtData" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="chkUSU_ATIVO" min="-2" pref="69" max="-2" attributes="0"/>
+                              <Component id="chkATIVO" min="-2" pref="69" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
@@ -307,7 +307,7 @@
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="621" max="32767" attributes="0"/>
-                          <Component id="chkUSU_ATIVO1" min="-2" max="-2" attributes="0"/>
+                          <Component id="chkTipo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -320,15 +320,15 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="8" pref="8" max="8" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="edtUSU_LOGIN1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="edtUSU_LOGIN3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="edtEmabalagem" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="edtNome" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblUSU_CODIGO" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblUSU_CODIGO2" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblNome" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblEmbalagem" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -337,62 +337,62 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="edtUSU_LOGIN4" min="-2" max="-2" attributes="0"/>
+                                      <Component id="edtPeso" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="lblUSU_LOGIN1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblUSU_CODIGO3" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                                          <Component id="edtUSU_LOGIN5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblUnidade" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblData" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                          <Component id="edtData" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="lblUSU_NOME" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="edtUSU_NOME1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblUSU_CODIGO4" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                          <Component id="lblEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="edtEstoque" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblPeso" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="edtUSU_LOGIN2" min="-2" max="-2" attributes="0"/>
+                                      <Component id="edtUnidade" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="chkUSU_ATIVO" min="-2" pref="46" max="-2" attributes="0"/>
+                              <Component id="chkATIVO" min="-2" pref="46" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblUSU_CODIGO1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="edtUSU_LOGIN" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="lblPreço" min="-2" max="-2" attributes="0"/>
+                                  <Component id="edtPreço" alignment="1" min="-2" pref="23" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="edtUSU_NOME2" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblUSU_NOME1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="edtCusto" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblCusto" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="lblUSU_LOGIN" min="-2" max="-2" attributes="0"/>
-                                  <Component id="edtUSU_NOME3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblAtacado" min="-2" max="-2" attributes="0"/>
+                                  <Component id="edtAtacdo" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="lblUSU_CODIGO7" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
-                                  <Component id="edtUSU_LOGIN6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblObs" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="edtObs" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="lblUSU_LOGIN2" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="edtUSU_NOME" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblMin" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="edtMin" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="edtUSU_NOME4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="lblUSU_SENHA" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="edtMax" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblMax" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -401,7 +401,7 @@
                   <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                          <Component id="chkUSU_ATIVO1" min="-2" max="-2" attributes="0"/>
+                          <Component id="chkTipo" min="-2" max="-2" attributes="0"/>
                           <EmptySpace pref="209" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -409,7 +409,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="lblUSU_CODIGO">
+            <Component class="javax.swing.JLabel" name="lblNome">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -417,7 +417,7 @@
                 <Property name="text" type="java.lang.String" value="Nome"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUSU_NOME">
+            <Component class="javax.swing.JLabel" name="lblEstoque">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -425,7 +425,7 @@
                 <Property name="text" type="java.lang.String" value="Estoque"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUSU_LOGIN">
+            <Component class="javax.swing.JLabel" name="lblAtacado">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -433,27 +433,27 @@
                 <Property name="text" type="java.lang.String" value="Atacado"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="edtUSU_NOME">
+            <Component class="javax.swing.JTextField" name="edtMin">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUSU_NOMEActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtMinActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="edtUSU_LOGIN">
+            <Component class="javax.swing.JTextField" name="edtPre&#xe7;o">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUSU_LOGINActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtPre&#xe7;oActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUSU_SENHA">
+            <Component class="javax.swing.JLabel" name="lblMax">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -461,7 +461,7 @@
                 <Property name="text" type="java.lang.String" value="Maximo"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="chkUSU_ATIVO">
+            <Component class="javax.swing.JCheckBox" name="chkATIVO">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -469,10 +469,10 @@
                 <Property name="text" type="java.lang.String" value="Ativo"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkUSU_ATIVOActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="chkATIVOActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUSU_CODIGO1">
+            <Component class="javax.swing.JLabel" name="lblPre&#xe7;o">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -480,7 +480,7 @@
                 <Property name="text" type="java.lang.String" value="Pre&#xe7;o"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUSU_NOME1">
+            <Component class="javax.swing.JLabel" name="lblCusto">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -488,7 +488,7 @@
                 <Property name="text" type="java.lang.String" value="Custo"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUSU_LOGIN1">
+            <Component class="javax.swing.JLabel" name="lblUnidade">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -496,47 +496,47 @@
                 <Property name="text" type="java.lang.String" value="Unidade"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="edtUSU_NOME1">
+            <Component class="javax.swing.JTextField" name="edtEstoque">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUSU_NOME1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtEstoqueActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="edtUSU_LOGIN1">
+            <Component class="javax.swing.JTextField" name="edtEmabalagem">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUSU_LOGIN1ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtEmabalagemActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="edtUSU_LOGIN2">
+            <Component class="javax.swing.JTextField" name="edtUnidade">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUSU_LOGIN2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUnidadeActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="edtUSU_NOME2">
+            <Component class="javax.swing.JTextField" name="edtCusto">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUSU_NOME2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtCustoActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUSU_LOGIN2">
+            <Component class="javax.swing.JLabel" name="lblMin">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -544,17 +544,17 @@
                 <Property name="text" type="java.lang.String" value="Minimo"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="edtUSU_NOME3">
+            <Component class="javax.swing.JTextField" name="edtAtacdo">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUSU_NOME3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtAtacdoActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUSU_CODIGO2">
+            <Component class="javax.swing.JLabel" name="lblEmbalagem">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -562,27 +562,27 @@
                 <Property name="text" type="java.lang.String" value="Embalagem"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="edtUSU_LOGIN3">
+            <Component class="javax.swing.JTextField" name="edtNome">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUSU_LOGIN3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtNomeActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="edtUSU_NOME4">
+            <Component class="javax.swing.JTextField" name="edtMax">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUSU_NOME4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtMaxActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUSU_CODIGO3">
+            <Component class="javax.swing.JLabel" name="lblData">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -590,17 +590,17 @@
                 <Property name="text" type="java.lang.String" value="Data de Cadastro"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="edtUSU_LOGIN4">
+            <Component class="javax.swing.JTextField" name="edtPeso">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUSU_LOGIN4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtPesoActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUSU_CODIGO4">
+            <Component class="javax.swing.JLabel" name="lblPeso">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -608,7 +608,7 @@
                 <Property name="text" type="java.lang.String" value="Peso"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="lblUSU_CODIGO7">
+            <Component class="javax.swing.JLabel" name="lblObs">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -616,7 +616,7 @@
                 <Property name="text" type="java.lang.String" value="Observa&#xe7;&#xe3;o"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JCheckBox" name="chkUSU_ATIVO1">
+            <Component class="javax.swing.JCheckBox" name="chkTipo">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
@@ -624,24 +624,24 @@
                 <Property name="text" type="java.lang.String" value="Tipo"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="edtUSU_LOGIN5">
+            <Component class="javax.swing.JTextField" name="edtData">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUSU_LOGIN5ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtDataActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JTextField" name="edtUSU_LOGIN6">
+            <Component class="javax.swing.JTextField" name="edtObs">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="0"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtUSU_LOGIN6ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="edtObsActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
@@ -723,9 +723,9 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="edtCONS_ID2" min="-2" pref="70" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="lblCONS_LOGIN" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblCONS_Preço" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="edtCONS_LOGIN" min="-2" pref="196" max="-2" attributes="0"/>
+                                  <Component id="edtCONS_Preço" min="-2" pref="196" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
                               </Group>
                           </Group>
@@ -747,8 +747,8 @@
                               <Component id="lblCodigo2" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="edtCONS_ID2" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btnConsulta" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="edtCONS_LOGIN" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="lblCONS_LOGIN" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="edtCONS_Preço" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblCONS_Preço" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -823,15 +823,15 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="lblCONS_LOGIN">
+                <Component class="javax.swing.JLabel" name="lblCONS_Pre&#xe7;o">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="CPF/CNPJ"/>
+                    <Property name="text" type="java.lang.String" value="Pre&#xe7;o"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="edtCONS_LOGIN">
+                <Component class="javax.swing.JTextField" name="edtCONS_Pre&#xe7;o">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>

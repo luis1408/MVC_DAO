@@ -5,34 +5,12 @@
  */
 package principal;
 
-import conexao.Conexao;
-import javax.swing.JFrame;
-import view.ClienteView;
-import view.FormaPagamentoView;
-import view.UsuarioView;
+import view.Menu;
 
-/**
- *
- * @author celio
- */
 public class MVC_DAO {
-    Conexao objconexao;
-    UsuarioView usuarioview;
-    FormaPagamentoView formapagamentoview; 
-    ClienteView clienteview;
-
-    public MVC_DAO() {
-        objconexao = new Conexao();
-        usuarioview = new UsuarioView();
-        clienteview = new ClienteView();
-        formapagamentoview = new FormaPagamentoView();
-        
-    }
-
+    
     public static void main(String[] args) {
-        MVC_DAO mvc_dao = new MVC_DAO();
-        
-       
+        new Menu();
     }
 
 }
