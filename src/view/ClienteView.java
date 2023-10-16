@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import model.UsuarioModel;
+import model.ClienteModel;
 
 public class ClienteView extends javax.swing.JFrame {
 
@@ -728,6 +728,14 @@ public class ClienteView extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        tblConsulta.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
         jScrollPane2.setViewportView(tblConsulta);
 
         javax.swing.GroupLayout painelCONSULTALayout = new javax.swing.GroupLayout(painelCONSULTA);
@@ -747,14 +755,14 @@ public class ClienteView extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(79, 79, 79))
         );
 
         jTabbedPane2.addTab("Consulta", painelCONSULTA);
 
         getContentPane().add(jTabbedPane2);
-        jTabbedPane2.setBounds(10, 450, 720, 200);
+        jTabbedPane2.setBounds(10, 450, 720, 280);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
