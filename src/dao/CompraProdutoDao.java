@@ -34,9 +34,9 @@ public class CompraProdutoDao {
             objusu.setCpr_id(rs.getInt("cpr_id"));
             objusu.setPro_id(rs.getInt("pro_id"));
             objusu.setCpr_qtde(rs.getDouble("cpr_qtde"));
-            objusu.setcpr_preco(rs.getDouble("cpr_preco"));
+            objusu.setCpr_preco(rs.getDouble("cpr_preco"));
             objusu.setCpr_desconto(rs.getDouble("cpr_desconto"));
-            objusu.setCpr_total(rs.getDouble("cpr_totall"));
+            objusu.setCpr_totall(rs.getDouble("cpr_totall"));
             lista.add(objusu);
         }
         rs.close();
@@ -62,7 +62,7 @@ public class CompraProdutoDao {
         stm.setDouble(3, compraProduto.getCpr_qtde());
         stm.setDouble(4, compraProduto.getCpr_preco());
         stm.setDouble(5, compraProduto.getCpr_desconto());
-        stm.setDouble(6, compraProduto.getCpr_total());
+        stm.setDouble(6, compraProduto.getCpr_totall());
         stm.execute();
         stm.close();
     }
@@ -77,7 +77,7 @@ public class CompraProdutoDao {
         stm.setDouble(3, compraProduto.getCpr_qtde());
         stm.setDouble(4, compraProduto.getCpr_preco());
         stm.setDouble(5, compraProduto.getCpr_desconto());
-        stm.setDouble(6, compraProduto.getCpr_total());
+        stm.setDouble(6, compraProduto.getCpr_totall());
         stm.execute();
         stm.close();
     }
