@@ -1,11 +1,13 @@
 package controller;
 
 import conexao.Conexao;
+import dao.CompraDao;
 import dao.CompraProdutoDao;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import model.CompraModel;
 import model.CompraProdutoModel;
 
 public class CompraProdutoController {
@@ -36,6 +38,11 @@ public class CompraProdutoController {
     public void alterar (CompraProdutoModel compraproduto) throws SQLException{
         CompraProdutoDao dao = new CompraProdutoDao();
         dao.alterar(compraproduto);
+    }
+    
+    public int getUltimoCodigo (CompraModel compra) throws SQLException{
+        CompraDao dao = new CompraDao();
+        dao.getUltimoCodigo(compra);
     }
     
     public void gravar (String operacao, CompraProdutoModel compraproduto) throws SQLException {

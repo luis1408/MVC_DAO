@@ -1,6 +1,6 @@
 package view;
 
-import controller.UsuarioController;
+import controller.CompraController;
 import java.awt.Dimension;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -8,18 +8,18 @@ import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import model.UsuarioModel;
+import model.CompraModel;
 
 public class CompraView extends javax.swing.JFrame {
 
     private String operacao;
-    private String colunas[] = {"ID", "Nome", "Login", "Ativo"};
+    private String colunas[] = {"ID do Compra", "ID do Fornecedor", "Data de Emissão", "Valor", "Desconto", "Total", "Data de Entrada", "Obs"};
     // esse objeto será vinculado com a tabela
     // selecione o objeto tabela, clique em PROPRIEDADES e encontre MODEL
     // no combo "Definir Propriedades" escolha "Código Personalizado"
     // digite o objeto DefaultTableModel, neste exemplo é tabela(criado logo abaixo)
-    private ArrayList<UsuarioModel> lista;
-    private UsuarioTableModel tabela;
+    private ArrayList<CompraModel> lista;
+    private CompraTableModel tabela;
 
     private String getOperacao() {
         return operacao;
@@ -619,12 +619,12 @@ public class CompraView extends javax.swing.JFrame {
         chkUSU_ATIVO.setSelected(false);
     }
 
-    private void mostrar(UsuarioModel usuario) {
-        edtUSU_CODIGO.setText(String.valueOf(usuario.getUsu_codigo()));
-        edtUSU_NOME.setText(usuario.getUsu_nome());
-        edtUSU_LOGIN.setText(usuario.getUsu_login());
-        edtUSU_SENHA.setText(usuario.getUsu_senha());
-        chkUSU_ATIVO.setSelected((usuario.getUsu_ativo() == 1));
+    private void mostrar(CompraModel compra) {
+        edtUSU_CODIGO.setText(String.valueOf(compra.getUsu_codigo()));
+        edtUSU_NOME.setText(compra.getUsu_nome());
+        edtUSU_LOGIN.setText(compra.getUsu_login());
+        edtUSU_SENHA.setText(compra.getUsu_senha());
+        chkUSU_ATIVO.setSelected((compra.getUsu_ativo() == 1));
     }
 
     private String filtroConsulta() {
@@ -656,24 +656,24 @@ public class CompraView extends javax.swing.JFrame {
     private void consultar() {
         try {
             String condicao = filtroConsulta();
-            UsuarioController usuariocontroller = new UsuarioController();
+            CompraController compracontroller = new CompraController();
             lista = null;
-            lista = usuariocontroller.consultar(condicao);
+            lista = compracontroller.consultar(condicao);
             if (lista.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
+                JOptionPane.showMessageDialog(null, "Não Existem Compras Cadastrados !");
             } else {
-                tabela = new UsuarioTableModel(lista, colunas);
+                tabela = new CompraTableModel(lista, colunas);
                 tblConsulta.setModel(tabela);
                 tblConsulta.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
             }
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro na Consulta do Usuário \n" + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro na Consulta da Compra \n" + ex.getMessage());
         }
     }
 
     private void btnPRIMEIROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPRIMEIROActionPerformed
         if (lista.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
+            JOptionPane.showMessageDialog(null, "Não Existem Compras Cadastrados !");
         }
         int primeiro = 0;
         mostrarRegistro(primeiro);
@@ -687,17 +687,17 @@ public class CompraView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnINCLUIRActionPerformed
 
     private void btnGRAVARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGRAVARActionPerformed
-        if (JOptionPane.showConfirmDialog(null, "Confirma Gravação deste Usuário ?",
+        if (JOptionPane.showConfirmDialog(null, "Confirma Gravação desta Compra ?",
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
-                UsuarioModel objusuario = new UsuarioModel();
-                objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objusuario.setUsu_nome(edtUSU_NOME.getText());
-                objusuario.setUsu_login(edtUSU_LOGIN.getText());
-                objusuario.setUsu_senha(edtUSU_SENHA.getText());
-                objusuario.setUsu_ativo((chkUSU_ATIVO.isSelected() ? 1 : 0));
-                UsuarioController usuariocontroller = new UsuarioController();
-                usuariocontroller.gravar(getOperacao(), objusuario);
+                CompraModel objcompra = new CompraModel();
+                objcompra.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
+                objcompra.setUsu_nome(edtUSU_NOME.getText());
+                objcompra.setUsu_login(edtUSU_LOGIN.getText());
+                objcompra.setUsu_senha(edtUSU_SENHA.getText());
+                objcompra.setUsu_ativo((chkUSU_ATIVO.isSelected() ? 1 : 0));
+                CompraController compracontroller = new CompraController();
+                compracontroller.gravar(getOperacao(), objcompra);
 
                 JOptionPane.showMessageDialog(null, "Dados Gravados com Sucesso");
                 consultar();
@@ -756,15 +756,15 @@ public class CompraView extends javax.swing.JFrame {
         if (JOptionPane.showConfirmDialog(null, "Confirma Exclusão deste Registro ?",
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
-                UsuarioModel objusuario = new UsuarioModel();
-                objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objusuario.setUsu_nome(edtUSU_NOME.getText());
-                objusuario.setUsu_login(edtUSU_LOGIN.getText());
-                objusuario.setUsu_senha(edtUSU_SENHA.getText());
-                objusuario.setUsu_ativo((chkUSU_ATIVO.isSelected() ? 1 : 0));
+                CompraModel objcompra = new CompraModel();
+                objcompra.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
+                objcompra.setUsu_nome(edtUSU_NOME.getText());
+                objcompra.setUsu_login(edtUSU_LOGIN.getText());
+                objcompra.setUsu_senha(edtUSU_SENHA.getText());
+                objcompra.setUsu_ativo((chkUSU_ATIVO.isSelected() ? 1 : 0));
 
-                UsuarioController usuariocontroller = new UsuarioController();
-                usuariocontroller.excluir(objusuario);
+                CompraController compracontroller = new CompraController();
+                compracontroller.excluir(objcompra);
 
                 JOptionPane.showMessageDialog(null, "Registro Excluído com Sucesso");
                 consultar();

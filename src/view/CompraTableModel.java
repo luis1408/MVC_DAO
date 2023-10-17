@@ -3,7 +3,6 @@ package view;
 import java.util.ArrayList;
 import javax.swing.table.AbstractTableModel;
 import model.CompraModel;
-import model.CompraProdutoModel;
 
 public class CompraTableModel extends AbstractTableModel {
 
@@ -33,9 +32,8 @@ public class CompraTableModel extends AbstractTableModel {
     @Override
     public String getColumnName(int indiceColuna) {
         return colunas[indiceColuna];
-    }s
+    }
 
-    @Override
     public Object getValueAt(int row, int col) {
         CompraModel compra = (CompraModel) linhas.get(row);
         

@@ -1,6 +1,6 @@
 package view;
 
-import controller.UsuarioController;
+import controller.ClienteController;
 import java.awt.Dimension;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -9,17 +9,18 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import model.ClienteModel;
+import model.PessoaModel;
 
 public class ClienteView extends javax.swing.JFrame {
 
     private String operacao;
-    private String colunas[] = {"ID", "Nome", "Login", "Ativo"};
+    private String colunas[] = {"ID do Cliente", "ID da Pessoa", "Limite de Credito", "Pessoa"};
     // esse objeto será vinculado com a tabela
     // selecione o objeto tabela, clique em PROPRIEDADES e encontre MODEL
     // no combo "Definir Propriedades" escolha "Código Personalizado"
     // digite o objeto DefaultTableModel, neste exemplo é tabela(criado logo abaixo)
-    private ArrayList<UsuarioModel> lista;
-    private UsuarioTableModel tabela;
+    private ArrayList<ClienteModel> lista;
+    private ClienteTableModel tabela;
 
     private String getOperacao() {
         return operacao;
@@ -768,43 +769,73 @@ public class ClienteView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void limparAgenda() {
-        edtUSU_CODIGO.setText("0");
+        edtNome.setText("");
         edtTel2.setText("");
         edtRg.setText("");
-        edtUSU_SENHA.setText("");
+        edtFantasia.setText("");
         chkATIVO.setSelected(false);
+        edtCpfCnpj.setText("");
+        edtData.setText("");
+        edtTel1.setText("");
+        edtCel.setText("");
+        edtLimtCred.setText("");
+        edtEndereço.setText("");
+        edtNum.setText("");
+        edtComple.setText("");
+        edtBairro.setText("");
+        edtCidade.setText("");
+        edtUf.setText("");
+        edtSite.setText("");
+        edtCep.setText("");
+        edtEmail.setText("");
+        chkFisica.setSelected(false);
     }
 
-    private void mostrar(UsuarioModel usuario) {
-        edtUSU_CODIGO.setText(String.valueOf(usuario.getUsu_codigo()));
-        edtTel2.setText(usuario.getUsu_nome());
-        edtRg.setText(usuario.getUsu_login());
-        edtUSU_SENHA.setText(usuario.getUsu_senha());
-        chkATIVO.setSelected((usuario.getUsu_ativo() == 1));
+    private void mostrar(ClienteModel cliente) {
+        edtNome.setText(String.valueOf(cliente.getPessoamodel().getPes_nome()));
+        edtTel2.setText(cliente.getPessoamodel().getPes_fone2());
+        edtRg.setText(cliente.getPessoamodel().getPes_rgie());
+        edtFantasia.setText(cliente.getPessoamodel().getPes_fantasia());
+        chkATIVO.setSelected((cliente.getPessoamodel().getPes_ativo() == 1));
+        edtCpfCnpj.setText(String.valueOf(cliente.getPessoamodel().getPes_cpfcnpj()));
+        edtData.setText(cliente.getPessoamodel().getPes_cadastro());
+        edtTel1.setText(cliente.getPessoamodel().getPes_fone1());
+        edtCel.setText(cliente.getPessoamodel().getPes_celular());
+        edtLimtCred.setText(String.valueOf(cliente.getCli_limitecred()));
+        edtEndereço.setText(cliente.getPessoamodel().getPes_endereco());
+        edtNum.setText(cliente.getPessoamodel().getPes_numero());
+        edtComple.setText(cliente.getPessoamodel().getPes_complemento());
+        edtBairro.setText(String.valueOf(cliente.getPessoamodel().getPes_bairro()));
+        edtCidade.setText(cliente.getPessoamodel().getPes_cidade());
+        edtUf.setText(cliente.getPessoamodel().getPes_uf());
+        edtSite.setText(cliente.getPessoamodel().getPes_site());
+        edtCep.setText(String.valueOf(cliente.getPessoamodel().getPes_cep()));
+        edtEmail.setText(cliente.getPessoamodel().getPes_email());
+        chkFisica.setSelected(("s".equals(cliente.getPessoamodel().getPes_fisica())));
     }
 
     private String filtroConsulta() {
         String condicao = "";
         if (!edtCONS_ID1.getText().trim().equals("")) {
-            condicao += "(USU_CODIGO >= " + edtCONS_ID1.getText() + ")";
+            condicao += "(cli_codigo >= " + edtCONS_ID1.getText() + ")";
         }
         if (!edtCONS_ID2.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_CODIGO <= " + edtCONS_ID2.getText() + ")";
+            condicao += "(cli_codigo <= " + edtCONS_ID2.getText() + ")";
         }
         if (!edtCONS_NOME.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_NOME LIKE ('%" + edtCONS_NOME.getText() + "%'))";
+            condicao += "(pes_nome LIKE ('%" + edtCONS_NOME.getText() + "%'))";
         }
         if (!edtConsCpfCnpj.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_LOGIN LIKE ('%" + edtConsCpfCnpj.getText() + "%'))";
+            condicao += "(pes_cpfcnpj LIKE ('%" + edtConsCpfCnpj.getText() + "%'))";
         }
         return condicao;
     }
@@ -812,24 +843,24 @@ public class ClienteView extends javax.swing.JFrame {
     private void consultar() {
         try {
             String condicao = filtroConsulta();
-            UsuarioController usuariocontroller = new UsuarioController();
+            ClienteController clientecontroller = new ClienteController();
             lista = null;
-            lista = usuariocontroller.consultar(condicao);
+            lista = clientecontroller.consultar(condicao);
             if (lista.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
+                JOptionPane.showMessageDialog(null, "Não Existem Clientes Cadastrados !");
             } else {
-                tabela = new UsuarioTableModel(lista, colunas);
+                tabela = new ClienteTableModel(lista, colunas);
                 tblConsulta.setModel(tabela);
                 tblConsulta.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
             }
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro na Consulta do Usuário \n" + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro na Consulta do Cliente \n" + ex.getMessage());
         }
     }
 
     private void btnPRIMEIROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPRIMEIROActionPerformed
         if (lista.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
+            JOptionPane.showMessageDialog(null, "Não Existem Clientes Cadastrados !");
         }
         int primeiro = 0;
         mostrarRegistro(primeiro);
@@ -843,17 +874,19 @@ public class ClienteView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnINCLUIRActionPerformed
 
     private void btnGRAVARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGRAVARActionPerformed
-        if (JOptionPane.showConfirmDialog(null, "Confirma Gravação deste Usuário ?",
+        if (JOptionPane.showConfirmDialog(null, "Confirma Gravação deste Cliente ?",
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
-                UsuarioModel objusuario = new UsuarioModel();
-                objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objusuario.setUsu_nome(edtTel2.getText());
-                objusuario.setUsu_login(edtRg.getText());
-                objusuario.setUsu_senha(edtUSU_SENHA.getText());
-                objusuario.setUsu_ativo((chkATIVO.isSelected() ? 1 : 0));
-                UsuarioController usuariocontroller = new UsuarioController();
-                usuariocontroller.gravar(getOperacao(), objusuario);
+                ClienteModel objcliente = new ClienteModel();
+                objcliente.setUsu_codigo(Integer.parseInt(edtcli_codigo.getText()));
+                objcliente.setPessoaModel(setPes_nome(edtNome.getText()));
+
+                objcliente.setPessoaModel().setPes_nome(edtNome.getText());
+                objcliente.setUsu_login(edtRg.getText());
+                objcliente.setUsu_senha(edtUSU_SENHA.getText());
+                objcliente.setUsu_ativo((chkATIVO.isSelected() ? 1 : 0));
+                ClienteController clientecontroller = new ClienteController();
+                clientecontroller.gravar(getOperacao(), objcliente);
 
                 JOptionPane.showMessageDialog(null, "Dados Gravados com Sucesso");
                 consultar();
@@ -912,15 +945,28 @@ public class ClienteView extends javax.swing.JFrame {
         if (JOptionPane.showConfirmDialog(null, "Confirma Exclusão deste Registro ?",
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
-                UsuarioModel objusuario = new UsuarioModel();
-                objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objusuario.setUsu_nome(edtTel2.getText());
-                objusuario.setUsu_login(edtRg.getText());
-                objusuario.setUsu_senha(edtUSU_SENHA.getText());
-                objusuario.setUsu_ativo((chkATIVO.isSelected() ? 1 : 0));
+                ClienteModel objcliente = new ClienteModel();
+                
+                objcliente.setPessoamodel(setPes_nome(edtNome.getText()));
+                objcliente.setPes_fantasia(edtRg.getText());
+                objcliente.setPes_cpfcnpj(edtTel2.getText());
+                objcliente.setUsu_login(edtRg.getText());
+                objcliente.setUsu_nome(edtTel2.getText());
+                objcliente.setUsu_login(edtRg.getText());
+                objcliente.setUsu_nome(edtTel2.getText());
+                objcliente.setUsu_login(edtRg.getText());
+                objcliente.setUsu_nome(edtTel2.getText());
+                objcliente.setUsu_login(edtRg.getText());
+                objcliente.setUsu_nome(edtTel2.getText());
+                objcliente.setUsu_login(edtRg.getText());
+                objcliente.setUsu_nome(edtTel2.getText());
+                objcliente.setUsu_login(edtRg.getText());
+                objcliente.setUsu_nome(edtTel2.getText());
+                objcliente.setCli_limitecred(edtLimtCred.getText());
+                objcliente.setUsu_ativo((chkATIVO.isSelected() ? 1 : 0));
 
-                UsuarioController usuariocontroller = new UsuarioController();
-                usuariocontroller.excluir(objusuario);
+                ClienteController clientecontroller = new ClienteController();
+                clientecontroller.excluir(objcliente);
 
                 JOptionPane.showMessageDialog(null, "Registro Excluído com Sucesso");
                 consultar();

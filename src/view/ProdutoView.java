@@ -1,6 +1,6 @@
 package view;
 
-import controller.UsuarioController;
+import controller.ProdutoController;
 import java.awt.Dimension;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -8,18 +8,18 @@ import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import model.UsuarioModel;
+import model.ProdutoModel;
 
 public class ProdutoView extends javax.swing.JFrame {
 
     private String operacao;
-    private String colunas[] = {"ID", "Nome", "Login", "Ativo"};
+    private String colunas[] = {"ID", "Nome", "Estoque", "Unidade", "Preço", "Custo", "Atacado", "Min", "Max", "Embalagem", "Peso", "Data", "Obs", "Ativo", "Tipo"};
     // esse objeto será vinculado com a tabela
     // selecione o objeto tabela, clique em PROPRIEDADES e encontre MODEL
     // no combo "Definir Propriedades" escolha "Código Personalizado"
     // digite o objeto DefaultTableModel, neste exemplo é tabela(criado logo abaixo)
-    private ArrayList<UsuarioModel> lista;
-    private UsuarioTableModel tabela;
+    private ArrayList<ProdutoModel> lista;
+    private ProdutoTableModel tabela;
 
     private String getOperacao() {
         return operacao;
@@ -645,43 +645,61 @@ public class ProdutoView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void limparAgenda() {
-        edtUSU_CODIGO.setText("0");
-        edtMin.setText("");
+        edtNome.setText("");
+        edtEstoque.setText("");
         edtPreço.setText("");
-        edtUSU_SENHA.setText("");
+        edtUnidade.setText("");
+        edtCusto.setText("");
+        edtAtacdo.setText("");
+        edtEmabalagem.setText("");
+        edtPeso.setText("");
+        edtData.setText("");
+        edtMin.setText("");
+        edtMax.setText("");
+        edtObs.setText("");
         chkATIVO.setSelected(false);
+        chkTipo.setSelected(false);
     }
 
-    private void mostrar(UsuarioModel usuario) {
-        edtUSU_CODIGO.setText(String.valueOf(usuario.getUsu_codigo()));
-        edtMin.setText(usuario.getUsu_nome());
-        edtPreço.setText(usuario.getUsu_login());
-        edtUSU_SENHA.setText(usuario.getUsu_senha());
-        chkATIVO.setSelected((usuario.getUsu_ativo() == 1));
+    private void mostrar(ProdutoModel produto) {
+        edtNome.setText(produto.getPro_nome());
+        edtEstoque.setText(Double.toString((produto.getPro_estoque())));
+        edtPreço.setText(Double.toString((produto.getPro_preco())));
+        edtUnidade.setText(produto.getPro_unidade());
+        edtCusto.setText(Double.toString((produto.getPro_custo())));
+        edtAtacdo.setText(Double.toString((produto.getPro_atacado())));
+        edtEmabalagem.setText(Double.toString((produto.getPro_embalagem())));
+        edtPeso.setText(Double.toString((produto.getPro_peso())));
+        edtData.setText(produto.getPro_cadastro());
+        edtMin.setText(Double.toString((produto.getPro_min())));
+        edtMax.setText(Double.toString((produto.getPro_max())));
+        edtObs.setText(produto.getPro_obs());
+        chkATIVO.setSelected((produto.getPro_ativo() == 1));
+        chkTipo.setSelected((produto.getPro_tipo() == 1));
     }
 
     private String filtroConsulta() {
         String condicao = "";
         if (!edtCONS_ID1.getText().trim().equals("")) {
-            condicao += "(USU_CODIGO >= " + edtCONS_ID1.getText() + ")";
+            condicao += "(pro_codigo >= " + edtCONS_ID1.getText() + ")";
         }
         if (!edtCONS_ID2.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_CODIGO <= " + edtCONS_ID2.getText() + ")";
+            condicao += "(pro_codigo <= " + edtCONS_ID2.getText() + ")";
         }
         if (!edtCONS_NOME.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_NOME LIKE ('%" + edtCONS_NOME.getText() + "%'))";
+            condicao += "(pro_nome LIKE ('%" + edtCONS_NOME.getText() + "%'))";
         }
         if (!edtCONS_Preço.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_LOGIN LIKE ('%" + edtCONS_Preço.getText() + "%'))";
+            condicao += "(pro_preco LIKE ('%" + edtCONS_Preço.getText() + "%'))";
         }
         return condicao;
     }
@@ -689,24 +707,24 @@ public class ProdutoView extends javax.swing.JFrame {
     private void consultar() {
         try {
             String condicao = filtroConsulta();
-            UsuarioController usuariocontroller = new UsuarioController();
+            ProdutoController produtocontroller = new ProdutoController();
             lista = null;
-            lista = usuariocontroller.consultar(condicao);
+            lista = produtocontroller.consultar(condicao);
             if (lista.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
+                JOptionPane.showMessageDialog(null, "Não Existem Produtos Cadastrados !");
             } else {
-                tabela = new UsuarioTableModel(lista, colunas);
+                tabela = new ProdutoTableModel(lista, colunas);
                 tblConsulta.setModel(tabela);
                 tblConsulta.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
             }
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro na Consulta do Usuário \n" + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro na Consulta de Produtos \n" + ex.getMessage());
         }
     }
 
     private void btnPRIMEIROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPRIMEIROActionPerformed
         if (lista.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
+            JOptionPane.showMessageDialog(null, "Não Existem Produtos Cadastrados !");
         }
         int primeiro = 0;
         mostrarRegistro(primeiro);
@@ -720,17 +738,26 @@ public class ProdutoView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnINCLUIRActionPerformed
 
     private void btnGRAVARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGRAVARActionPerformed
-        if (JOptionPane.showConfirmDialog(null, "Confirma Gravação deste Usuário ?",
+        if (JOptionPane.showConfirmDialog(null, "Confirma Gravação deste Produto ?",
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
-                UsuarioModel objusuario = new UsuarioModel();
-                objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objusuario.setUsu_nome(edtMin.getText());
-                objusuario.setUsu_login(edtPreço.getText());
-                objusuario.setUsu_senha(edtUSU_SENHA.getText());
-                objusuario.setUsu_ativo((chkATIVO.isSelected() ? 1 : 0));
-                UsuarioController usuariocontroller = new UsuarioController();
-                usuariocontroller.gravar(getOperacao(), objusuario);
+                ProdutoModel objproduto = new ProdutoModel();
+                objproduto.setPro_nome(edtNome.getText());
+                objproduto.sePro_estoque(Double.parseDouble(edtEstoque.getText()));
+                objproduto.setPro_unidade(edtUnidade.getText());
+                objproduto.setPro_preco(Double.parseDouble(edtPreço.getText()));
+                objproduto.setPro_custo(Double.parseDouble(edtCusto.getText()));
+                objproduto.setPro_atacado(Double.parseDouble(edtAtacdo.getText()));
+                objproduto.setPro_min(Double.parseDouble(edtMin.getText()));
+                objproduto.setPro_max(Double.parseDouble(edtMax.getText()));
+                objproduto.setPro_embalagem(Double.parseDouble(edtEmabalagem.getText()));
+                objproduto.setPro_peso(Double.parseDouble(edtPeso.getText()));
+                objproduto.setPro_cadastro(edtData.getText());
+                objproduto.setPro_obs(edtObs.getText());
+                objproduto.setPro_ativo((chkATIVO.isSelected() ? 1 : 0));
+                objproduto.sePro_tipo((chkTipo.isSelected() ? 1 : 0));
+                ProdutoController produtocontroller = new ProdutoController();
+                produtocontroller.gravar(getOperacao(), objproduto);
 
                 JOptionPane.showMessageDialog(null, "Dados Gravados com Sucesso");
                 consultar();
@@ -789,15 +816,25 @@ public class ProdutoView extends javax.swing.JFrame {
         if (JOptionPane.showConfirmDialog(null, "Confirma Exclusão deste Registro ?",
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
-                UsuarioModel objusuario = new UsuarioModel();
-                objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objusuario.setUsu_nome(edtMin.getText());
-                objusuario.setUsu_login(edtPreço.getText());
-                objusuario.setUsu_senha(edtUSU_SENHA.getText());
-                objusuario.setUsu_ativo((chkATIVO.isSelected() ? 1 : 0));
-
-                UsuarioController usuariocontroller = new UsuarioController();
-                usuariocontroller.excluir(objusuario);
+                ProdutoModel objproduto = new ProdutoModel();
+                
+                objproduto.setPro_nome(edtNome.getText());
+                objproduto.sePro_estoque(Double.parseDouble(edtEstoque.getText()));
+                objproduto.setPro_unidade(edtUnidade.getText());
+                objproduto.setPro_preco(Double.parseDouble(edtPreço.getText()));
+                objproduto.setPro_custo(Double.parseDouble(edtCusto.getText()));
+                objproduto.setPro_atacado(Double.parseDouble(edtAtacdo.getText()));
+                objproduto.setPro_min(Double.parseDouble(edtMin.getText()));
+                objproduto.setPro_max(Double.parseDouble(edtMax.getText()));
+                objproduto.setPro_embalagem(Double.parseDouble(edtEmabalagem.getText()));
+                objproduto.setPro_peso(Double.parseDouble(edtPeso.getText()));
+                objproduto.setPro_cadastro(edtData.getText());
+                objproduto.setPro_obs(edtObs.getText());
+                objproduto.setPro_ativo((chkATIVO.isSelected() ? 1 : 0));
+                objproduto.sePro_tipo((chkTipo.isSelected() ? 1 : 0));
+                
+                ProdutoController produtocontroller = new ProdutoController();
+                produtocontroller.excluir(objproduto);
 
                 JOptionPane.showMessageDialog(null, "Registro Excluído com Sucesso");
                 consultar();

@@ -1,6 +1,6 @@
 package view;
 
-import controller.UsuarioController;
+import controller.FornecedorController;
 import java.awt.Dimension;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -8,18 +8,18 @@ import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import model.UsuarioModel;
+import model.FornecedorModel;
 
 public class FornecedorView extends javax.swing.JFrame {
 
     private String operacao;
-    private String colunas[] = {"ID", "Nome", "Login", "Ativo"};
+    private String colunas[] = {"ID do Fornecedor", "ID da Pessoa", "Contato", "Pessoa"};
     // esse objeto será vinculado com a tabela
     // selecione o objeto tabela, clique em PROPRIEDADES e encontre MODEL
     // no combo "Definir Propriedades" escolha "Código Personalizado"
     // digite o objeto DefaultTableModel, neste exemplo é tabela(criado logo abaixo)
-    private ArrayList<UsuarioModel> lista;
-    private UsuarioTableModel tabela;
+    private ArrayList<FornecedorModel> lista;
+    private FornecedorTableModel tabela;
 
     private String getOperacao() {
         return operacao;
@@ -760,43 +760,73 @@ public class FornecedorView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void limparAgenda() {
-        edtUSU_CODIGO.setText("0");
+        edtNome.setText("");
         edtTel2.setText("");
         edtRg.setText("");
-        edtUSU_SENHA.setText("");
+        edtFantasia.setText("");
         chkAtivo.setSelected(false);
+        edtCpfCnpj.setText("");
+        edtData.setText("");
+        edtTel1.setText("");
+        edtCel.setText("");
+        edtContato.setText("");
+        edtEndereço.setText("");
+        edtNum.setText("");
+        edtCompl.setText("");
+        edtBairro.setText("");
+        edtCidade.setText("");
+        edtUf.setText("");
+        edtSite.setText("");
+        edtCep.setText("");
+        edtEmail.setText("");
+        chkFisica.setSelected(false);
     }
 
-    private void mostrar(UsuarioModel usuario) {
-        edtUSU_CODIGO.setText(String.valueOf(usuario.getUsu_codigo()));
-        edtTel2.setText(usuario.getUsu_nome());
-        edtRg.setText(usuario.getUsu_login());
-        edtUSU_SENHA.setText(usuario.getUsu_senha());
-        chkAtivo.setSelected((usuario.getUsu_ativo() == 1));
+    private void mostrar(FornecedorModel fornecedor) {
+        edtNome.setText(String.valueOf(fornecedor.getPessoamodel().getPes_nome()));
+        edtTel2.setText(fornecedor.getPessoamodel().getPes_fone2());
+        edtRg.setText(fornecedor.getPessoamodel().getPes_rgie());
+        edtFantasia.setText(fornecedor.getPessoamodel().getPes_fantasia());
+        chkAtivo.setSelected((fornecedor.getPessoamodel().getPes_ativo() == 1));
+        edtCpfCnpj.setText(String.valueOf(fornecedor.getPessoamodel().getPes_cpfcnpj()));
+        edtData.setText(fornecedor.getPessoamodel().getPes_cadastro());
+        edtTel1.setText(fornecedor.getPessoamodel().getPes_fone1());
+        edtCel.setText(fornecedor.getPessoamodel().getPes_celular());
+        edtContato.setText(String.valueOf(fornecedor.getFor_contato()));
+        edtEndereço.setText(fornecedor.getPessoamodel().getPes_endereco());
+        edtNum.setText(fornecedor.getPessoamodel().getPes_numero());
+        edtCompl.setText(fornecedor.getPessoamodel().getPes_complemento());
+        edtBairro.setText(String.valueOf(fornecedor.getPessoamodel().getPes_bairro()));
+        edtCidade.setText(fornecedor.getPessoamodel().getPes_cidade());
+        edtUf.setText(fornecedor.getPessoamodel().getPes_uf());
+        edtSite.setText(fornecedor.getPessoamodel().getPes_site());
+        edtCep.setText(String.valueOf(fornecedor.getPessoamodel().getPes_cep()));
+        edtEmail.setText(fornecedor.getPessoamodel().getPes_email());
+        chkFisica.setSelected(("s".equals(fornecedor.getPessoamodel().getPes_fisica())));
     }
 
     private String filtroConsulta() {
         String condicao = "";
         if (!edtCONS_ID1.getText().trim().equals("")) {
-            condicao += "(USU_CODIGO >= " + edtCONS_ID1.getText() + ")";
+            condicao += "(for_codigo >= " + edtCONS_ID1.getText() + ")";
         }
         if (!edtCONS_ID2.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_CODIGO <= " + edtCONS_ID2.getText() + ")";
+            condicao += "(for_codigo <= " + edtCONS_ID2.getText() + ")";
         }
         if (!edtCONS_NOME.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_NOME LIKE ('%" + edtCONS_NOME.getText() + "%'))";
+            condicao += "(pes_nome LIKE ('%" + edtCONS_NOME.getText() + "%'))";
         }
         if (!edtConsCpfCnpj.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_LOGIN LIKE ('%" + edtConsCpfCnpj.getText() + "%'))";
+            condicao += "(pes_cpfcnpj LIKE ('%" + edtConsCpfCnpj.getText() + "%'))";
         }
         return condicao;
     }
@@ -804,13 +834,13 @@ public class FornecedorView extends javax.swing.JFrame {
     private void consultar() {
         try {
             String condicao = filtroConsulta();
-            UsuarioController usuariocontroller = new UsuarioController();
+            FornecedorController fornecedorcontroller = new FornecedorController();
             lista = null;
-            lista = usuariocontroller.consultar(condicao);
+            lista = fornecedorcontroller.consultar(condicao);
             if (lista.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
             } else {
-                tabela = new UsuarioTableModel(lista, colunas);
+                tabela = new FornecedorTableModel(lista, colunas);
                 tblConsulta.setModel(tabela);
                 tblConsulta.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
             }
@@ -838,14 +868,14 @@ public class FornecedorView extends javax.swing.JFrame {
         if (JOptionPane.showConfirmDialog(null, "Confirma Gravação deste Usuário ?",
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
-                UsuarioModel objusuario = new UsuarioModel();
-                objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objusuario.setUsu_nome(edtTel2.getText());
-                objusuario.setUsu_login(edtRg.getText());
-                objusuario.setUsu_senha(edtUSU_SENHA.getText());
-                objusuario.setUsu_ativo((chkAtivo.isSelected() ? 1 : 0));
-                UsuarioController usuariocontroller = new UsuarioController();
-                usuariocontroller.gravar(getOperacao(), objusuario);
+                FornecedorModel objfornecedor = new FornecedorModel();
+                objfornecedor.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
+                objfornecedor.setUsu_nome(edtTel2.getText());
+                objfornecedor.setUsu_login(edtRg.getText());
+                objfornecedor.setUsu_senha(edtUSU_SENHA.getText());
+                objfornecedor.setUsu_ativo((chkAtivo.isSelected() ? 1 : 0));
+                FornecedorController fornecedorcontroller = new FornecedorController();
+                fornecedorcontroller.gravar(getOperacao(), objfornecedor);
 
                 JOptionPane.showMessageDialog(null, "Dados Gravados com Sucesso");
                 consultar();
@@ -904,15 +934,15 @@ public class FornecedorView extends javax.swing.JFrame {
         if (JOptionPane.showConfirmDialog(null, "Confirma Exclusão deste Registro ?",
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
-                UsuarioModel objusuario = new UsuarioModel();
-                objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objusuario.setUsu_nome(edtTel2.getText());
-                objusuario.setUsu_login(edtRg.getText());
-                objusuario.setUsu_senha(edtUSU_SENHA.getText());
-                objusuario.setUsu_ativo((chkAtivo.isSelected() ? 1 : 0));
+                FornecedorModel objfornecedor = new FornecedorModel();
+                objfornecedor.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
+                objfornecedor.setUsu_nome(edtTel2.getText());
+                objfornecedor.setUsu_login(edtRg.getText());
+                objfornecedor.setUsu_senha(edtUSU_SENHA.getText());
+                objfornecedor.setUsu_ativo((chkAtivo.isSelected() ? 1 : 0));
 
-                UsuarioController usuariocontroller = new UsuarioController();
-                usuariocontroller.excluir(objusuario);
+                FornecedorController fornecedorcontroller = new FornecedorController();
+                fornecedorcontroller.excluir(objfornecedor);
 
                 JOptionPane.showMessageDialog(null, "Registro Excluído com Sucesso");
                 consultar();

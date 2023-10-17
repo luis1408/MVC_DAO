@@ -93,4 +93,19 @@ public class VendaDao {
             alterar(venda);
         }
     }
+    
+     public int getUltimoCodigo() throws SQLException{
+        PreparedStatement stm;
+        ResultSet rs;
+        int pes_codigo;
+        String sql = "SELECT COALESCE(MAX(vda_codigo),1) AS ultimo FROM venda";
+        
+        stm = conexao.prepareStatement(sql);
+        rs = stm.executeQuery();
+        rs.next();
+        pes_codigo = rs.getInt("ultimo");
+        rs.close();
+        stm.close();
+        return pes_codigo;
+    }
 }
