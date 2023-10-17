@@ -879,13 +879,12 @@ public class ClienteView extends javax.swing.JFrame {
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
                 ClienteModel objcliente = new ClienteModel();
-                objcliente.setUsu_codigo(Integer.parseInt(edtcli_codigo.getText()));
-                objcliente.setPessoaModel(setPes_nome(edtNome.getText()));
+                PessoaModel pessoa = new PessoaModel();
+                
+                pessoa.setPes_nome(edtNome.getText());
+                pessoa.setPes_rgie(edtRg.getText());
+                objcliente.setPessoamodel(pessoa);
 
-                objcliente.setPessoaModel().setPes_nome(edtNome.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_senha(edtUSU_SENHA.getText());
-                objcliente.setUsu_ativo((chkATIVO.isSelected() ? 1 : 0));
                 ClienteController clientecontroller = new ClienteController();
                 clientecontroller.gravar(getOperacao(), objcliente);
 
@@ -947,24 +946,14 @@ public class ClienteView extends javax.swing.JFrame {
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
                 ClienteModel objcliente = new ClienteModel();
-                
-                objcliente.setPessoamodel(setPes_nome(edtNome.getText()));
-                objcliente.setPes_fantasia(edtRg.getText());
-                objcliente.setPes_cpfcnpj(edtTel2.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_nome(edtTel2.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_nome(edtTel2.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_nome(edtTel2.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_nome(edtTel2.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_nome(edtTel2.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_nome(edtTel2.getText());
-                objcliente.setCli_limitecred(edtLimtCred.getText());
-                objcliente.setUsu_ativo((chkATIVO.isSelected() ? 1 : 0));
+                PessoaModel pessoa = new PessoaModel();
+
+                pessoa.setPes_nome(edtNome.getText());
+                pessoa.setPes_fantasia(edtFantasia.getText());
+                pessoa.setPes_cpfcnpj(edtConsCpfCnpj.getText());
+
+                objcliente.setPessoamodel(pessoa);
+                objcliente.setCli_limitecred(Double.parseDouble(edtLimtCred.getText()));
 
                 ClienteController clientecontroller = new ClienteController();
                 clientecontroller.excluir(objcliente);
