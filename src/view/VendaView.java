@@ -131,7 +131,7 @@ public class VendaView extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("MVC - Cadastro de Usuários");
         setFocusable(false);
         getContentPane().setLayout(null);
@@ -612,11 +612,12 @@ public class VendaView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void limparAgenda() {
-        edtUSU_CODIGO.setText("0");
-        edtUSU_NOME.setText("");
+        edtID_Cliente.setText("");
+        edtProdutoID.setText("");
         edtValor.setText("");
-        edtUSU_SENHA.setText("");
-        chkUSU_ATIVO.setSelected(false);
+        edtDataa.setText("");
+        edtDescontoVenda.setText("");;
+        edtTotalVenda.setText("");
     }
 
     private void mostrar(UsuarioModel usuario) {
@@ -775,51 +776,51 @@ public class VendaView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEXCLUIRActionPerformed
 
     private void edtID_ClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtID_ClienteActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtID_ClienteActionPerformed
 
     private void edtValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtValorActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtValorActionPerformed
 
     private void edtProdutoIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtProdutoIDActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtProdutoIDActionPerformed
 
     private void edtDataaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtDataaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtDataaActionPerformed
 
     private void edtDescontoVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtDescontoVendaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtDescontoVendaActionPerformed
 
     private void edtTotalVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtTotalVendaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtTotalVendaActionPerformed
 
     private void edtID_UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtID_UsuarioActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtID_UsuarioActionPerformed
 
     private void edtQtdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtQtdActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtQtdActionPerformed
 
     private void edtPreçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtPreçoActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtPreçoActionPerformed
 
     private void edtDescProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtDescProdActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtDescProdActionPerformed
 
     private void edtTotalProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtTotalProdActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtTotalProdActionPerformed
 
     private void edtObsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtObsActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtObsActionPerformed
     /**
      * @param args the command line arguments

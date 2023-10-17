@@ -40,9 +40,9 @@ public class CompraProdutoController {
         dao.alterar(compraproduto);
     }
     
-    public int getUltimoCodigo (CompraModel compra) throws SQLException{
+    public int getUltimoCodigo(CompraModel compra) throws SQLException{
         CompraDao dao = new CompraDao();
-        dao.getUltimoCodigo(compra);
+        return dao.getUltimoCodigo();
     }
     
     public void gravar (String operacao, CompraProdutoModel compraproduto) throws SQLException {

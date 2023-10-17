@@ -33,27 +33,27 @@ public class Menu extends javax.swing.JFrame {
     private String filtroConsulta() {
         String condicao = "";
         if (!txtLogin.getText().trim().equals("")) {
-            condicao += "(USU_LOGIN = " + txtLogin.getText() + ")";
-        }
-        if (!password.getText().trim().equals("")) {
-            if (!condicao.isEmpty()) {
-                condicao += " AND ";
-            }
-            condicao += "(USU_SENHA = " + password.getText() + ")";
+            condicao += "(usu_login = '" + txtLogin.getText() + "')";
         }
         return condicao;
     }
 
-    private void singin(String login, String password) {
+    private void singin() {
         try {
             ArrayList<UsuarioModel> users = new UsuarioController().consultar(filtroConsulta()); 
-            UsuarioModel user = users.get(users.size());
-            if (user.getUsu_login() == login) {
-                this.panelLogin.setVisible(false);
-                this.jMenuBar.setVisible(true);
-            } else {
+            if (users.size() == 0) {
+                this.txtMensagemErro.setText("Usuário não existe");
                 this.txtMensagemErro.setVisible(true);
-            }
+            } else {
+                UsuarioModel user = users.get(0);
+                if (password.getPassword().toString().equals(user.getUsu_senha())) {
+                    this.panelLogin.setVisible(false);
+                    this.jMenuBar.setVisible(true);
+                } else {
+                    System.out.print(user.getUsu_senha() + " " + password.getPassword().toString());
+                    this.txtMensagemErro.setVisible(true);
+                }  
+            } 
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -159,12 +159,27 @@ public class Menu extends javax.swing.JFrame {
         menuCadastro.add(menuUsuario);
 
         menuFornecedor.setText("Fornecedor");
+        menuFornecedor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuFornecedorActionPerformed(evt);
+            }
+        });
         menuCadastro.add(menuFornecedor);
 
         menuCliente.setText("Cliente");
+        menuCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuClienteActionPerformed(evt);
+            }
+        });
         menuCadastro.add(menuCliente);
 
         menuProduto.setText("Produto");
+        menuProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuProdutoActionPerformed(evt);
+            }
+        });
         menuCadastro.add(menuProduto);
 
         menuFormaPagamento.setText("Forma de Pagamento");
@@ -180,9 +195,19 @@ public class Menu extends javax.swing.JFrame {
         menuMovimentacao.setText("Movimentação");
 
         menuCompra.setText("Compra");
+        menuCompra.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuCompraActionPerformed(evt);
+            }
+        });
         menuMovimentacao.add(menuCompra);
 
         menuVenda.setText("Venda");
+        menuVenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuVendaActionPerformed(evt);
+            }
+        });
         menuMovimentacao.add(menuVenda);
 
         jMenuBar.add(menuMovimentacao);
@@ -207,26 +232,45 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtLoginActionPerformed
 
     private void bttEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttEntrarActionPerformed
-        singin(this.txtLogin.getText(), this.password.getText());
+        singin();
     }//GEN-LAST:event_bttEntrarActionPerformed
 
     private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_passwordActionPerformed
 
     private void menuUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuUsuarioActionPerformed
-        // TODO add your handling code here:
+        
         new UsuarioView();
     }//GEN-LAST:event_menuUsuarioActionPerformed
 
     private void menuFormaPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFormaPagamentoActionPerformed
-        // TODO add your handling code here:
         new FormaPagamentoView();
     }//GEN-LAST:event_menuFormaPagamentoActionPerformed
+
+    private void menuFornecedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuFornecedorActionPerformed
+        new FornecedorView();
+    }//GEN-LAST:event_menuFornecedorActionPerformed
+
+    private void menuClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuClienteActionPerformed
+        new ClienteView();
+    }//GEN-LAST:event_menuClienteActionPerformed
+
+    private void menuProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuProdutoActionPerformed
+        new ProdutoView();
+    }//GEN-LAST:event_menuProdutoActionPerformed
+
+    private void menuCompraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCompraActionPerformed
+        new CompraView();
+    }//GEN-LAST:event_menuCompraActionPerformed
+
+    private void menuVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuVendaActionPerformed
+        new VendaView();
+    }//GEN-LAST:event_menuVendaActionPerformed
 
     /**
      * @param args the command line arguments

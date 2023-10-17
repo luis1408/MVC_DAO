@@ -13,12 +13,13 @@ public class Conexao {
     // public final static String USUARIO = "postgres";
     // public final static String SENHA = "M@d@r@";
 
-    public final static String BANCO = "jdbc:postgresql://192.168.70.93:5432/N822350";
-    public final static String USUARIO = "N822350";
-    public final static String SENHA = "N822350";
+    public final static String BANCO = "jdbc:postgresql://localhost:5432/postgres";
+    public final static String USUARIO = "oleoespindola";
+    public final static String SENHA = "oleoespindola";
     
     private static Connection conexao;
     private Statement stm;
+
 
     public Conexao() {
         try {

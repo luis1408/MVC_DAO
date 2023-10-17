@@ -110,7 +110,7 @@ public class FormaPagamentoView extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("MVC - Cadastro de Usuários");
         setFocusable(false);
         getContentPane().setLayout(null);
@@ -565,11 +565,11 @@ public class FormaPagamentoView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEXCLUIRActionPerformed
 
     private void edtFPG_NOMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtFPG_NOMEActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtFPG_NOMEActionPerformed
 
     private void chkFPG_ATIVOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkFPG_ATIVOActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_chkFPG_ATIVOActionPerformed
     /**
      * @param args the command line arguments

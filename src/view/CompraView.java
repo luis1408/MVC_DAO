@@ -131,7 +131,7 @@ public class CompraView extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("MVC - Cadastro de Usuários");
         setFocusable(false);
         getContentPane().setLayout(null);
@@ -775,51 +775,51 @@ public class CompraView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEXCLUIRActionPerformed
 
     private void edtUSU_NOME1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME1ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_NOME1ActionPerformed
 
     private void edtUSU_LOGINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGINActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_LOGINActionPerformed
 
     private void edtUSU_LOGIN1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN1ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_LOGIN1ActionPerformed
 
     private void edtUSU_LOGIN2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_LOGIN2ActionPerformed
 
     private void edtUSU_NOME2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_NOME2ActionPerformed
 
     private void edtUSU_NOME3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOME3ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_NOME3ActionPerformed
 
     private void edtUSU_LOGIN3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN3ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_LOGIN3ActionPerformed
 
     private void edtUSU_LOGIN4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN4ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_LOGIN4ActionPerformed
 
     private void edtUSU_LOGIN5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN5ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_LOGIN5ActionPerformed
 
     private void edtUSU_LOGIN6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN6ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_LOGIN6ActionPerformed
 
     private void edtUSU_LOGIN7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN7ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_LOGIN7ActionPerformed
 
     private void edtUSU_LOGIN9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_LOGIN9ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_LOGIN9ActionPerformed
     /**
      * @param args the command line arguments

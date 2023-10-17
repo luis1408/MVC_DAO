@@ -10,10 +10,11 @@ import model.UsuarioModel;
 
 public class UsuarioDao {
 
-    private Connection conexao = null;
+    private Connection conection;
 
-    public UsuarioDao() throws SQLException {
-        this.conexao = Conexao.getConexao();
+    public UsuarioDao() {
+        new Conexao();
+        this.conection = Conexao.getConexao();
     }
 
     public ArrayList<UsuarioModel> consultar(String filtro) throws SQLException {
@@ -24,7 +25,7 @@ public class UsuarioDao {
         if (!filtro.equals("")) {
             sql += " WHERE " + filtro;
         }
-        stm = conexao.prepareStatement(sql);
+        stm = conection.prepareStatement(sql);
         rs = stm.executeQuery();
         lista = new ArrayList<>();
 
@@ -44,7 +45,7 @@ public class UsuarioDao {
 
     public void excluir(UsuarioModel usuario) throws SQLException {
         String sql = "DELETE FROM usuario WHERE usu_codigo = ?";
-        PreparedStatement stm = conexao.prepareStatement(sql);
+        PreparedStatement stm = conection.prepareStatement(sql);
         stm.setInt(1, usuario.getUsu_codigo());
         stm.execute();
         stm.close();
@@ -53,7 +54,7 @@ public class UsuarioDao {
     public void adicionar(UsuarioModel usuario) throws SQLException {
         String sql = "INSERT INTO usuario (usu_nome, usu_login, usu_senha, usu_ativo)"
                 + " VALUES (?, ?, ?, ?)";
-        PreparedStatement stm = conexao.prepareStatement(sql);
+        PreparedStatement stm = conection.prepareStatement(sql);
         stm.setString(1, usuario.getUsu_nome());
         stm.setString(2, usuario.getUsu_login());
         stm.setString(3, usuario.getUsu_senha());
@@ -65,7 +66,7 @@ public class UsuarioDao {
     public void alterar(UsuarioModel usuario) throws SQLException {
         String sql = "UPDATE usuario SET usu_nome = ?, usu_login = ?, "
                 + "usu_senha = ?, usu_ativo = ? WHERE usu_codigo = ?";
-        PreparedStatement stm = conexao.prepareStatement(sql);
+        PreparedStatement stm = conection.prepareStatement(sql);
         stm.setString(1, usuario.getUsu_nome());
         stm.setString(2, usuario.getUsu_login());
         stm.setString(3, usuario.getUsu_senha());

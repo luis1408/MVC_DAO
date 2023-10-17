@@ -133,7 +133,7 @@ public class ProdutoView extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("MVC - Cadastro de Usuários");
         setFocusable(false);
         getContentPane().setLayout(null);
@@ -845,55 +845,55 @@ public class ProdutoView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEXCLUIRActionPerformed
 
     private void edtMinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtMinActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtMinActionPerformed
 
     private void edtEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtEstoqueActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtEstoqueActionPerformed
 
     private void edtPreçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtPreçoActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtPreçoActionPerformed
 
     private void edtEmabalagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtEmabalagemActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtEmabalagemActionPerformed
 
     private void edtUnidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUnidadeActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUnidadeActionPerformed
 
     private void edtCustoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtCustoActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtCustoActionPerformed
 
     private void edtAtacdoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtAtacdoActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtAtacdoActionPerformed
 
     private void edtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtNomeActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtNomeActionPerformed
 
     private void edtMaxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtMaxActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtMaxActionPerformed
 
     private void edtPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtPesoActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtPesoActionPerformed
 
     private void chkATIVOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkATIVOActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_chkATIVOActionPerformed
 
     private void edtDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtDataActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtDataActionPerformed
 
     private void edtObsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtObsActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtObsActionPerformed
     /**
      * @param args the command line arguments

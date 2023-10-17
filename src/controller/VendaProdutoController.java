@@ -42,7 +42,7 @@ public class VendaProdutoController {
     
     public int getUltimoCodigo (VendaModel venda) throws SQLException{
         VendaDao dao = new VendaDao();
-        dao.getUltimoCodigo(venda);
+        return dao.getUltimoCodigo();
     }
     
     public void gravar (String operacao, VendaProdutoModel vendaProduto) throws SQLException {

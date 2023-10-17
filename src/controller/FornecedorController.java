@@ -39,9 +39,8 @@ public class FornecedorController {
         dao.alterar(fornecedor);
     }
     
-    public int getUltimoCodigo (FornecedorModel fornecedor) throws SQLException{
-        PessoaDao dao = new PessoaDao();
-        dao.getUltimoCodigo(pessoa);
+    public int getUltimoCodigo(FornecedorModel fornecedor) throws SQLException{
+        return fornecedor.getPes_id();
     }
     
     public void gravar (String operacao, FornecedorModel fornecedor) throws SQLException {

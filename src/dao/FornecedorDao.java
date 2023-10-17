@@ -76,4 +76,7 @@ public class FornecedorDao {
             alterar(fornecedor);
         }
     }
+
+    public void getUltimoCodigo(FornecedorModel fornecedor) {
+    }
 }

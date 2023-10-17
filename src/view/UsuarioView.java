@@ -56,7 +56,7 @@ public class UsuarioView extends javax.swing.JFrame {
         pack();
     }
 
-    @SuppressWarnings("unchecked")
+    // @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -116,7 +116,7 @@ public class UsuarioView extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("MVC - Cadastro de Usuários");
         setFocusable(false);
         getContentPane().setLayout(null);
@@ -529,7 +529,7 @@ public class UsuarioView extends javax.swing.JFrame {
                 objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
                 objusuario.setUsu_nome(edtUSU_NOME.getText());
                 objusuario.setUsu_login(edtUSU_LOGIN.getText());
-                objusuario.setUsu_senha(edtUSU_SENHA.getText());
+                objusuario.setUsu_senha(edtUSU_SENHA.getPassword().toString());
                 objusuario.setUsu_ativo((chkUSU_ATIVO.isSelected() ? 1 : 0));
                 UsuarioController usuariocontroller = new UsuarioController();
                 usuariocontroller.gravar(getOperacao(), objusuario);
@@ -595,7 +595,7 @@ public class UsuarioView extends javax.swing.JFrame {
                 objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
                 objusuario.setUsu_nome(edtUSU_NOME.getText());
                 objusuario.setUsu_login(edtUSU_LOGIN.getText());
-                objusuario.setUsu_senha(edtUSU_SENHA.getText());
+                objusuario.setUsu_senha(edtUSU_SENHA.getPassword().toString());
                 objusuario.setUsu_ativo((chkUSU_ATIVO.isSelected() ? 1 : 0));
 
                 UsuarioController usuariocontroller = new UsuarioController();
@@ -610,7 +610,7 @@ public class UsuarioView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEXCLUIRActionPerformed
 
     private void edtUSU_NOMEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUSU_NOMEActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUSU_NOMEActionPerformed
     /**
      * @param args the command line arguments

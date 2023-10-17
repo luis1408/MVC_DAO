@@ -10,6 +10,7 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import model.ClienteModel;
 import model.PessoaModel;
+import model.UsuarioModel;
 
 public class ClienteView extends javax.swing.JFrame {
 
@@ -146,7 +147,7 @@ public class ClienteView extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("MVC - Cadastro de Usuários");
         setFocusable(false);
         getContentPane().setLayout(null);
@@ -977,79 +978,79 @@ public class ClienteView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEXCLUIRActionPerformed
 
     private void edtTel2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtTel2ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtTel2ActionPerformed
 
     private void edtFantasiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtFantasiaActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtFantasiaActionPerformed
 
     private void edtRgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtRgActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtRgActionPerformed
 
     private void edtEndereçoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtEndereçoActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtEndereçoActionPerformed
 
     private void edtCpfCnpjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtCpfCnpjActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtCpfCnpjActionPerformed
 
     private void edtDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtDataActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtDataActionPerformed
 
     private void edtTel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtTel1ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtTel1ActionPerformed
 
     private void edtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtNomeActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtNomeActionPerformed
 
     private void edtCelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtCelActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtCelActionPerformed
 
     private void edtNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtNumActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtNumActionPerformed
 
     private void chkATIVOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkATIVOActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_chkATIVOActionPerformed
 
     private void edtCompleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtCompleActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtCompleActionPerformed
 
     private void edtBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtBairroActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtBairroActionPerformed
 
     private void edtCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtCidadeActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtCidadeActionPerformed
 
     private void edtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtEmailActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtEmailActionPerformed
 
     private void edtUfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtUfActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtUfActionPerformed
 
     private void edtCepActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtCepActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtCepActionPerformed
 
     private void edtSiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtSiteActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtSiteActionPerformed
 
     private void edtLimtCredActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtLimtCredActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_edtLimtCredActionPerformed
     /**
      * @param args the command line arguments
