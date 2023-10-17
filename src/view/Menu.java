@@ -46,11 +46,11 @@ public class Menu extends javax.swing.JFrame {
                 this.txtMensagemErro.setVisible(true);
             } else {
                 UsuarioModel user = users.get(0);
-                if (password.getPassword().toString().equals(user.getUsu_senha())) {
+                if (password.getText().equals(user.getUsu_senha())) {
                     this.panelLogin.setVisible(false);
                     this.jMenuBar.setVisible(true);
                 } else {
-                    System.out.print(user.getUsu_senha() + " " + password.getPassword().toString());
+                    System.out.print(user.getUsu_senha() + " " + password.getText());
                     this.txtMensagemErro.setVisible(true);
                 }  
             } 

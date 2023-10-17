@@ -508,7 +508,7 @@ public class FormaPagamentoView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnConsultaActionPerformed
 
     private void btnSAIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSAIRActionPerformed
-        System.exit(0);
+        this.dispose();;
     }//GEN-LAST:event_btnSAIRActionPerformed
 
     private void btnANTERIORActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnANTERIORActionPerformed
