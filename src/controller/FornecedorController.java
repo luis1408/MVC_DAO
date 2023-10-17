@@ -1,20 +1,15 @@
 package controller;
 
-import conexao.Conexao;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.*;
 import dao.FornecedorDao;
-import dao.PessoaDao;
 
 public class FornecedorController {
 
-    private Connection conexao = null;
 
     public FornecedorController() {
-        this.conexao = Conexao.getConexao();
     }
 
     private List<FornecedorModel> listafornecedores;
@@ -44,7 +39,6 @@ public class FornecedorController {
     }
     
     public void gravar (String operacao, FornecedorModel fornecedor) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")){
             adicionar(fornecedor);
         } else if (operacao.equals("alterar")){

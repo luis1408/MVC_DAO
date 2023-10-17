@@ -1,8 +1,6 @@
 package controller;
 
-import conexao.Conexao;
 import dao.VendaDao;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,10 +8,8 @@ import model.VendaModel;
 
 public class VendaController {
 
-    private Connection conexao = null;
 
     public VendaController() {
-        this.conexao = Conexao.getConexao();
     }
 
     private List<VendaModel> listavendas;
@@ -39,7 +35,6 @@ public class VendaController {
     }
     
     public void gravar (String operacao, VendaModel venda) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")){
             adicionar(venda);
         } else if (operacao.equals("alterar")){

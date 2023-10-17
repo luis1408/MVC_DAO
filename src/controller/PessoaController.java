@@ -1,8 +1,6 @@
 package controller;
 
-import conexao.Conexao;
 import dao.PessoaDao;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,10 +8,8 @@ import model.*;
 
 public class PessoaController {
 
-    private Connection conexao = null;
 
     public PessoaController() {
-        this.conexao = Conexao.getConexao();
     }
 
     private List<PessoaModel> listapessoas;
@@ -39,7 +35,6 @@ public class PessoaController {
     }
     
     public void gravar (String operacao, PessoaModel pessoa) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")){
             adicionar(pessoa);
         } else if (operacao.equals("alterar")){

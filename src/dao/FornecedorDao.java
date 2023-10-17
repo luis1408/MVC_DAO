@@ -69,7 +69,6 @@ public class FornecedorDao {
     }
 
     public void gravar(String operacao, FornecedorModel fornecedor) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")) {
             adicionar(fornecedor);
         } else if (operacao.equals("alterar")) {

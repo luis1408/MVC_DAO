@@ -69,7 +69,6 @@ public class ClienteDao {
     }
 
     public void gravar(String operacao, ClienteModel cliente) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")) {
             adicionar(cliente);
         } else if (operacao.equals("alterar")) {

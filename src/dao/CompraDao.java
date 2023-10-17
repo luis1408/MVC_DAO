@@ -89,7 +89,6 @@ public class CompraDao {
     }
 
     public void gravar(String operacao, CompraModel compra) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")) {
             adicionar(compra);
         } else if (operacao.equals("alterar")) {

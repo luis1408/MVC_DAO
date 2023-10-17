@@ -1,9 +1,7 @@
 
 package controller;
 
-import conexao.Conexao;
 import dao.FormaPagamentoDao;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +12,8 @@ import model.FormaPagamentoModel;
  */
 public class FormaPagamentoController {
     
-    private Connection conexao = null;
 
     public FormaPagamentoController() {
-        this.conexao = Conexao.getConexao();
     }
     
     private List<FormaPagamentoModel> listaformapagto;
@@ -43,7 +39,6 @@ public class FormaPagamentoController {
     }
     
     public void gravar (String operacao, FormaPagamentoModel formaPagamento) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")){
             adicionar(formaPagamento);
         } else if (operacao.equals("alterar")){

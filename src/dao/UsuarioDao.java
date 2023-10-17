@@ -76,7 +76,6 @@ public class UsuarioDao {
     }
 
     public void gravar(String operacao, UsuarioModel usuario) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")) {
             adicionar(usuario);
         } else if (operacao.equals("alterar")) {

@@ -1,9 +1,7 @@
 
 package controller;
 
-import conexao.Conexao;
 import dao.VendaPagamentoDao;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +12,8 @@ import model.VendaPagamentoModel;
  */
 public class VendaPagamentoController {
     
-    private Connection conexao = null;
 
     public VendaPagamentoController() {
-        this.conexao = Conexao.getConexao();
     }
     
     private List<VendaPagamentoModel> listavendapagto;
@@ -43,7 +39,6 @@ public class VendaPagamentoController {
     }
     
     public void gravar (String operacao, VendaPagamentoModel vendaPagamento) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")){
             adicionar(vendaPagamento);
         } else if (operacao.equals("alterar")){

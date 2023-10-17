@@ -127,7 +127,6 @@ public class PessoaDao {
     }
 
     public void gravar(String operacao, PessoaModel pessoa) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")) {
             adicionar(pessoa);
         } else if (operacao.equals("alterar")) {

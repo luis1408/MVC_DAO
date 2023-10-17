@@ -69,7 +69,6 @@ public class FormaPagamentoDao {
     }
 
     public void gravar(String operacao, FormaPagamentoModel formapagto) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")) {
             adicionar(formapagto);
         } else if (operacao.equals("alterar")) {

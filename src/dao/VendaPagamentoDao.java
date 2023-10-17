@@ -72,7 +72,6 @@ public class VendaPagamentoDao {
     }
 
     public void gravar(String operacao, VendaPagamentoModel vendapagto) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")) {
             adicionar(vendapagto);
         } else if (operacao.equals("alterar")) {

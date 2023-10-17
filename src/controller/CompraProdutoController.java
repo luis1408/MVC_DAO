@@ -1,9 +1,7 @@
 package controller;
 
-import conexao.Conexao;
 import dao.CompraDao;
 import dao.CompraProdutoDao;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +10,8 @@ import model.CompraProdutoModel;
 
 public class CompraProdutoController {
 
-    private Connection conexao = null;
 
     public CompraProdutoController() {
-        this.conexao = Conexao.getConexao();
     }
 
     private List<CompraProdutoModel> listacompraProdutos;
@@ -46,7 +42,6 @@ public class CompraProdutoController {
     }
     
     public void gravar (String operacao, CompraProdutoModel compraproduto) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")){
             adicionar(compraproduto);
         } else if (operacao.equals("alterar")){

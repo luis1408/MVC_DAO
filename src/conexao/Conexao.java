@@ -2,9 +2,7 @@ package conexao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 public class Conexao {
@@ -18,13 +16,10 @@ public class Conexao {
     public final static String SENHA = "oleoespindola";
     
     private static Connection conexao;
-    private Statement stm;
-
 
     public Conexao() {
         try {
-            conexao = DriverManager.getConnection(BANCO, USUARIO, SENHA); //cria conexão
-            stm = conexao.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY); // configura o Statement
+            conexao = DriverManager.getConnection(BANCO, USUARIO, SENHA);
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "Erro ao conectar no banco. \n" + ex.getMessage());
         }

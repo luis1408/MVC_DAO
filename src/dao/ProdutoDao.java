@@ -111,7 +111,6 @@ public class ProdutoDao {
     }
 
     public void gravar(String operacao, ProdutoModel produto) throws SQLException {
-        boolean retorno = true;
         if (operacao.equals("incluir")) {
             adicionar(produto);
         } else if (operacao.equals("alterar")) {
