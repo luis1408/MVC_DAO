@@ -1,6 +1,8 @@
 package controller;
 
 import dao.ClienteDao;
+import dao.PessoaDao;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,8 +27,10 @@ public class ClienteController {
     }
     
     public void adicionar (ClienteModel cliente) throws SQLException{
-        ClienteDao dao = new ClienteDao();
-        dao.adicionar(cliente);
+        ClienteDao clienteDao = new ClienteDao();
+        clienteDao.adicionar(cliente);
+        PessoaDao pessoaDao = new PessoaDao();
+        pessoaDao.adicionar(cliente.getPessoamodel());
     }
     
     public void alterar (ClienteModel cliente) throws SQLException{

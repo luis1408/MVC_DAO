@@ -36,7 +36,7 @@ public class CompraDao {
             objusu.setCpr_emissao(rs.getString("cpr_emissao"));
             objusu.setCpr_valor(rs.getDouble("cpr_valor"));
             objusu.setCpr_desconto(rs.getDouble("cpr_desconto"));
-            objusu.setCpr_total(rs.getDouble("cpr_total"));
+            // objusu.setCpr_total(rs.getDouble("cpr_total"));
             objusu.setCpr_dtentrada(rs.getString("cpr_dtentrada"));
             objusu.setCpr_obs(rs.getString("cpr_obs"));
             lista.add(objusu);
@@ -56,7 +56,7 @@ public class CompraDao {
 
     public void adicionar(CompraModel compra) throws SQLException {
         String sql = "INSERT INTO compra (usu_id, for_id, cpr_emissao,"
-                + " cpr_valor, cpr_desconto, cpr_total, cpr_dtentrada, cpr_obs)"
+                + " cpr_valor, cpr_desconto, cpr_dtentrada, cpr_obs)"
                 + " VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
         PreparedStatement stm = conexao.prepareStatement(sql);
         stm.setInt(1, compra.getUsu_id());
@@ -64,7 +64,7 @@ public class CompraDao {
         stm.setString(3, compra.getCpr_emissao());
         stm.setDouble(4, compra.getCpr_valor());
         stm.setDouble(5, compra.getCpr_desconto());
-        stm.setDouble(6, compra.getCpr_total());
+        // stm.setDouble(6, compra.getCpr_total());
         stm.setString(7, compra.getCpr_dtentrada());
         stm.setString(8, compra.getCpr_obs());
         stm.execute();
@@ -74,14 +74,14 @@ public class CompraDao {
     public void alterar(CompraModel compra) throws SQLException {
         String sql = "UPDATE compra SET usu_id = ?, for_id = ?, "
                 + "cpr_emissao = ?, cpr_valor = ?, cpr_desconto = ?, "
-                + "cpr_total = ?, cpr_dtentrada = ?, cpr_obs = ? WHERE cpr_codigo = ?";
+                + "cpr_dtentrada = ?, cpr_obs = ? WHERE cpr_codigo = ?";
         PreparedStatement stm = conexao.prepareStatement(sql);
         stm.setInt(1, compra.getUsu_id());
         stm.setInt(2, compra.getFor_id());
         stm.setString(3, compra.getCpr_emissao());
         stm.setDouble(4, compra.getCpr_valor());
         stm.setDouble(5, compra.getCpr_desconto());
-        stm.setDouble(6, compra.getCpr_total());
+        // stm.setDouble(6, compra.getCpr_total());
         stm.setString(7, compra.getCpr_dtentrada());
         stm.setString(8, compra.getCpr_obs());
         stm.execute();
