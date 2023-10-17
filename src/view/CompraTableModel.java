@@ -51,11 +51,23 @@ public class CompraTableModel extends AbstractTableModel {
             case 5:
                 return compra.getCpr_desconto();
             case 6:
-                return compra.getCpr_total();
-            case 7:
                 return compra.getCpr_dtentrada();
-            case 8:
+            case 7:
                 return compra.getCpr_obs();
+            case 8:
+                return compra.getCompraprodutomodel().getCpp_codigo();
+            case 9:
+                return compra.getCompraprodutomodel().getCpr_id();
+            case 10:
+                return compra.getCompraprodutomodel().getPro_id();
+            case 11:
+                return compra.getCompraprodutomodel().getCpr_qtde();
+            case 12:
+                return compra.getCompraprodutomodel().getCpr_preco();
+            case 13:
+                return compra.getCompraprodutomodel().getCpr_desconto();
+            case 14:
+                return compra.getCompraprodutomodel().getCpr_totall();
             default:
                 return null;    
         }

@@ -11,12 +11,13 @@ public class CompraModel {
     private double cpr_total;
     private String cpr_dtentrada;
     private String cpr_obs;
+    private CompraProdutoModel compraprodutomodel;
     
     public CompraModel() {
     }
 
     public CompraModel(int cpr_codigo, int usu_id, int for_id, String cpr_emissao, double cpr_valor, double cpr_desconto, double cpr_total,
-            String cpr_dtentrada, String cpr_obs) {
+            String cpr_dtentrada, String cpr_obs, CompraProdutoModel compraprodutomodel) {
         this.cpr_codigo = cpr_codigo;
         this.usu_id = usu_id;
         this.for_id = for_id;
@@ -26,6 +27,7 @@ public class CompraModel {
         this.cpr_total = cpr_total;
         this.cpr_dtentrada = cpr_dtentrada;
         this.cpr_obs = cpr_obs;
+        this.compraprodutomodel = compraprodutomodel;
     }
 
     public int getCpr_codigo() {
@@ -91,11 +93,19 @@ public class CompraModel {
         this.cpr_dtentrada = cpr_dtentrada;
     }
     
-     public String getCpr_obs() {
+    public String getCpr_obs() {
         return cpr_obs;
     }
 
     public void setCpr_obs(String cpr_obs) {
         this.cpr_obs = cpr_obs;
+    }
+    
+    public CompraProdutoModel getCompraprodutomodel() {
+        return compraprodutomodel;
+    }
+
+    public void setCompraprodutomodel(CompraProdutoModel compraprodutomodel) {
+        this.compraprodutomodel = compraprodutomodel;
     }
 }

@@ -1,6 +1,7 @@
 package view;
 
-import controller.UsuarioController;
+import controller.VendaController;
+import controller.VendaProdutoController;
 import java.awt.Dimension;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -8,18 +9,19 @@ import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import model.UsuarioModel;
+import model.VendaModel;
+import model.VendaProdutoModel;
 
 public class VendaView extends javax.swing.JFrame {
 
     private String operacao;
-    private String colunas[] = {"ID", "Nome", "Login", "Ativo"};
+    private String colunas[] = {"ID", "Venda ID", "Cliente ID", "Data", "Valor", "Desconto", "Total", "Obs", "VendaProduto ID", "Venda ID", "ProdutoID", "Qtde", "preço", "Desconto", "Total"};
     // esse objeto será vinculado com a tabela
     // selecione o objeto tabela, clique em PROPRIEDADES e encontre MODEL
     // no combo "Definir Propriedades" escolha "Código Personalizado"
     // digite o objeto DefaultTableModel, neste exemplo é tabela(criado logo abaixo)
-    private ArrayList<UsuarioModel> lista;
-    private UsuarioTableModel tabela;
+    private ArrayList<VendaModel> lista;
+    private VendaTableModel tabela;
 
     private String getOperacao() {
         return operacao;
@@ -131,7 +133,7 @@ public class VendaView extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MVC - Cadastro de Usuários");
         setFocusable(false);
         getContentPane().setLayout(null);
@@ -485,7 +487,7 @@ public class VendaView extends javax.swing.JFrame {
                         .addComponent(lblTotalVenda)
                         .addComponent(edtTotalVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(lblObservção, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(30, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Dados da Venda", painelDADOS);
@@ -606,50 +608,67 @@ public class VendaView extends javax.swing.JFrame {
         jTabbedPane2.addTab("Consulta", painelCONSULTA);
 
         getContentPane().add(jTabbedPane2);
-        jTabbedPane2.setBounds(10, 380, 720, 270);
+        jTabbedPane2.setBounds(10, 400, 720, 250);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void limparAgenda() {
+        
+        edtID_Usuario.setText("");
         edtID_Cliente.setText("");
-        edtProdutoID.setText("");
-        edtValor.setText("");
         edtDataa.setText("");
+        edtValor.setText("");
         edtDescontoVenda.setText("");;
         edtTotalVenda.setText("");
+        edtProdutoID.setText("");
+        edtQtd.setText("");
+        edtPreço.setText("");
+        edtDescProd.setText("");
+        edtTotalProd.setText("");;
+        edtObs.setText("");
+        
     }
 
-    private void mostrar(UsuarioModel usuario) {
-        edtUSU_CODIGO.setText(String.valueOf(usuario.getUsu_codigo()));
-        edtUSU_NOME.setText(usuario.getUsu_nome());
-        edtValor.setText(usuario.getUsu_login());
-        edtUSU_SENHA.setText(usuario.getUsu_senha());
-        chkUSU_ATIVO.setSelected((usuario.getUsu_ativo() == 1));
+    private void mostrar(VendaModel venda) {
+        
+        edtID_Usuario.setText(String.valueOf(venda.getUsu_id()));
+        edtID_Cliente.setText(String.valueOf(venda.getCli_id()));
+        edtValor.setText(String.valueOf(venda.getVda_valor()));
+        edtDataa.setText(venda.getVda_data());
+        edtDescontoVenda.setText(String.valueOf(venda.getVda_desconto()));
+        edtTotalVenda.setText(String.valueOf(venda.getVda_total()));
+        edtProdutoID.setText(String.valueOf(venda.getVendaprodutompdel().getPro_id()));
+        edtQtd.setText(String.valueOf(venda.getVendaprodutompdel().getVep_qtde()));
+        edtPreço.setText(String.valueOf(venda.getVendaprodutompdel().getVep_preco()));
+        edtDescProd.setText(String.valueOf(venda.getVendaprodutompdel().getVep_desconto()));
+        edtTotalProd.setText(String.valueOf(venda.getVendaprodutompdel().getVep_total()));
+        edtObs.setText(venda.getVda_obs());
+        
     }
 
     private String filtroConsulta() {
         String condicao = "";
         if (!edtCONS_ID1.getText().trim().equals("")) {
-            condicao += "(USU_CODIGO >= " + edtCONS_ID1.getText() + ")";
+            condicao += "(vda_codigo >= " + edtCONS_ID1.getText() + ")";
         }
         if (!edtCONS_ID2.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_CODIGO <= " + edtCONS_ID2.getText() + ")";
+            condicao += "(vda_codigo <= " + edtCONS_ID2.getText() + ")";
         }
         if (!edtCONS_Valor.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_NOME LIKE ('%" + edtCONS_Valor.getText() + "%'))";
+            condicao += "(vda_valor LIKE ('%" + edtCONS_Valor.getText() + "%'))";
         }
         if (!edtCONS_Total.getText().trim().equals("")) {
             if (!condicao.isEmpty()) {
                 condicao += " AND ";
             }
-            condicao += "(USU_LOGIN LIKE ('%" + edtCONS_Total.getText() + "%'))";
+            condicao += "(vda_total LIKE ('%" + edtCONS_Total.getText() + "%'))";
         }
         return condicao;
     }
@@ -657,24 +676,24 @@ public class VendaView extends javax.swing.JFrame {
     private void consultar() {
         try {
             String condicao = filtroConsulta();
-            UsuarioController usuariocontroller = new UsuarioController();
+            VendaController vendacontroller = new VendaController();
             lista = null;
-            lista = usuariocontroller.consultar(condicao);
+            lista = vendacontroller.consultar(condicao);
             if (lista.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
+                JOptionPane.showMessageDialog(null, "Não Existem Vendas Cadastrados !");
             } else {
-                tabela = new UsuarioTableModel(lista, colunas);
+                tabela = new VendaTableModel(lista, colunas);
                 tblConsulta.setModel(tabela);
                 tblConsulta.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
             }
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro na Consulta do Usuário \n" + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro na Consulta das Vendas \n" + ex.getMessage());
         }
     }
 
     private void btnPRIMEIROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPRIMEIROActionPerformed
         if (lista.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
+            JOptionPane.showMessageDialog(null, "Não Existem Vendas Cadastrados !");
         }
         int primeiro = 0;
         mostrarRegistro(primeiro);
@@ -683,22 +702,49 @@ public class VendaView extends javax.swing.JFrame {
     private void btnINCLUIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnINCLUIRActionPerformed
         limparAgenda();
         setOperacao("incluir");
-        edtUSU_NOME.setFocusable(true);
-        chkUSU_ATIVO.setSelected(true);
+        edtID_Usuario.setFocusable(true);
+        edtID_Cliente.setFocusable(true);
+        edtDataa.setFocusable(true);
+        edtValor.setFocusable(true);
+        edtDescontoVenda.setFocusable(true);
+        edtTotalVenda.setFocusable(true);
+        edtProdutoID.setFocusable(true);
+        edtQtd.setFocusable(true);
+        edtPreço.setFocusable(true);
+        edtDescProd.setFocusable(true);
+        edtTotalProd.setFocusable(true);
+        edtObs.setFocusable(true);
+        
     }//GEN-LAST:event_btnINCLUIRActionPerformed
 
     private void btnGRAVARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGRAVARActionPerformed
-        if (JOptionPane.showConfirmDialog(null, "Confirma Gravação deste Usuário ?",
+        if (JOptionPane.showConfirmDialog(null, "Confirma Gravação desta Venda ?",
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
-                UsuarioModel objusuario = new UsuarioModel();
-                objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objusuario.setUsu_nome(edtUSU_NOME.getText());
-                objusuario.setUsu_login(edtValor.getText());
-                objusuario.setUsu_senha(edtUSU_SENHA.getText());
-                objusuario.setUsu_ativo((chkUSU_ATIVO.isSelected() ? 1 : 0));
-                UsuarioController usuariocontroller = new UsuarioController();
-                usuariocontroller.gravar(getOperacao(), objusuario);
+                VendaModel objvenda = new VendaModel();
+                VendaProdutoModel vendaproduto = new VendaProdutoModel();
+
+                objvenda.setUsu_id(Integer.parseInt(edtID_Usuario.getText()));
+                objvenda.setCli_id(Integer.parseInt(edtID_Cliente.getText()));
+                objvenda.setVda_valor(Integer.parseInt(edtValor.getText()));
+                objvenda.setVda_data(edtDataa.getText());
+                objvenda.setVda_desconto(Integer.parseInt(edtDescontoVenda.getText()));
+                objvenda.setVda_total(Integer.parseInt(edtTotalVenda.getText()));
+                
+                vendaproduto.setPro_id(Integer.parseInt(edtProdutoID.getText()));
+                vendaproduto.setVep_qtde(Double.parseDouble(edtQtd.getText()));
+                vendaproduto.setVep_preco(Integer.parseInt(edtPreço.getText()));
+                vendaproduto.setVep_desconto(Integer.parseInt(edtDescProd.getText()));
+                vendaproduto.setVep_total(Integer.parseInt(edtTotalProd.getText()));
+                
+                objvenda.setVda_obs(edtObs.getText());
+                
+
+                VendaController vendacontroller = new VendaController();
+                vendacontroller.gravar(getOperacao(), objvenda);
+                
+                VendaProdutoController vendaprodutocontroller = new VendaProdutoController();
+                vendaprodutocontroller.gravar(getOperacao(), vendaproduto);
 
                 JOptionPane.showMessageDialog(null, "Dados Gravados com Sucesso");
                 consultar();
@@ -757,15 +803,29 @@ public class VendaView extends javax.swing.JFrame {
         if (JOptionPane.showConfirmDialog(null, "Confirma Exclusão deste Registro ?",
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
-                UsuarioModel objusuario = new UsuarioModel();
-                objusuario.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objusuario.setUsu_nome(edtUSU_NOME.getText());
-                objusuario.setUsu_login(edtValor.getText());
-                objusuario.setUsu_senha(edtUSU_SENHA.getText());
-                objusuario.setUsu_ativo((chkUSU_ATIVO.isSelected() ? 1 : 0));
+                VendaModel objvenda = new VendaModel();
+                VendaProdutoModel vendaproduto = new VendaProdutoModel();
 
-                UsuarioController usuariocontroller = new UsuarioController();
-                usuariocontroller.excluir(objusuario);
+                objvenda.setUsu_id(Integer.parseInt(edtID_Usuario.getText()));
+                objvenda.setCli_id(Integer.parseInt(edtID_Cliente.getText()));
+                objvenda.setVda_valor(Integer.parseInt(edtValor.getText()));
+                objvenda.setVda_data(edtDataa.getText());
+                objvenda.setVda_desconto(Integer.parseInt(edtDescontoVenda.getText()));
+                objvenda.setVda_total(Integer.parseInt(edtTotalVenda.getText()));
+                
+                vendaproduto.setPro_id(Integer.parseInt(edtProdutoID.getText()));
+                vendaproduto.setVep_qtde(Double.parseDouble(edtQtd.getText()));
+                vendaproduto.setVep_preco(Integer.parseInt(edtPreço.getText()));
+                vendaproduto.setVep_desconto(Integer.parseInt(edtDescProd.getText()));
+                vendaproduto.setVep_total(Integer.parseInt(edtTotalProd.getText()));
+                
+                objvenda.setVda_obs(edtObs.getText());
+
+                VendaController vendacontroller = new VendaController();
+                vendacontroller.excluir(objvenda);
+                
+                VendaProdutoController vendaprodutocontroller = new VendaProdutoController();
+                vendaprodutocontroller.excluir(vendaproduto);
 
                 JOptionPane.showMessageDialog(null, "Registro Excluído com Sucesso");
                 consultar();

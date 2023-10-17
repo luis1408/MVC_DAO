@@ -454,20 +454,20 @@ public class FormaPagamentoView extends javax.swing.JFrame {
             lista = null;
             lista = formapagamentocontroller.consultar(condicao);
             if (lista.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
+                JOptionPane.showMessageDialog(null, "Não Existem Formas de Pagamento Cadastrados !");
             } else {
                 tabela = new FormaPagamentoTableModel(lista, colunas);
                 tblConsulta.setModel(tabela);
                 tblConsulta.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
             }
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro na Consulta do Usuário \n" + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro na Consulta das Formas de Pagamento \n" + ex.getMessage());
         }
     }
 
     private void btnPRIMEIROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPRIMEIROActionPerformed
         if (lista.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
+            JOptionPane.showMessageDialog(null, "Não Existem Formas de Pagamento Cadastrados !");
         }
         int primeiro = 0;
         mostrarRegistro(primeiro);
@@ -481,7 +481,7 @@ public class FormaPagamentoView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnINCLUIRActionPerformed
 
     private void btnGRAVARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGRAVARActionPerformed
-        if (JOptionPane.showConfirmDialog(null, "Confirma Gravação deste Usuário ?",
+        if (JOptionPane.showConfirmDialog(null, "Confirma Gravação desta Forma de Pagamento ?",
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
                 FormaPagamentoModel objformapagamento = new FormaPagamentoModel();

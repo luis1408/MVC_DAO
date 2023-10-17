@@ -9,12 +9,13 @@ public class VendaModel {
     private double vda_desconto;
     private double vda_total;
     private String vda_obs;
+    private VendaProdutoModel vendaprodutompdel;
 
     public VendaModel() {
     }
 
     public VendaModel(int usu_id, int vda_codigo, int cli_id, String vda_data, double vda_valor,
-            double vda_desconto, double vda_total, String vda_obs ) {
+            double vda_desconto, double vda_total, String vda_obs, VendaProdutoModel vendaprodutompdel ) {
         this.vda_codigo = vda_codigo;
         this.usu_id = usu_id;
         this.cli_id = cli_id;
@@ -23,6 +24,7 @@ public class VendaModel {
         this.vda_desconto = vda_desconto;
         this.vda_total = vda_total;
         this.vda_obs = vda_obs;
+        this.vendaprodutompdel = vendaprodutompdel;
         
     }
 
@@ -88,5 +90,13 @@ public class VendaModel {
 
     public void setVda_obs(String vda_obs) {
         this.vda_obs = vda_obs;
-    }     
+    }
+    
+    public VendaProdutoModel getVendaprodutompdel() {
+        return vendaprodutompdel;
+    }
+
+    public void setVendaprodutompdel(VendaProdutoModel vendaprodutompdel) {
+        this.vendaprodutompdel = vendaprodutompdel;
+    }
 }

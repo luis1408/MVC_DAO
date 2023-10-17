@@ -52,6 +52,21 @@ public class VendaTableModel extends AbstractTableModel {
                 return venda.getVda_total();
             case 7:
                 return venda.getVda_obs();
+            case 8:
+                return venda.getVendaprodutompdel().getVep_codigo();
+            case 9:
+                return venda.getVendaprodutompdel().getVda_id();
+            case 10:
+                return venda.getVendaprodutompdel().getPro_id();
+            case 12:
+                return venda.getVendaprodutompdel().getVep_qtde();
+            case 13:
+                return venda.getVendaprodutompdel().getVep_preco();
+            case 14:
+                return venda.getVendaprodutompdel().getVep_desconto();
+            case 15:
+                return venda.getVendaprodutompdel().getVep_total();
+                
             default:
                 return null;
         }

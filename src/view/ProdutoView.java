@@ -732,8 +732,20 @@ public class ProdutoView extends javax.swing.JFrame {
     private void btnINCLUIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnINCLUIRActionPerformed
         limparAgenda();
         setOperacao("incluir");
+        edtNome.setFocusable(true);
+        edtEstoque.setFocusable(true);
+        edtPreço.setFocusable(true);
+        edtUnidade.setFocusable(true);
+        edtCusto.setFocusable(true);
+        edtAtacdo.setFocusable(true);
+        edtEmabalagem.setFocusable(true);
+        edtPeso.setFocusable(true);
+        edtData.setFocusable(true);
         edtMin.setFocusable(true);
+        edtMax.setFocusable(true);
+        edtObs.setFocusable(true);
         chkATIVO.setSelected(true);
+        chkTipo.setSelected(true);
     }//GEN-LAST:event_btnINCLUIRActionPerformed
 
     private void btnGRAVARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGRAVARActionPerformed

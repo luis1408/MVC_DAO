@@ -12,8 +12,8 @@ public class Conexao {
     // public final static String SENHA = "M@d@r@";
 
     public final static String BANCO = "jdbc:postgresql://localhost:5432/postgres";
-    public final static String USUARIO = "oleoespindola";
-    public final static String SENHA = "oleoespindola";
+    public final static String USUARIO = "postgres";
+    public final static String SENHA = "M@d@r@";
     
     private static Connection conexao;
 

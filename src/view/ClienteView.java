@@ -1,6 +1,7 @@
 package view;
 
 import controller.ClienteController;
+import controller.PessoaController;
 import java.awt.Dimension;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -10,12 +11,12 @@ import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import model.ClienteModel;
 import model.PessoaModel;
-import model.UsuarioModel;
+
 
 public class ClienteView extends javax.swing.JFrame {
 
     private String operacao;
-    private String colunas[] = {"ID do Cliente", "ID da Pessoa", "Limite de Credito", "Pessoa"};
+    private String colunas[] = {"ID do Cliente", "ID da Pessoa", "Limite de Credito", "Pessoa codigo", "Nome", "Fantasia", "Pessoa Fisica", "CPF/CNPJ", "RG", "Data de Cadastro", "Endereço", "Número", "Complemento", "Bairro", "Cidade", "UF", "CEP", "Tel 1", "Tel 2", "Cel", "Site", "Email", "Ativo"};
     // esse objeto será vinculado com a tabela
     // selecione o objeto tabela, clique em PROPRIEDADES e encontre MODEL
     // no combo "Definir Propriedades" escolha "Código Personalizado"
@@ -147,7 +148,7 @@ public class ClienteView extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MVC - Cadastro de Usuários");
         setFocusable(false);
         getContentPane().setLayout(null);
@@ -746,9 +747,9 @@ public class ClienteView extends javax.swing.JFrame {
             painelCONSULTALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelCONSULTALayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelCONSULTALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(painelCONSULTALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2))
                 .addGap(14, 14, 14))
         );
         painelCONSULTALayout.setVerticalGroup(
@@ -757,8 +758,8 @@ public class ClienteView extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jTabbedPane2.addTab("Consulta", painelCONSULTA);
@@ -870,7 +871,25 @@ public class ClienteView extends javax.swing.JFrame {
     private void btnINCLUIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnINCLUIRActionPerformed
         limparAgenda();
         setOperacao("incluir");
+        edtNome.setFocusable(true);
         edtTel2.setFocusable(true);
+        edtRg.setFocusable(true);
+        edtFantasia.setFocusable(true);
+        edtCpfCnpj.setFocusable(true);
+        edtData.setFocusable(true);
+        edtTel1.setFocusable(true);
+        edtCel.setFocusable(true);
+        edtLimtCred.setFocusable(true);
+        edtEndereço.setFocusable(true);
+        edtNum.setFocusable(true);
+        edtComple.setFocusable(true);
+        edtBairro.setFocusable(true);
+        edtCidade.setFocusable(true);
+        edtUf.setFocusable(true);
+        edtSite.setFocusable(true);
+        edtCep.setFocusable(true);
+        edtEmail.setFocusable(true);
+        chkFisica.setSelected(true);
         chkATIVO.setSelected(true);
     }//GEN-LAST:event_btnINCLUIRActionPerformed
 
@@ -879,15 +898,35 @@ public class ClienteView extends javax.swing.JFrame {
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
                 ClienteModel objcliente = new ClienteModel();
-                objcliente.setUsu_codigo(Integer.parseInt(edtcli_codigo.getText()));
-                objcliente.setPessoaModel(setPes_nome(edtNome.getText()));
-
-                objcliente.setPessoaModel().setPes_nome(edtNome.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_senha(edtUSU_SENHA.getText());
-                objcliente.setUsu_ativo((chkATIVO.isSelected() ? 1 : 0));
+                PessoaModel  pessoa = new PessoaModel();
+                
+                pessoa.setPes_nome(edtNome.getText());
+                pessoa.setPes_fone2(edtTel2.getText());
+                pessoa.setPes_fisica(edtFantasia.getText());
+                pessoa.setPes_rgie(edtRg.getText());
+                pessoa.setPes_cpfcnpj(edtCpfCnpj.getText());
+                pessoa.setPes_cadastro(edtData.getText());
+                pessoa.setPes_fone1(edtTel1.getText());
+                pessoa.setPes_celular(edtCel.getText());
+                pessoa.setPes_endereco(edtEndereço.getText());
+                pessoa.setPes_numero(edtNum.getText());
+                pessoa.setPes_complemento(edtComple.getText());
+                pessoa.setPes_bairro(edtBairro.getText());
+                pessoa.setPes_cidade(edtCidade.getText());
+                pessoa.setPes_uf(edtUf.getText());
+                pessoa.setPes_site(edtSite.getText());
+                pessoa.setPes_cep(edtCep.getText());
+                pessoa.setPes_email(edtEmail.getText());
+                pessoa.setPes_ativo((chkATIVO.isSelected() ? 1 : 0));
+                pessoa.setPes_fisica((chkFisica.isSelected() ? "s" : "n"));
+                
+                objcliente.setCli_limitecred(Double.parseDouble(edtLimtCred.getText()));
+                
                 ClienteController clientecontroller = new ClienteController();
                 clientecontroller.gravar(getOperacao(), objcliente);
+                
+                PessoaController  pessoacontroller = new PessoaController();
+                pessoacontroller.gravar(getOperacao(), pessoa);
 
                 JOptionPane.showMessageDialog(null, "Dados Gravados com Sucesso");
                 consultar();
@@ -947,27 +986,35 @@ public class ClienteView extends javax.swing.JFrame {
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
                 ClienteModel objcliente = new ClienteModel();
+                PessoaModel  pessoa = new PessoaModel();
                 
-                objcliente.setPessoamodel(setPes_nome(edtNome.getText()));
-                objcliente.setPes_fantasia(edtRg.getText());
-                objcliente.setPes_cpfcnpj(edtTel2.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_nome(edtTel2.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_nome(edtTel2.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_nome(edtTel2.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_nome(edtTel2.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_nome(edtTel2.getText());
-                objcliente.setUsu_login(edtRg.getText());
-                objcliente.setUsu_nome(edtTel2.getText());
-                objcliente.setCli_limitecred(edtLimtCred.getText());
-                objcliente.setUsu_ativo((chkATIVO.isSelected() ? 1 : 0));
+                pessoa.setPes_nome(edtNome.getText());
+                pessoa.setPes_fone2(edtTel2.getText());
+                pessoa.setPes_fisica(edtFantasia.getText());
+                pessoa.setPes_rgie(edtRg.getText());
+                pessoa.setPes_cpfcnpj(edtCpfCnpj.getText());
+                pessoa.setPes_cadastro(edtData.getText());
+                pessoa.setPes_fone1(edtTel1.getText());
+                pessoa.setPes_celular(edtCel.getText());
+                pessoa.setPes_endereco(edtEndereço.getText());
+                pessoa.setPes_numero(edtNum.getText());
+                pessoa.setPes_complemento(edtComple.getText());
+                pessoa.setPes_bairro(edtBairro.getText());
+                pessoa.setPes_cidade(edtCidade.getText());
+                pessoa.setPes_uf(edtUf.getText());
+                pessoa.setPes_site(edtSite.getText());
+                pessoa.setPes_cep(edtCep.getText());
+                pessoa.setPes_email(edtEmail.getText());
+                pessoa.setPes_ativo((chkATIVO.isSelected() ? 1 : 0));
+                pessoa.setPes_fisica((chkFisica.isSelected() ? "s" : "n"));
+                
+                objcliente.setCli_limitecred(Double.parseDouble(edtLimtCred.getText()));
 
                 ClienteController clientecontroller = new ClienteController();
                 clientecontroller.excluir(objcliente);
+                
+                PessoaController  pessoacontroller = new PessoaController();
+                pessoacontroller.excluir(pessoa);
 
                 JOptionPane.showMessageDialog(null, "Registro Excluído com Sucesso");
                 consultar();

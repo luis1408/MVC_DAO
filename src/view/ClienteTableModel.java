@@ -44,7 +44,45 @@ public class ClienteTableModel extends AbstractTableModel {
             case 2:
                 return Cliente.getCli_limitecred();
             case 3:
-                return Cliente.getPessoamodel();                
+                return Cliente.getPessoamodel().getPes_codigo(); 
+            case 4:
+                return Cliente.getPessoamodel().getPes_nome();
+            case 5:
+                return Cliente.getPessoamodel().getPes_fantasia();
+            case 6:
+                return Cliente.getPessoamodel().getPes_fisica();
+            case 7:
+                return Cliente.getPessoamodel().getPes_cpfcnpj();
+            case 8:
+                return Cliente.getPessoamodel().getPes_rgie();
+            case 9:
+                return Cliente.getPessoamodel().getPes_cadastro();
+            case 10:
+                return Cliente.getPessoamodel().getPes_endereco();
+            case 11:
+                return Cliente.getPessoamodel().getPes_numero();
+            case 12:
+                return Cliente.getPessoamodel().getPes_complemento();
+            case 13:
+                return Cliente.getPessoamodel().getPes_bairro(); 
+            case 14:
+                return Cliente.getPessoamodel().getPes_cidade();
+            case 15:
+                return Cliente.getPessoamodel().getPes_uf();
+            case 16:
+                return Cliente.getPessoamodel().getPes_cep();
+            case 17:
+                return Cliente.getPessoamodel().getPes_fone1();
+            case 18:
+                return Cliente.getPessoamodel().getPes_fone2();
+            case 19:
+                return Cliente.getPessoamodel().getPes_celular();
+            case 20:
+                return Cliente.getPessoamodel().getPes_site();
+            case 21:
+                return Cliente.getPessoamodel().getPes_email();
+            case 22:
+                return Cliente.getPessoamodel().getPes_ativo();
             default:
                 return null;
         }

@@ -1,6 +1,7 @@
 package view;
 
 import controller.FornecedorController;
+import controller.PessoaController;
 import java.awt.Dimension;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -9,11 +10,13 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import model.FornecedorModel;
+import model.PessoaModel;
 
 public class FornecedorView extends javax.swing.JFrame {
 
     private String operacao;
-    private String colunas[] = {"ID do Fornecedor", "ID da Pessoa", "Contato", "Pessoa"};
+    private String colunas[] = {"ID do Fornecedor", "ID da Pessoa", "Contato", "Pessoa codigo", "Nome", "Fantasia", "Pessoa Fisica", "CPF/CNPJ", "RG", "Data de Cadastro", "Endereço", "Número", "Complemento", "Bairro", "Cidade", "UF", "CEP", "Tel 1", "Tel 2", "Cel", "Site", "Email", "Ativo"};
+
     // esse objeto será vinculado com a tabela
     // selecione o objeto tabela, clique em PROPRIEDADES e encontre MODEL
     // no combo "Definir Propriedades" escolha "Código Personalizado"
@@ -145,7 +148,7 @@ public class FornecedorView extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MVC - Cadastro de Usuários");
         setFocusable(false);
         getContentPane().setLayout(null);
@@ -604,7 +607,7 @@ public class FornecedorView extends javax.swing.JFrame {
                         .addComponent(lblCep, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelDADOSLayout.createSequentialGroup()
                         .addComponent(edtUf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(painelDADOSLayout.createSequentialGroup()
                                 .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -628,18 +631,18 @@ public class FornecedorView extends javax.swing.JFrame {
                     .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(lblContato)
                         .addComponent(edtContato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(painelDADOSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(painelDADOSLayout.createSequentialGroup()
                     .addGap(19, 19, 19)
                     .addComponent(chkFisica)
-                    .addContainerGap(269, Short.MAX_VALUE)))
+                    .addContainerGap(261, Short.MAX_VALUE)))
         );
 
         jTabbedPane1.addTab("Dados do Fornecedor", painelDADOS);
 
         getContentPane().add(jTabbedPane1);
-        jTabbedPane1.setBounds(10, 100, 710, 340);
+        jTabbedPane1.setBounds(10, 100, 710, 330);
 
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -734,27 +737,30 @@ public class FornecedorView extends javax.swing.JFrame {
         painelCONSULTA.setLayout(painelCONSULTALayout);
         painelCONSULTALayout.setHorizontalGroup(
             painelCONSULTALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelCONSULTALayout.createSequentialGroup()
+            .addGroup(painelCONSULTALayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(painelCONSULTALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(14, 14, 14))
+                .addGroup(painelCONSULTALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelCONSULTALayout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE)
+                        .addGap(14, 14, 14))
+                    .addGroup(painelCONSULTALayout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap())))
         );
         painelCONSULTALayout.setVerticalGroup(
             painelCONSULTALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelCONSULTALayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         jTabbedPane2.addTab("Consulta", painelCONSULTA);
 
         getContentPane().add(jTabbedPane2);
-        jTabbedPane2.setBounds(10, 450, 720, 200);
+        jTabbedPane2.setBounds(10, 470, 720, 300);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -783,7 +789,7 @@ public class FornecedorView extends javax.swing.JFrame {
     }
 
     private void mostrar(FornecedorModel fornecedor) {
-        edtNome.setText(String.valueOf(fornecedor.getPessoamodel().getPes_nome()));
+        edtNome.setText(fornecedor.getPessoamodel().getPes_nome());
         edtTel2.setText(fornecedor.getPessoamodel().getPes_fone2());
         edtRg.setText(fornecedor.getPessoamodel().getPes_rgie());
         edtFantasia.setText(fornecedor.getPessoamodel().getPes_fantasia());
@@ -792,11 +798,11 @@ public class FornecedorView extends javax.swing.JFrame {
         edtData.setText(fornecedor.getPessoamodel().getPes_cadastro());
         edtTel1.setText(fornecedor.getPessoamodel().getPes_fone1());
         edtCel.setText(fornecedor.getPessoamodel().getPes_celular());
-        edtContato.setText(String.valueOf(fornecedor.getFor_contato()));
+        edtContato.setText(fornecedor.getFor_contato());
         edtEndereço.setText(fornecedor.getPessoamodel().getPes_endereco());
         edtNum.setText(fornecedor.getPessoamodel().getPes_numero());
         edtCompl.setText(fornecedor.getPessoamodel().getPes_complemento());
-        edtBairro.setText(String.valueOf(fornecedor.getPessoamodel().getPes_bairro()));
+        edtBairro.setText(fornecedor.getPessoamodel().getPes_bairro());
         edtCidade.setText(fornecedor.getPessoamodel().getPes_cidade());
         edtUf.setText(fornecedor.getPessoamodel().getPes_uf());
         edtSite.setText(fornecedor.getPessoamodel().getPes_site());
@@ -838,20 +844,20 @@ public class FornecedorView extends javax.swing.JFrame {
             lista = null;
             lista = fornecedorcontroller.consultar(condicao);
             if (lista.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
+                JOptionPane.showMessageDialog(null, "Não Existem Fornecedores Cadastrados !");
             } else {
                 tabela = new FornecedorTableModel(lista, colunas);
                 tblConsulta.setModel(tabela);
                 tblConsulta.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
             }
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Erro na Consulta do Usuário \n" + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Erro na Consulta do Fornecedor \n" + ex.getMessage());
         }
     }
 
     private void btnPRIMEIROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPRIMEIROActionPerformed
         if (lista.isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Não Existem Usuários Cadastrados !");
+            JOptionPane.showMessageDialog(null, "Não Existem Fornecedores Cadastrados !");
         }
         int primeiro = 0;
         mostrarRegistro(primeiro);
@@ -860,22 +866,62 @@ public class FornecedorView extends javax.swing.JFrame {
     private void btnINCLUIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnINCLUIRActionPerformed
         limparAgenda();
         setOperacao("incluir");
+        edtNome.setFocusable(true);
         edtTel2.setFocusable(true);
+        edtRg.setFocusable(true);
+        edtFantasia.setFocusable(true);
+        edtCpfCnpj.setFocusable(true);
+        edtData.setFocusable(true);
+        edtTel1.setFocusable(true);
+        edtCel.setFocusable(true);
+        edtContato.setFocusable(true);
+        edtEndereço.setFocusable(true);
+        edtNum.setFocusable(true);
+        edtCompl.setFocusable(true);
+        edtBairro.setFocusable(true);
+        edtCidade.setFocusable(true);
+        edtUf.setFocusable(true);
+        edtSite.setFocusable(true);
+        edtCep.setFocusable(true);
+        edtEmail.setFocusable(true);
+        chkFisica.setSelected(true);
         chkAtivo.setSelected(true);
     }//GEN-LAST:event_btnINCLUIRActionPerformed
 
     private void btnGRAVARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGRAVARActionPerformed
-        if (JOptionPane.showConfirmDialog(null, "Confirma Gravação deste Usuário ?",
+        if (JOptionPane.showConfirmDialog(null, "Confirma Gravação deste Fornecedor ?",
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
                 FornecedorModel objfornecedor = new FornecedorModel();
-                objfornecedor.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objfornecedor.setUsu_nome(edtTel2.getText());
-                objfornecedor.setUsu_login(edtRg.getText());
-                objfornecedor.setUsu_senha(edtUSU_SENHA.getText());
-                objfornecedor.setUsu_ativo((chkAtivo.isSelected() ? 1 : 0));
+                PessoaModel pessoa = new PessoaModel();
+                
+                objfornecedor.setFor_contato(edtContato.getText());
+                
+                pessoa.setPes_cpfcnpj(edtCpfCnpj.getText());
+                pessoa.setPes_cep(edtCep.getText());
+                pessoa.setPes_nome(edtNome.getText());
+                pessoa.setPes_fone2(edtTel2.getText());
+                pessoa.setPes_rgie(edtRg.getText());
+                pessoa.setPes_fantasia(edtFantasia.getText());
+                pessoa.setPes_cadastro(edtData.getText());
+                pessoa.setPes_fone1(edtTel1.getText());
+                pessoa.setPes_celular(edtCel.getText());
+                pessoa.setPes_endereco(edtEndereço.getText());
+                pessoa.setPes_numero(edtNum.getText());
+                pessoa.setPes_complemento(edtCompl.getText());
+                pessoa.setPes_bairro(edtBairro.getText());
+                pessoa.setPes_cidade(edtCidade.getText());
+                pessoa.setPes_uf(edtUf.getText());
+                pessoa.setPes_site(edtSite.getText());
+                pessoa.setPes_email(edtEmail.getText());
+                pessoa.setPes_ativo((chkAtivo.isSelected() ? 1 : 0));
+                pessoa.setPes_fisica((chkFisica.isSelected() ? "s" : "n"));
+                
                 FornecedorController fornecedorcontroller = new FornecedorController();
                 fornecedorcontroller.gravar(getOperacao(), objfornecedor);
+                
+                PessoaController pessoacontroller = new PessoaController();
+                pessoacontroller.gravar(getOperacao(), pessoa);
 
                 JOptionPane.showMessageDialog(null, "Dados Gravados com Sucesso");
                 consultar();
@@ -935,14 +981,35 @@ public class FornecedorView extends javax.swing.JFrame {
                 "Confirmação", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
             try {
                 FornecedorModel objfornecedor = new FornecedorModel();
-                objfornecedor.setUsu_codigo(Integer.parseInt(edtUSU_CODIGO.getText()));
-                objfornecedor.setUsu_nome(edtTel2.getText());
-                objfornecedor.setUsu_login(edtRg.getText());
-                objfornecedor.setUsu_senha(edtUSU_SENHA.getText());
-                objfornecedor.setUsu_ativo((chkAtivo.isSelected() ? 1 : 0));
+                PessoaModel pessoa = new PessoaModel();
+                
+                objfornecedor.setFor_contato(edtContato.getText());
+                
+                pessoa.setPes_cpfcnpj(edtCpfCnpj.getText());
+                pessoa.setPes_cep(edtCep.getText());
+                pessoa.setPes_nome(edtNome.getText());
+                pessoa.setPes_fone2(edtTel2.getText());
+                pessoa.setPes_rgie(edtRg.getText());
+                pessoa.setPes_fantasia(edtFantasia.getText());
+                pessoa.setPes_cadastro(edtData.getText());
+                pessoa.setPes_fone1(edtTel1.getText());
+                pessoa.setPes_celular(edtCel.getText());
+                pessoa.setPes_endereco(edtEndereço.getText());
+                pessoa.setPes_numero(edtNum.getText());
+                pessoa.setPes_complemento(edtCompl.getText());
+                pessoa.setPes_bairro(edtBairro.getText());
+                pessoa.setPes_cidade(edtCidade.getText());
+                pessoa.setPes_uf(edtUf.getText());
+                pessoa.setPes_site(edtSite.getText());
+                pessoa.setPes_email(edtEmail.getText());
+                pessoa.setPes_ativo((chkAtivo.isSelected() ? 1 : 0));
+                pessoa.setPes_fisica((chkFisica.isSelected() ? "s" : "n"));
 
                 FornecedorController fornecedorcontroller = new FornecedorController();
                 fornecedorcontroller.excluir(objfornecedor);
+                
+                PessoaController pessoacontroller = new PessoaController();
+                pessoacontroller.excluir(pessoa);
 
                 JOptionPane.showMessageDialog(null, "Registro Excluído com Sucesso");
                 consultar();

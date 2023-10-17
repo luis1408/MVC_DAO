@@ -59,7 +59,7 @@ public class CompraProdutoModel {
         return cpr_preco;
     }
 
-    public void setcpr_preco(double cpr_preco) {
+    public void setCpr_preco(double cpr_preco) {
         this.cpr_preco = cpr_preco;
     }
     public double getCpr_desconto() {
@@ -70,11 +70,11 @@ public class CompraProdutoModel {
         this.cpr_desconto = cpr_desconto;
     }
     
-    public double getCpr_total() {
+    public double getCpr_totall() {
         return cpr_totall;
     }
 
-    public void setCpr_total(double cpr_totall) {
+    public void setCpr_totall(double cpr_totall) {
         this.cpr_totall = cpr_totall;
     }
     

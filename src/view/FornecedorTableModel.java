@@ -43,7 +43,45 @@ public class FornecedorTableModel extends AbstractTableModel {
             case 2:
                 return fornecedor.getFor_contato();
             case 3:
-                return fornecedor.getPessoamodel();                
+                return fornecedor.getPessoamodel().getPes_codigo(); 
+            case 4:
+                return fornecedor.getPessoamodel().getPes_nome();
+            case 5:
+                return fornecedor.getPessoamodel().getPes_fantasia();
+            case 6:
+                return fornecedor.getPessoamodel().getPes_fisica();
+            case 7:
+                return fornecedor.getPessoamodel().getPes_cpfcnpj();
+            case 8:
+                return fornecedor.getPessoamodel().getPes_rgie();
+            case 9:
+                return fornecedor.getPessoamodel().getPes_cadastro();
+            case 10:
+                return fornecedor.getPessoamodel().getPes_endereco();
+            case 11:
+                return fornecedor.getPessoamodel().getPes_numero();
+            case 12:
+                return fornecedor.getPessoamodel().getPes_complemento();
+            case 13:
+                return fornecedor.getPessoamodel().getPes_bairro(); 
+            case 14:
+                return fornecedor.getPessoamodel().getPes_cidade();
+            case 15:
+                return fornecedor.getPessoamodel().getPes_uf();
+            case 16:
+                return fornecedor.getPessoamodel().getPes_cep();
+            case 17:
+                return fornecedor.getPessoamodel().getPes_fone1();
+            case 18:
+                return fornecedor.getPessoamodel().getPes_fone2();
+            case 19:
+                return fornecedor.getPessoamodel().getPes_celular();
+            case 20:
+                return fornecedor.getPessoamodel().getPes_site();
+            case 21:
+                return fornecedor.getPessoamodel().getPes_email();
+            case 22:
+                return fornecedor.getPessoamodel().getPes_ativo();                
             default:
                 return null;
         }
